@@ -383,6 +383,11 @@
                                 <div class="detail-value">List people responsible for the contents of this entry. Hyphens, apostrophes and blank spaces are allowed in the last names. Special characters and character modifiers should not be used.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">Bleary, Percival R.</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -401,6 +406,11 @@
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">This data item defines the order of the author's name in the
                list of audit authors.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">1</div>
                             </div>
 
                         </div>
@@ -422,25 +432,64 @@
                                 <div class="detail-value">    The Open Researcher and Contributor ID (ORCID).</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">0000-0002-6681-547X</div>
+                            </div>
+
                         </div>
                     </div>
 
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
                         <p>Example 1 - based on PDB entry 5HVP and laboratory records for the
-                structure corresponding to PDB entry 5HVP.</p>
+                structure corresponding to PDB entry 5HVP.
+;</p>
 
                         <pre class="example-code">loop_
     _audit_author.pdbx_ordinal
     _audit_author.name
     _audit_author.address
      1
-     'Fitzgerald, Paula M.D.'</pre>
+     'Fitzgerald, Paula M.D.'
+    ; Department of Biophysical Chemistry
+      Merck Research Laboratories
+      P. O. Box 2000, Ry80M203
+      Rahway, New Jersey  07065
+      USA
+    ;
+     2
+     'McKeever, Brian M.'
+    ; Department of Biophysical Chemistry
+      Merck Research Laboratories
+      P. O. Box 2000, Ry80M203
+      Rahway, New Jersey  07065
+      USA
+    ;
+     3
+     'Van Middlesworth, J.F.'
+    ; Department of Biophysical Chemistry
+      Merck Research Laboratories
+      P. O. Box 2000, Ry80M203
+      Rahway, New Jersey  07065
+      USA
+    ;
+     4
+     'Springer, James P.'
+    ; Department of Biophysical Chemistry
+      Merck Research Laboratories
+      P. O. Box 2000, Ry80M203
+      Rahway, New Jersey  07065
+      USA
+    ;
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -518,6 +567,11 @@
                                 <div class="detail-value">The name of the publisher of the citation</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">John Wiley and Sons</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -535,6 +589,11 @@
                             <div class="detail-row">
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">The location of the publisher of the citation</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">London</div>
                             </div>
 
                         </div>
@@ -574,6 +633,11 @@
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">Document Object Identifier used by doi.org to uniquely
                specify bibliographic entry.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">10.1016/j.str.2020.04.019</div>
                             </div>
 
                         </div>
@@ -635,6 +699,11 @@
                bibliographic entry.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">32413289</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -655,6 +724,11 @@
                of the contents of the data block to the literature item cited.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">citation relates to the first fragment screening series</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -673,6 +747,11 @@
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">Abbreviated name of the cited journal as given in the
                Chemical Abstracts Service Source Index.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">J. Mol. Biol.</div>
                             </div>
 
                         </div>
@@ -714,6 +793,11 @@
                                 <div class="detail-value">Full name of the cited journal; relevant for journal articles.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">Journal of Molecular Biology</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -731,6 +815,11 @@
                             <div class="detail-row">
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">Issue number of the journal cited</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">2</div>
                             </div>
 
                         </div>
@@ -752,6 +841,11 @@
                                 <div class="detail-value">Volume number of the journal cited</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">174</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -769,6 +863,11 @@
                             <div class="detail-row">
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">Language in which the cited article is written.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">German</div>
                             </div>
 
                         </div>
@@ -847,6 +946,11 @@
                                 <div class="detail-value">The year of the citation</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">2020</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -872,11 +976,12 @@
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Example 1 - based on PDB entry 5PH0 and related structures deposited to the PDB and part of the same investigation.</p>
+                        <p>Example 1 - based on PDB entry 5PH0 and related structures deposited to the PDB and part of the same investigation.
+;</p>
 
                         <pre class="example-code">_citation.id                                 primary 
     _citation.journal_abbrev                     'Nat Commun'
@@ -900,7 +1005,10 @@
     _citation.book_publisher_city                ?
     _citation.book_title                         ?
     _citation.details                            ?
-    _citation.unpublished_flag                   ?</pre>
+    _citation.unpublished_flag                   ?
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -935,6 +1043,11 @@
                             <div class="detail-row">
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">Author of a journal article, book chapter, whole book, or thesis. It is not to be used for editor(s) names. Provide the authors' name by using surname (family, or last name), a comma, followed by period separated initials for first and middle names. The word Junior is abbreviated as Jr. Umlauts and other character modifiers should not be included.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">Bleary, Percival R.</div>
                             </div>
 
                         </div>
@@ -976,18 +1089,24 @@
                                 <div class="detail-value">    The Open Researcher and Contributor ID (ORCID).</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">0000-0002-6681-547X</div>
+                            </div>
+
                         </div>
                     </div>
 
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
                         <p>Example 1 - based on PDB entry 5HVP and laboratory records for the
-                structure corresponding to PDB entry 5HVP.</p>
+                structure corresponding to PDB entry 5HVP.
+;</p>
 
                         <pre class="example-code">loop_
     _citation_author.citation_id
@@ -1027,7 +1146,10 @@
       4        5  'Diehl, R.E.'
       4        6  'Hill, W.S.'
       4        7  'Dixon, R.A.F.'
-      4        8  'Sigal, I.S.'</pre>
+      4        8  'Sigal, I.S.'
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -1062,6 +1184,11 @@
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">The name of the organization providing funding support for the
                entry.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">National Institutes of Health</div>
                             </div>
 
                             <div class="detail-row">
@@ -4504,24 +4631,33 @@
                                 <div class="detail-value">A unique sequential integer identifier for each source of support for this entry.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">1</div>
+                            </div>
+
                         </div>
                     </div>
 
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Example 1 -</p>
+                        <p>Example 1 -
+;</p>
 
                         <pre class="example-code">loop_
      _pdbx_audit_support.ordinal
      _pdbx_audit_support.funding_organization
      _pdbx_audit_support.grant_number
      _pdbx_audit_support.country
-     1  'National Institutes of Health/National Institute of General Medical Sciences' '1R01GM072999-01' 'United States'</pre>
+     1  'National Institutes of Health/National Institute of General Medical Sciences' '1R01GM072999-01' 'United States'
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -4560,6 +4696,11 @@
                                 <div class="detail-value">          A unique integer identifier for this author</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">1 2 3</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -4578,6 +4719,11 @@
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">The mailing address of the author of the data block to whom
                correspondence should be addressed, line 1 of 3.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">610 Taylor Road</div>
                             </div>
 
                         </div>
@@ -4600,6 +4746,11 @@
                correspondence should be addressed, line 2 of 3.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">Department of Chemistry and Chemical Biology</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -4618,6 +4769,11 @@
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">The mailing address of the author of the data block to whom
                correspondence should be addressed, line 3 of 3.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">Busch Campus</div>
                             </div>
 
                         </div>
@@ -4641,6 +4797,11 @@
                _audit_contact_author.address</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">Busch Campus</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -4659,6 +4820,11 @@
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">The mailing address of the author of the data block to whom
                correspondence should be addressed, city.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">Piscataway</div>
                             </div>
 
                         </div>
@@ -4681,6 +4847,11 @@
                correspondence should be addressed, state or province.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">New Jersey</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -4699,6 +4870,11 @@
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">The mailing address of the author of the data block to whom
                correspondence should be addressed, zip code.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">08854</div>
                             </div>
 
                         </div>
@@ -4720,6 +4896,11 @@
                                 <div class="detail-value">Enter the e-mail address at which the PDB can reach the contact person. This email address is also used for all correspondence regarding this deposition.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">name@host.domain.country</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -4737,6 +4918,11 @@
                             <div class="detail-row">
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">Enter the complete fax number, in any format you prefer. Please include all country and area codes.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">12(34) 947 7334</div>
                             </div>
 
                         </div>
@@ -4758,6 +4944,11 @@
                                 <div class="detail-value">Enter the first name of the contact person.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">Percival</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -4777,6 +4968,11 @@
                                 <div class="detail-value">Enter the family name also known as the surname or last name of the contact person.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">Samuels</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -4794,6 +4990,11 @@
                             <div class="detail-row">
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">Enter the middle name of the contact person if any.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">T.</div>
                             </div>
 
                         </div>
@@ -4816,6 +5017,11 @@
                should be addressed.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">Dr.</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -4833,6 +5039,11 @@
                             <div class="detail-row">
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">The country/region in which the research was performed</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">UNITED STATES</div>
                             </div>
 
                             <div class="detail-row">
@@ -6117,6 +6328,11 @@
                correspondence should be addressed.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">AFRICA</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -6134,6 +6350,11 @@
                             <div class="detail-row">
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">Enter the complete telephone number, in any format you prefer. Please include all country and area codes.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">12 (34) 947 7330</div>
                             </div>
 
                         </div>
@@ -6155,6 +6376,11 @@
                                 <div class="detail-value">        The role of this author in the project depositing this data.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">principal investigator/group leader</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -6172,6 +6398,11 @@
                             <div class="detail-row">
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">        The organization type to which this author is affiliated.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">academic</div>
                             </div>
 
                         </div>
@@ -6193,17 +6424,23 @@
                                 <div class="detail-value">    The Open Researcher and Contributor ID (ORCID).</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">0000-0002-6681-547X</div>
+                            </div>
+
                         </div>
                     </div>
 
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Example 1 -</p>
+                        <p>Example 1 -
+;</p>
 
                         <pre class="example-code">_pdbx_contact_author.id                1
     _pdbx_contact_author.name_salutation   'Dr.'
@@ -6221,7 +6458,10 @@
     _pdbx_contact_author.fax               '908 594 6645'
     _pdbx_contact_author.email             'paula_fitzgerald@merck.com'
     _pdbx_contact_author.role              'principal investigator/group leader'
-    _pdbx_contact_author.organization_type 'commercial'</pre>
+    _pdbx_contact_author.organization_type 'commercial'
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -6360,6 +6600,11 @@
                                 <div class="detail-value">The computational pipeline version used for data analysis.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">v4</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -6377,6 +6622,11 @@
                             <div class="detail-row">
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">The year that the fragment screening campaign started.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">2022</div>
                             </div>
 
                         </div>
@@ -6715,11 +6965,14 @@
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <pre class="example-code">Theoretical example 1.</pre>
+                        <pre class="example-code">Theoretical example 1.
+;
+  
+;</pre>
 
                     </div>
                 </div>
@@ -6804,11 +7057,12 @@
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Theoretical example.</p>
+                        <p>Theoretical example.
+;</p>
 
                         <pre class="example-code">loop_
 _pdbx_fraghub_investigation_frag_component_mix.id
@@ -6822,7 +7076,10 @@ _pdbx_fraghub_investigation_frag_component_mix.internal_id
 2 6  Plate1_B1
 3 7  Plate1_C1
 3 8  Plate1_C1
-3 9  Plate1_C1</pre>
+3 9  Plate1_C1
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -6989,6 +7246,11 @@ _pdbx_fraghub_investigation_frag_component_mix.internal_id
                   of their symbol. If carbon is not present, the elements
                   are listed purely in alphabetic order of their symbol. This
                   is the 'Hill' system used by Chemical Abstracts.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">C29 H40 N2 O7 S</div>
                             </div>
 
                         </div>
@@ -7233,11 +7495,12 @@ _pdbx_fraghub_investigation_frag_component_mix.internal_id
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Theoretical example.</p>
+                        <p>Theoretical example.
+;</p>
 
                         <pre class="example-code">loop_
 _pdbx_fraghub_investigation_fraglib_component.id
@@ -7259,7 +7522,10 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
 6  1   VT00162  ?               ?   C12H9N3      195.2  'InChI=1S/C12H9N3/c1-2-6-11-10(5-1)14-12(15-11)9-4-3-7-13-8-9/h1-8H,(H,14,15)'                                      BOUOQESVDURNSB-UHFFFAOYSA-N   ?   ? 
 7  1   VT00257  ?               ?   C6H10N2O3S   190.2  'InChI=1S/C6H10N2O3S/c1-4-6(5(2)11-8-4)12(9,10)7-3/h7H,1-3H3'                                                       PBAHROBCZQANJL-UHFFFAOYSA-N   ?   ? 
 8  1   VT00084  ?               ?   C12H15NO4S   269.3  'InChI=1S/C12H15NO4S/c1-9-4-6-10(7-5-9)18(16,17)13-8-2-3-11(13)12(14)15/h4-7,11H,2-3,8H2,1H3,(H,14,15)/t11-/m0/s1'  CGPHGPCHVUSFFA-NSHDSACASA-N   ?   ? 
-9  1   VT00190  ?               ?   C10H12N2O    176.2  'InChI=1S/C10H12N2O/c1-8-11-9-4-2-3-5-10(9)12(8)6-7-13/h2-5,13H,6-7H2,1H3'                                          CURPBJGJXFWNMF-UHFFFAOYSA-N   ?   ?</pre>
+9  1   VT00190  ?               ?   C10H12N2O    176.2  'InChI=1S/C10H12N2O/c1-8-11-9-4-2-3-5-10(9)12(8)6-7-13/h2-5,13H,6-7H2,1H3'                                          CURPBJGJXFWNMF-UHFFFAOYSA-N   ?   ?
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -7336,6 +7602,11 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
                                 <div class="detail-value">The name of the publisher of the citation</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">John Wiley and Sons</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -7353,6 +7624,11 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
                             <div class="detail-row">
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">The location of the publisher of the citation</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">London</div>
                             </div>
 
                         </div>
@@ -7392,6 +7668,11 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">Document Object Identifier used by doi.org to uniquely
                specify bibliographic entry.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">10.1016/j.str.2020.04.019</div>
                             </div>
 
                         </div>
@@ -7453,6 +7734,11 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
                bibliographic entry.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">32413289</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -7473,6 +7759,11 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
                of the contents of the data block to the literature item cited.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">citation relates to this precise fragment library</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -7491,6 +7782,11 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">Abbreviated name of the cited journal as given in the
                Chemical Abstracts Service Source Index.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">J. Mol. Biol.</div>
                             </div>
 
                         </div>
@@ -7532,6 +7828,11 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
                                 <div class="detail-value">Full name of the cited journal; relevant for journal articles.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">Journal of Molecular Biology</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -7549,6 +7850,11 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
                             <div class="detail-row">
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">Issue number of the journal cited</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">2</div>
                             </div>
 
                         </div>
@@ -7570,6 +7876,11 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
                                 <div class="detail-value">Volume number of the journal cited</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">174</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -7587,6 +7898,11 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
                             <div class="detail-row">
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">Language in which the cited article is written.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">German</div>
                             </div>
 
                         </div>
@@ -7665,6 +7981,11 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
                                 <div class="detail-value">The year of the citation</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">2020</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -7690,11 +8011,12 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Example 1 - For EUOPEN fragment library</p>
+                        <p>Example 1 - For EUOPEN fragment library
+;</p>
 
                         <pre class="example-code">_pdbx_fraghub_investigation_fragment_lib_citation.id                             1
     _pdbx_fraghub_investigation_fragment_lib_citation.journal_abbrev                 "Rsc Med Chem"
@@ -7718,7 +8040,10 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
     _pdbx_fraghub_investigation_fragment_lib_citation.book_publisher_city            ?
     _pdbx_fraghub_investigation_fragment_lib_citation.book_title                     ?
     _pdbx_fraghub_investigation_fragment_lib_citation.details                        ?
-    _pdbx_fraghub_investigation_fragment_lib_citation.unpublished_flag               ?</pre>
+    _pdbx_fraghub_investigation_fragment_lib_citation.unpublished_flag               ?
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -7775,6 +8100,11 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
                                 <div class="detail-value">Author of a journal article, book chapter, whole book, or thesis.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">Bleary, Percival R.</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -7814,17 +8144,23 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
                                 <div class="detail-value">    The Open Researcher and Contributor ID (ORCID).</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">0000-0002-6681-547X</div>
+                            </div>
+
                         </div>
                     </div>
 
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Example 1 - For EUOPEN fragment library</p>
+                        <p>Example 1 - For EUOPEN fragment library
+;</p>
 
                         <pre class="example-code">loop_
     _pdbx_fraghub_investigation_fragment_lib_citation_author.citation_id
@@ -7840,7 +8176,17 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
       1        8        'Yadrykhinsky, V.'
       1        9        'Specker, E.'
       1       10        'Jaudzems, K.'
-      1       11        'Mileti&#263</pre>
+      1       11        'Mileti&#263;, T.'
+      1       12        'Harmel, R.'
+      1       13        'Gribbon, P.'
+      1       14        'Schwalbe, H.'
+      1       15        'Brenk, R.'
+      1       16        'Jirgensons, A.'
+      1       17        'Zaliani, A.'
+      1       18        'Mestres, J.'
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -8226,11 +8572,12 @@ _pdbx_fraghub_investigation_fraglib_component.cas_identifier
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Theoretical example.</p>
+                        <p>Theoretical example.
+;</p>
 
                         <pre class="example-code">loop_
 _pdbx_fraghub_investigation_screening_exp.screening_exp_id
@@ -8255,7 +8602,10 @@ exp4   1 1   FH123   1 4   FH123/exp4   'X-RAY DIFFRACTION'   ? http://www.fragh
 exp5   1 1   FH123   2 5   FH123/exp5   'X-RAY DIFFRACTION'   ? http://www.fraghub.org/fh123456/5    n  1    ?   
 exp6   1 1   FH123   2 6   FH123/exp6   'X-RAY DIFFRACTION'   ? http://www.fraghub.org/fh123456/6    n  1    ?   
 exp7   1 1   FH123   2 7   FH123/exp7   'X-RAY DIFFRACTION'   ? http://www.fraghub.org/fh123456/7    n  1    ?   
-exp8   1 1   FH123   2 8   FH123/exp8   'X-RAY DIFFRACTION'   ? http://www.fraghub.org/fh123456/8    n  1    ?</pre>
+exp8   1 1   FH123   2 8   FH123/exp8   'X-RAY DIFFRACTION'   ? http://www.fraghub.org/fh123456/8    n  1    ?
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -8559,11 +8909,12 @@ exp8   1 1   FH123   2 8   FH123/exp8   'X-RAY DIFFRACTION'   ? http://www.fragh
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Theoretical example.</p>
+                        <p>Theoretical example.
+;</p>
 
                         <pre class="example-code">loop_
 _pdbx_fraghub_investigation_screening_result.screening_exp_id
@@ -8581,7 +8932,10 @@ exp4  1        partial-hit    4   refined     "On-site binding"           ?
 exp5  1        hit            5   refined     "Highest affinity hit"      ? 
 exp6  1        miss           ?   manual      "No diffraction"            ? 
 exp7  1        miss           ?   manual      "No diffraction"            ? 
-exp8  1        miss           ?   manual      "Fragment unobserved"       ?</pre>
+exp8  1        miss           ?   manual      "Fragment unobserved"       ?
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -8892,6 +9246,11 @@ exp8  1        miss           ?   manual      "Fragment unobserved"       ?</pre
                                 <div class="detail-value">The year that the fragment library was purchased.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">2022</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -9023,17 +9382,25 @@ exp8  1        miss           ?   manual      "Fragment unobserved"       ?</pre
                                 <div class="detail-value">A description of any series-specific information.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">Fragment library designed by analysis of previous hits.</div>
+                            </div>
+
                         </div>
                     </div>
 
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <pre class="example-code">Theoretical example 1.</pre>
+                        <pre class="example-code">Theoretical example 1.
+;
+  
+;</pre>
 
                     </div>
                 </div>
@@ -9068,6 +9435,11 @@ exp8  1        miss           ?   manual      "Fragment unobserved"       ?</pre
                                 <div class="detail-value">Uniquely identifies an investigation</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">1</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -9085,6 +9457,11 @@ exp8  1        miss           ?   manual      "Fragment unobserved"       ?</pre
                             <div class="detail-row">
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">Describes the type of investigation.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">Fragment Screening</div>
                             </div>
 
                             <div class="detail-row">
@@ -9194,6 +9571,11 @@ exp8  1        miss           ?   manual      "Fragment unobserved"       ?</pre
                                 <div class="detail-value">             Another id; however not mandatory and with no child categories.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">fh123456</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -9259,11 +9641,12 @@ exp8  1        miss           ?   manual      "Fragment unobserved"       ?</pre
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Example 1</p>
+                        <p>Example 1
+;</p>
 
                         <pre class="example-code">_pdbx_investigation.id            FH123
 _pdbx_investigation.type          "Fragment Screening"
@@ -9271,7 +9654,10 @@ _pdbx_investigation.db            frag_hub
 _pdbx_investigation.project       fh123456
 _pdbx_investigation.title         "Frag Screen Investigation XYZ"
 _pdbx_investigation.details       "Fragment screening project for Hemoglobin"
-_pdbx_investigation.external_url  https://www.fragscreen-facility.org/123456789</pre>
+_pdbx_investigation.external_url  https://www.fragscreen-facility.org/123456789
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -9526,11 +9912,12 @@ _pdbx_investigation.external_url  https://www.fragscreen-facility.org/123456789<
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Theoretical example.</p>
+                        <p>Theoretical example.
+;</p>
 
                         <pre class="example-code">_pdbx_investgation_archived_data.investigation_id 
 _pdbx_investgation_archived_data.id 
@@ -9540,7 +9927,10 @@ _pdbx_investgation_archived_data.archived_data_details
 _pdbx_investgation_archived_data.archived_url 
 _pdbx_investgation_archived_data.archived_doi
 FH123   1  'X-ray Diffraction'  PDB   1A3N 'DEOXY HUMAN HEMOGLOBIN'  https://www.wwpdb.org/pdb?id=pdb_00001a3n   10.2210/pdb1a3n/pdb
-FH123   2  'X-ray Diffraction'  PDB   4NI0 'Quaternary R3 CO-liganded hemoglobin structure in complex with a thiol containing compound'  https://www.wwpdb.org/pdb?id=pdb_00004ni0   10.2210/pdb4ni0/pdb</pre>
+FH123   2  'X-ray Diffraction'  PDB   4NI0 'Quaternary R3 CO-liganded hemoglobin structure in complex with a thiol containing compound'  https://www.wwpdb.org/pdb?id=pdb_00004ni0   10.2210/pdb4ni0/pdb
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -9595,6 +9985,11 @@ FH123   2  'X-ray Diffraction'  PDB   4NI0 'Quaternary R3 CO-liganded hemoglobin
                             <div class="detail-row">
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">          The name (IUPAC or common) of the small molecule component.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">alanine</div>
                             </div>
 
                         </div>
@@ -9652,6 +10047,11 @@ FH123   2  'X-ray Diffraction'  PDB   4NI0 'Quaternary R3 CO-liganded hemoglobin
                   of their symbol. If carbon is not present, the elements
                   are listed purely in alphabetic order of their symbol. This
                   is the 'Hill' system used by Chemical Abstracts.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">C18 H19 N7 O8 S</div>
                             </div>
 
                         </div>
@@ -9896,11 +10296,12 @@ FH123   2  'X-ray Diffraction'  PDB   4NI0 'Quaternary R3 CO-liganded hemoglobin
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Theoretical example.</p>
+                        <p>Theoretical example.
+;</p>
 
                         <pre class="example-code">loop_
 _pdbx_investigation_entity_nonpoly.nonpoly_entity_id 
@@ -9918,7 +10319,10 @@ _pdbx_investigation_entity_nonpoly.cas_identifier
 5 'MAGNESIUM ION'      MG   Mg              24.305 'InChI=1S/Mg/q+2'                                                         JLVVSXFLKOJNIY-UHFFFAOYSA-N          ?
 6 'TRIETHYLENE GLYCOL' PGE 'C6 H14 O4'     150.173 'InChI=1S/C6H14O4/c7-1-3-9-5-6-10-4-2-8/h7-8H,1-6H2'                      ZIBGPFATKBEMQZ-UHFFFAOYSA-N          ?
 7  water               HOH 'H2 O'           18.015 'InChI=1S/H2O/h1H2'                                                       XLYOFNOQVPJJNP-UHFFFAOYSA-N          ?
-#</pre>
+#
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -10149,6 +10553,11 @@ Y for Tyrosine
 (NH2) for Amidation cap</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">(MSE)SHHWGYGKHNGPEHWHKDFPIAKGERQSPVDIDTHTAKYDPSLKPLSVSYDQATSLRILNNGAAFNVEFD</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -10246,11 +10655,12 @@ Y for Tyrosine
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Theoretical example.</p>
+                        <p>Theoretical example.
+;</p>
 
                         <pre class="example-code">loop_
 _pdbx_investigation_entity_poly.poly_entity_id 
@@ -10260,7 +10670,10 @@ _pdbx_investigation_entity_poly.db_name
 _pdbx_investigation_entity_poly.db_acc 
 _pdbx_investigation_entity_poly.db_code 
 1  polypeptide(L)   man  MVHLTPEEKSAVTALWGKVNVDEVGGEALGRLLVVYPWTQRFFESFGDLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTFATLSELHCDKLHVDPENFRLLGNVLVCVLAHHFGKEFTPPVQAAYQKVVAGVANALAHKYH  UNP   P68871   HBB_HUMAN
-2  polypeptide(L)   man  MVLSPADKTNVKAAWGKVGAHAGEYGAEALERMFLSFPTTKTYFPHFDLSHGSAQVKGHGKKVADALTNAVAHVDDMPNALSALSDLHAHKLRVDPVNFKLLSHCLLVTLAAHLPAEFTPAVHASLDKFLASVSTVLTSKYR       UNP   P69905   HBA_HUMAN</pre>
+2  polypeptide(L)   man  MVLSPADKTNVKAAWGKVGAHAGEYGAEALERMFLSFPTTKTYFPHFDLSHGSAQVKGHGKKVADALTNAVAHVDDMPNALSALSDLHAHKLRVDPVNFKLLSHCLLVTLAAHLPAEFTPAVHASLDKFLASVSTVLTSKYR       UNP   P69905   HBA_HUMAN
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -10432,11 +10845,12 @@ _pdbx_investigation_entity_poly.db_code
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Theoretical example.</p>
+                        <p>Theoretical example.
+;</p>
 
                         <pre class="example-code">_pdbx_investigation_focus.investigation_id 
 _pdbx_investigation_focus.key_component_name
@@ -10445,7 +10859,10 @@ _pdbx_investigation_focus.comp_ref_db_acc
 _pdbx_investigation_focus.comp_ref_db_name 
 _pdbx_investigation_focus.comp_ref_db_code
 FH123   Hemoglobin1    1  P68871  UNP  HBB_HUMAN
-FH123   Hemoglobin2    2  P69905  UNP  HBA_HUMAN</pre>
+FH123   Hemoglobin2    2  P69905  UNP  HBA_HUMAN
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -10510,11 +10927,12 @@ FH123   Hemoglobin2    2  P69905  UNP  HBA_HUMAN</pre>
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Theoretical example.</p>
+                        <p>Theoretical example.
+;</p>
 
                         <pre class="example-code">loop_
 _pdbx_investigation_nonpoly_descript.id
@@ -10541,7 +10959,10 @@ _pdbx_investigation_nonpoly_descript.nonpoly_entity_id
 4 5
 4 6
 4 7
-#</pre>
+#
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -10605,18 +11026,22 @@ _pdbx_investigation_nonpoly_descript.nonpoly_entity_id
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Theoretical example.</p>
+                        <p>Theoretical example.
+;</p>
 
                         <pre class="example-code">loop_
 _pdbx_investigation_poly_descript.id
 _pdbx_investigation_poly_descript.poly_entity_id
 1 1
 1 2
-#</pre>
+#
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -10726,11 +11151,12 @@ _pdbx_investigation_poly_descript.poly_entity_id
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
-                        <p>Theoretical example 1.</p>
+                        <p>Theoretical example 1.
+;</p>
 
                         <pre class="example-code">loop_
 _pdbx_investigation_sample.sample_id
@@ -10740,7 +11166,10 @@ _pdbx_investigation_sample.nonpoly_descript_id
 1  1     1   1 
 2  1     1   2 
 3  1     2   3 
-4  1     3   4</pre>
+4  1     3   4
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -10774,6 +11203,11 @@ _pdbx_investigation_sample.nonpoly_descript_id
                             <div class="detail-row">
                                 <div class="detail-label">Description:</div>
                                 <div class="detail-value">Code for status of file.</div>
+                            </div>
+
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">REL</div>
                             </div>
 
                             <div class="detail-row">
@@ -11104,6 +11538,11 @@ _pdbx_investigation_sample.nonpoly_descript_id
                                 <div class="detail-value">The date of initial deposition. (The first message for deposition has been received.)</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">1983-02-21</div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -11123,13 +11562,18 @@ _pdbx_investigation_sample.nonpoly_descript_id
                                 <div class="detail-value">The date on which the depositor accepted the PDB terms and conditions.</div>
                             </div>
 
+                            <div class="detail-row">
+                                <div class="detail-label">Examples:</div>
+                                <div class="example-code  detail-value">2021-09-13</div>
+                            </div>
+
                         </div>
                     </div>
 
                 <div class="example-section">
                     <div class="example-header" onclick="toggleExampleSection(this)">
                         Examples
-                        <span class="collapsible-icon">+</span>
+                        <span id="example-icon">+</span>
                     </div>
                     <div class="example-content">
 
@@ -11138,7 +11582,10 @@ _pdbx_investigation_sample.nonpoly_descript_id
      _pdbx_investigation_status.dep_release_investigation            "HOLD FOR PUBLICATION"
      _pdbx_investigation_status.author_release_status_code           HPUB
      _pdbx_investigation_status.recvd_initial_deposition_date        2021-12-10
-     _pdbx_investigation_status.date_accepted_terms_and_conditions   2021-12-10</pre>
+     _pdbx_investigation_status.date_accepted_terms_and_conditions   2021-12-10
+;
+
+   #</pre>
 
                     </div>
                 </div>
@@ -11172,7 +11619,7 @@ _pdbx_investigation_sample.nonpoly_descript_id
         function toggleExampleSection(element) {
             const exampleContent = element.nextElementSibling;
             exampleContent.classList.toggle('active');
-            const icon = element.querySelector('.collapsible-icon');
+            const icon = element.querySelector('#example-icon');
             if (exampleContent.classList.contains('active')) {
                 icon.textContent = '−';
             } else {
