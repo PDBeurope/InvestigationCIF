@@ -4,7 +4,7 @@
 
 The [MMCIF investigation dictionary](dist/mmcif_investigation_fraghub_ext.dic) provides the data representation to capture relationships between macromolecule structures deposited in the wwPDB, and data from other database, with enrichment of additional information / metadata to describe an investigation -- aka a series of related structures that were collected for a project and together provide insight. 
 
-This dictionary is an extension of the [PDBx/mmCIF](http://mmcif.wwpdb.org) dictionary and provides the additional defintions required to handle require to generate the investigation files. Investigation files are umbrella files for a set of coordinate and their corresponding experimental data files. The primary example showcased here is for fragment screening investigations, where multiple atomic-level models are determined to analyze how small molecule fragments interact with protein targets, facilitating drug discovery efforts.
+This dictionary is an extension of the [PDBx/mmCIF](http://mmcif.wwpdb.org) dictionary and provides the additional defintions required for an investigation files. Investigation files are umbrella files for a set of coordinate and their corresponding experimental data files. The primary example showcased here is for fragment screening investigations, where multiple atomic-level models are determined to analyze how small molecule fragments interact with protein targets, facilitating drug discovery efforts.
 
 ## Why InvestigationCIF?
 Traditional PDB entries represent individual structures, but many research projects generate collections of related structures. InvestigationCIF solves this problem by:
