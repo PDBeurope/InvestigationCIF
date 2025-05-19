@@ -4,7 +4,7 @@
 
 The [MMCIF investigation dictionary](dist/mmcif_investigation_fraghub_ext.dic) provides the data representation to capture relationships between macromolecule structures deposited in the wwPDB, and data from other database, with enrichment of additional information / metadata to describe an investigation -- aka a series of related structures that were collected for a project and together provide insight. 
 
-This dictionary is an extension of the [PDBx/mmCIF](http://mmcif.wwpdb.org) dictionary and provides the additional defintions required to handle require to generate the investigation files. Investigation files are umbrella files for a set of coordinate and their corresponding experimental data files. The primary example showcased here is for fragment screening investigations, where multiple atomic-level models are determined to analyze how small molecule fragments interact with protein targets, facilitating drug discovery efforts.
+This dictionary is an extension of the [PDBx/mmCIF](http://mmcif.wwpdb.org) dictionary and provides the additional defintions required for an investigation files. Investigation files are umbrella files for a set of coordinates / models and their corresponding experimental data files. The primary example showcased here is for fragment screening investigations, where multiple atomic-level models are determined to analyze how small molecule fragments interact with protein targets, facilitating drug discovery efforts.
 
 ## Why InvestigationCIF?
 Traditional PDB entries represent individual structures, but many research projects generate collections of related structures. InvestigationCIF solves this problem by:
@@ -24,10 +24,10 @@ The Investigation mmcif can be created through [mmcif-gen]([https://pypi.org/pro
 
 ```
 # Fetch configuration for a specific facility
-mmcif-gen fetch-facility-json dls-metadata
+mmcif-gen fetch-facility-json maxiv
 
 # Specify custom output directory
-mmcif-gen fetch-facility-json dls-metadata -o ./mapping_operations
+mmcif-gen fetch-facility-json maxiv -o ./mapping_operations
 ```
 For more extensive documentation on using it: [ check here](https://pypi.org/project/mmcif-gen/).
 
@@ -38,6 +38,18 @@ For more extensive documentation on using it: [ check here](https://pypi.org/pro
 [MMCIF investigation extension](dist/mmcif_investigation_fraghub_ext.dic) - Investigation dictionary extension
 
 [Examples](examples) - directory with examples of investigation mmCIF file(s) compliant with the MMCIF investgation dictionary
+
+## Contributions / collaborations
+Fragment-based-screening (FBS) is a complex and data-rich endeavour, wherein each stage of the process can generate different file types of complex data, in both raw and processed forms. 
+The popularity of fragment screening in academic scientific research and the pharmaceutical industry is reflected by the increasing number of facilities, such as synchrotrons, that support fragment screening experiments. Synchrotrons are central service centres that support experimental data generation with multiple options related to structural biology using X-ray crystallography. 
+Individuals from synchrotrons across Europe were involve in developing the data model for fragment-screening in this repository. 
+
+Synchrotrons and associated facilities involved in developing this data model:
+* [The Crystallisation Facility]( https://www.embl.org/services-facilities/grenoble/high-throughput-crystallisation/) at the [European Molecular Biology Laboratory (EMBL) Grenoble]( https://www.embl.org/research/faculty/grenoble/) and [European Synchrotron Radiation Facility (ESFR)]( https://www.esrf.fr/home.html/) in France
+* [XChem: Diamond Fragment Screening](https://www.diamond.ac.uk/Instruments/Mx/Fragment-Screening.html) (service centre for X-ray crystallography, based at [Diamond Light Source(DLS))]( https://www.diamond.ac.uk/Home.html) in the United Kingdom
+* [Fragment Screening Facility]( https://www.helmholtz-berlin.de/forschung/oe/ps/macromolecular-crystallography/fragment-screening/index_en.html) at Macromolecular Crystallography (BESSY-MX )]() at Helmholtz-Zentrum Berlin/HZB in Germany
+* [FragMAX](https://www.maxiv.lu.se/beamlines-accelerators/science-initiatives/fragmax-biomax-fragment-screening-platform/) at [MAX IV](https://www.maxiv.lu.se/) in Sweden
+
 
 ## Contributing
 We welcome contributions to improve the InvestigationCIF dictionary. For changes, please open an issue first to discuss what you would like to change.
