@@ -59,6 +59,7 @@ For more extensive documentation on using it:
 We welcome contributions to improve the InvestigationCIF dictionary. For changes, please open an issue first to discuss what you would like to change.
 
 ## Feedback
+
 For any feedback or suggestions, email us at pdbehelp@ebi.ac.uk. Please include 'InvestigationCIF' in your subject line.
 
 ## Contributions / collaborations
@@ -97,12 +98,13 @@ Individuals from synchrotrons across Europe were involve in developing the data 
   </a>
 <br>
 <p></p>
+
 ## Funded by:
 
 <p></p>
 <span style="display: inline-block; margin-right: 10%;">
   <a href="https://inext-discovery.eu/">
-  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/iNEXT_Discovery_Logo.png?raw=true?raw="true" alt="iNext-Discovery Logo" width="200">
+  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/iNEXT_Discovery_Logo.png?raw="true" alt="iNext-Discovery Logo" width="200">
   </a>
 </span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
