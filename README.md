@@ -110,12 +110,13 @@ Individuals from synchrotrons across Europe were involve in developing the data 
   <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/iNEXT_Discovery_Logo.png?raw=true?raw="true" alt="iNext-Discovery Logo" width="200">
   </a>
 </span>
+<br>
 <span style="display: inline-block;">
   <a href="https://fragmentscreen.org/home">
   <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/Fragment_Screen_Logo.png?raw="true" alt="FragmentScreen Logo" width="200">
   </a>
 </span>
-<p></p>
+</p>
 
 * [iNEXT-Discovery](https://inext-discovery.eu/) - a European Union funded project via Horizon Europe (Grant agreement ID: 871037)
 * [FragmentScreen](https://fragmentscreen.org/home) - a European Union funded project via Horizon Europe (Grant agreement ID: 101094131)
