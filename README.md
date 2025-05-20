@@ -1,12 +1,16 @@
 # InvestigationCIF
  ![Category count](https://badgen.net/static/Categories/22/orange) ![Item count](https://badgen.net/static/Items/192/purple) ![license](https://badgen.net/static/license/CC-0%201.0/gray) ![version](https://badgen.net/static/version/1.0.5/blue)
+
 ## Overview
 
-The [MMCIF investigation dictionary](dist/mmcif_investigation_fraghub_ext.dic) provides the data representation to capture relationships between macromolecule structures deposited in the wwPDB, and data from other database, with enrichment of additional information / metadata to describe an investigation -- aka a series of related structures that were collected for a project and together provide insight. 
+The [MMCIF investigation dictionary](dist/mmcif_investigation_fraghub_ext.dic) provides the data representation to capture relationships between macromolecule structures deposited in the worldwide Protein Data Bank (wwPDB), and data from other databases and databanks, with enrichment of additional information / metadata to describe an investigation -- aka a series of related structures that were collected for a project and together provide insight. 
 
-This dictionary is an extension of the [PDBx/mmCIF](http://mmcif.wwpdb.org) dictionary and provides the additional defintions required for an investigation files. Investigation files are umbrella files for a set of coordinates / models and their corresponding experimental data files. The primary example showcased here is for fragment screening investigations, where multiple atomic-level models are determined to analyze how small molecule fragments interact with protein targets, facilitating drug discovery efforts.
+This dictionary is an extension of the [PDBx/mmCIF](http://mmcif.wwpdb.org) dictionary and provides the additional definitions required for an investigation files. Investigation files are umbrella files for a set of coordinates / models and their corresponding experimental data files. 
+
+The primary example showcased here is for fragment screening investigations, where multiple atomic-level models are determined to analyze how small molecule fragments interact with protein targets, facilitating drug discovery efforts.
 
 ## Why InvestigationCIF?
+
 Traditional PDB entries represent individual structures, but many research projects generate collections of related structures. InvestigationCIF solves this problem by:
 
 - Creating umbrella files that link multiple coordinate files and their experimental data
@@ -16,11 +20,15 @@ Traditional PDB entries represent individual structures, but many research proje
 
 
 ## Investigation Files
+
 Fragment Screening Investigation files created from PDB group depositions are available at:
 https://ftp.ebi.ac.uk/pub/databases/msd/fragment_screening/investigations/
 
 ## Creating Investigation MMCIF file
-The Investigation mmcif can be created through [mmcif-gen]([https://pypi.org/project/mmcif-gen/](https://github.com/PDBeurope/Investigations), a Python tool for generating mmCIF files (using metadata from facilities):
+
+The Investigation mmcif can be created through [mmcif-gen]([https://pypi.org/project/mmcif-gen/]), which is a Python tool for generating mmCIF files. 
+
+mmcif-gen can be used to create an Investigation mmCIF from internal databases at research facilities, such as a synchrotron, for example:
 
 ```
 # Fetch configuration for a specific facility
@@ -29,7 +37,15 @@ mmcif-gen fetch-facility-json maxiv
 # Specify custom output directory
 mmcif-gen fetch-facility-json maxiv -o ./mapping_operations
 ```
-For more extensive documentation on using it: [ check here](https://pypi.org/project/mmcif-gen/).
+Each facility stores their data internal in different formats, thus each facility has a different facility-json
+For more extensive documentation on using it: 
+<center>
+
+[check mmcif-gen PyPI page](https://pypi.org/project/mmcif-gen/)
+<br>
+--or-- <br>
+[check mmcif-gen GitHub repository](https://github.com/PDBeurope/Investigations)
+</center>
 
 ## Organization of the repository
 
@@ -40,16 +56,73 @@ For more extensive documentation on using it: [ check here](https://pypi.org/pro
 [Examples](examples) - directory with examples of investigation mmCIF file(s) compliant with the MMCIF investgation dictionary
 
 ## Contributions / collaborations
+
 Fragment-based-screening (FBS) is a complex and data-rich endeavour, wherein each stage of the process can generate different file types of complex data, in both raw and processed forms. 
-The popularity of fragment screening in academic scientific research and the pharmaceutical industry is reflected by the increasing number of facilities, such as synchrotrons, that support fragment screening experiments. Synchrotrons are central service centres that support experimental data generation with multiple options related to structural biology using X-ray crystallography. 
-Individuals from synchrotrons across Europe were involve in developing the data model for fragment-screening in this repository. 
+The popularity of fragment screening in academic scientific research and the pharmaceutical industry is reflected by the increasing number of facilities, such as synchrotrons, that support fragment screening experiments. 
 
-Synchrotrons and associated facilities involved in developing this data model:
-* [The Crystallisation Facility]( https://www.embl.org/services-facilities/grenoble/high-throughput-crystallisation/) at the [European Molecular Biology Laboratory (EMBL) Grenoble]( https://www.embl.org/research/faculty/grenoble/) and [European Synchrotron Radiation Facility (ESFR)]( https://www.esrf.fr/home.html/) in France
-* [XChem: Diamond Fragment Screening](https://www.diamond.ac.uk/Instruments/Mx/Fragment-Screening.html) (service centre for X-ray crystallography, based at [Diamond Light Source(DLS))]( https://www.diamond.ac.uk/Home.html) in the United Kingdom
-* [Fragment Screening Facility]( https://www.helmholtz-berlin.de/forschung/oe/ps/macromolecular-crystallography/fragment-screening/index_en.html) at Macromolecular Crystallography (BESSY-MX )]() at Helmholtz-Zentrum Berlin/HZB in Germany
-* [FragMAX](https://www.maxiv.lu.se/beamlines-accelerators/science-initiatives/fragmax-biomax-fragment-screening-platform/) at [MAX IV](https://www.maxiv.lu.se/) in Sweden
+Synchrotrons are central service centres that support experimental data generation with multiple options related to structural biology using X-ray crystallography. 
 
+Individuals from synchrotrons across Europe were involve in developing the data model for fragment-screening in this repository. Synchrotrons and associated facilities involved in developing this data model:
+* [The Crystallisation Facility](https://www.embl.org/services-facilities/grenoble/high-throughput-crystallisation/) at the [European Molecular Biology Laboratory (EMBL) Grenoble]( https://www.embl.org/research/faculty/grenoble/) and [European Synchrotron Radiation Facility (ESFR)]( https://www.esrf.fr/home.html/) in France
+* [XChem: Diamond Fragment Screening](https://www.diamond.ac.uk/Instruments/Mx/Fragment-Screening.html) at [Diamond Light Source (DLS)](https://www.diamond.ac.uk/Home.html) in the United Kingdom
+* [Fragment Screening Facility](https://www.helmholtz-berlin.de/forschung/oe/ps/macromolecular-crystallography/fragment-screening/index_en.html) at [Berlin synchrotron BESSY-MX](https://www.helmholtz-berlin.de/forschung/quellen/bessy/index_en.html) and Helmholtz-Zentrum Berlin/HZB in Germany
+* [FragMAX](https://www.maxiv.lu.se/beamlines-accelerators/science-initiatives/fragmax-biomax-fragment-screening-platform/) at Swedish synchrotron [MAX IV](https://www.maxiv.lu.se/) in Sweden
+
+
+<center>
+<span style="display: inline-block">
+  <a href="https://www.esrf.fr/home.html">
+  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/ESRF_Logo.jpg?raw="true" alt="European Synchrotron Radiation Facility Logo" width="200">
+  </a>
+</span>
+<br>
+<span style="display: inline-block">
+  <a href="https://www.embl.org/">
+  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/EMBL_logo_colour_DIGITAL.png?raw="true" alt="European Molecular Biology Laboratory Logo" width="250">
+  </a>
+</span>
+<br>
+<span style="display: inline-block;">
+  <a href="https://www.diamond.ac.uk/Home.html">
+  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/Diamond_Logo.jpg?raw="true" alt="Diamond Light Source Synchrotron Logo" width="250">
+  </a>
+</span>
+<br>
+<span style="display: inline-block;">
+  <a href="https://www.helmholtz-berlin.de/index_en.html">
+  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/HZB_Logo.jpg?raw="true" alt="Helmholtz-Zentrum Berlin Research Center Logo" width="300">
+  </a>
+</span>
+<br>
+<span style="display: inline-block;">
+  <a href="https://www.maxiv.lu.se/">
+  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/MAX%20IV_Logo.jpg?raw="true" alt="Max IV Synchrotron Logo" width="250">
+  </a>
+</span>
+<br>
+</center>
+
+## Funded by:
+
+<center>
+<span style="display: inline-block; margin-right: 10%;">
+  <a href="https://inext-discovery.eu/">
+  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/iNEXT_Discovery_Logo.png?raw=true?raw="true" alt="iNext-Discovery Logo" width="200">
+  </a>
+</span>
+<span style="display: inline-block;">
+  <a href="(https://fragmentscreen.org/home">
+  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/Fragment_Screen_Logo.png?raw="true" alt="FragmentScreen Logo" width="200">
+  </a>
+</span>
+</center>
+
+* [iNEXT-Discovery](https://inext-discovery.eu/) - a European Union funded project via Horizon Europe (Grant agreement ID: 871037)
+* [FragmentScreen](https://fragmentscreen.org/home) - a European Union funded project via Horizon Europe (Grant agreement ID: 101094131)
+
+<center>
+ <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/EN_FundedbytheEU_RGB_POS.png?raw="true" alt="Funded by the European Union" width="400">
+</centeR>
 
 ## Contributing
 We welcome contributions to improve the InvestigationCIF dictionary. For changes, please open an issue first to discuss what you would like to change.
