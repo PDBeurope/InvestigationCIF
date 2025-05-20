@@ -72,7 +72,7 @@ Synchrotrons are central service centres that support experimental data generati
 Individuals from synchrotrons across Europe were involve in developing the data model for fragment-screening in this repository. Synchrotrons and associated facilities involved in developing this data model:
 * [The Crystallisation Facility](https://www.embl.org/services-facilities/grenoble/high-throughput-crystallisation/) at the [European Molecular Biology Laboratory (EMBL) Grenoble]( https://www.embl.org/research/faculty/grenoble/) and [European Synchrotron Radiation Facility (ESFR)]( https://www.esrf.fr/home.html/) in France
 * [XChem: Diamond Fragment Screening](https://www.diamond.ac.uk/Instruments/Mx/Fragment-Screening.html) at [Diamond Light Source (DLS)](https://www.diamond.ac.uk/Home.html) in the United Kingdom
-* [Fragment Screening Facility](https://www.helmholtz-berlin.de/forschung/oe/ps/macromolecular-crystallography/fragment-screening/index_en.html) at [Berlin synchrotron BESSY-MX](https://www.helmholtz-berlin.de/forschung/quellen/bessy/index_en.html) and Helmholtz-Zentrum Berlin/HZB in Germany
+* [Fragment Screening Facility](https://www.helmholtz-berlin.de/forschung/oe/ps/macromolecular-crystallography/fragment-screening/index_en.html) at [Berlin synchrotron BESSY-MX and Helmholtz-Zentrum Berlin/HZB](https://www.helmholtz-berlin.de/forschung/quellen/bessy/index_en.html) in Germany
 * [FragMAX](https://www.maxiv.lu.se/beamlines-accelerators/science-initiatives/fragmax-biomax-fragment-screening-platform/) at Swedish synchrotron [MAX IV](https://www.maxiv.lu.se/) in Sweden
 
 
