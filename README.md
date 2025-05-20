@@ -69,7 +69,9 @@ The popularity of fragment screening in academic scientific research and the pha
 
 Synchrotrons are central service centres that support experimental data generation with multiple options related to structural biology using X-ray crystallography. 
 
-Individuals from synchrotrons across Europe were involve in developing the data model for fragment-screening in this repository. Synchrotrons and associated facilities involved in developing this data model:
+Individuals from synchrotrons across Europe were involve in developing the data model for fragment-screening in this repository. 
+
+Synchrotrons and associated facilities involved in developing this data model:
 * [The Crystallisation Facility](https://www.embl.org/services-facilities/grenoble/high-throughput-crystallisation/) at the [European Molecular Biology Laboratory (EMBL) Grenoble]( https://www.embl.org/research/faculty/grenoble/) and [European Synchrotron Radiation Facility (ESFR)]( https://www.esrf.fr/home.html/) in France
 * [XChem: Diamond Fragment Screening](https://www.diamond.ac.uk/Instruments/Mx/Fragment-Screening.html) at [Diamond Light Source (DLS)](https://www.diamond.ac.uk/Home.html) in the United Kingdom
 * [Fragment Screening Facility](https://www.helmholtz-berlin.de/forschung/oe/ps/macromolecular-crystallography/fragment-screening/index_en.html) at [Berlin synchrotron BESSY-MX and Helmholtz-Zentrum Berlin/HZB](https://www.helmholtz-berlin.de/forschung/quellen/bessy/index_en.html) in Germany
@@ -104,14 +106,12 @@ Individuals from synchrotrons across Europe were involve in developing the data 
 <p></p>
 <span style="display: inline-block">
   <a href="https://inext-discovery.eu/">
-  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/iNEXT_Discovery_Logo.png?raw="true" alt="iNext-Discovery Logo" width="200">
-  </a>
+  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/iNEXT_Discovery_Logo.png?raw="true" alt="iNext-Discovery Logo" width="200"></a>
 </span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <span style="display: inline-block;">
   <a href="https://fragmentscreen.org/home">
-  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/Fragment_Screen_Logo.png?raw="true" alt="FragmentScreen Logo" width="200">
-  </a>
+  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/Fragment_Screen_Logo.png?raw="true" alt="FragmentScreen Logo" width="200"></a>
 </span>
 <p></p>
 
