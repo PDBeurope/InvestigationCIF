@@ -109,7 +109,7 @@ Individuals from synchrotrons across Europe were involve in developing the data 
 </span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <span style="display: inline-block;">
-  <a href="(https://fragmentscreen.org/home">
+  <a href="https://fragmentscreen.org/home">
   <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/Fragment_Screen_Logo.png?raw="true" alt="FragmentScreen Logo" width="200">
   </a>
 </span>
