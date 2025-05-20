@@ -69,61 +69,46 @@ Individuals from synchrotrons across Europe were involve in developing the data 
 * [FragMAX](https://www.maxiv.lu.se/beamlines-accelerators/science-initiatives/fragmax-biomax-fragment-screening-platform/) at Swedish synchrotron [MAX IV](https://www.maxiv.lu.se/) in Sweden
 
 
-<center>
-<span style="display: inline-block">
+<p></p>
   <a href="https://www.esrf.fr/home.html">
   <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/ESRF_Logo.jpg?raw="true" alt="European Synchrotron Radiation Facility Logo" width="200">
   </a>
-</span>
 <br>
-<span style="display: inline-block">
   <a href="https://www.embl.org/">
   <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/EMBL_logo_colour_DIGITAL.png?raw="true" alt="European Molecular Biology Laboratory Logo" width="250">
   </a>
-</span>
 <br>
-<span style="display: inline-block;">
   <a href="https://www.diamond.ac.uk/Home.html">
   <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/Diamond_Logo.jpg?raw="true" alt="Diamond Light Source Synchrotron Logo" width="250">
   </a>
-</span>
 <br>
-<span style="display: inline-block;">
   <a href="https://www.helmholtz-berlin.de/index_en.html">
   <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/HZB_Logo.jpg?raw="true" alt="Helmholtz-Zentrum Berlin Research Center Logo" width="300">
   </a>
-</span>
 <br>
-<span style="display: inline-block;">
   <a href="https://www.maxiv.lu.se/">
   <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/MAX%20IV_Logo.jpg?raw="true" alt="Max IV Synchrotron Logo" width="250">
   </a>
-</span>
 <br>
-</center>
-
+<p></p>
 ## Funded by:
 
-<p style="text-align:center;">
-<span style="display: inline-block">
+<p></p>
   <a href="https://inext-discovery.eu/">
   <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/iNEXT_Discovery_Logo.png?raw=true?raw="true" alt="iNext-Discovery Logo" width="200">
   </a>
-</span>
-<br>
-<span style="display: inline-block;">
+<p></p>
   <a href="https://fragmentscreen.org/home">
   <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/Fragment_Screen_Logo.png?raw="true" alt="FragmentScreen Logo" width="200">
   </a>
-</span>
-</p>
+<p></p>
 
 * [iNEXT-Discovery](https://inext-discovery.eu/) - a European Union funded project via Horizon Europe (Grant agreement ID: 871037)
 * [FragmentScreen](https://fragmentscreen.org/home) - a European Union funded project via Horizon Europe (Grant agreement ID: 101094131)
 
-<center>
+<p></p>
  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/EN_FundedbytheEU_RGB_POS.png?raw="true" alt="Funded by the European Union" width="400">
-</centeR>
+<p></p>
 
 ## Contributing
 We welcome contributions to improve the InvestigationCIF dictionary. For changes, please open an issue first to discuss what you would like to change.
