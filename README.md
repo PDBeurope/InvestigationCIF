@@ -55,13 +55,6 @@ For more extensive documentation on using it:
 
 [Examples](examples) - directory with examples of investigation mmCIF file(s) compliant with the MMCIF investgation dictionary
 
-## Contributing
-We welcome contributions to improve the InvestigationCIF dictionary. For changes, please open an issue first to discuss what you would like to change.
-
-## Feedback
-
-For any feedback or suggestions, email us at pdbehelp@ebi.ac.uk. Please include 'InvestigationCIF' in your subject line.
-
 ## Contributions / collaborations
 
 Fragment-based-screening (FBS) is a complex and data-rich endeavour, wherein each stage of the process can generate different file types of complex data, in both raw and processed forms. 
@@ -121,3 +114,15 @@ Synchrotrons and associated facilities involved in developing this data model:
 <p></p>
  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/EN_FundedbytheEU_RGB_POS.png?raw="true" alt="Funded by the European Union" width="400">
 <p></p>
+
+## License
+
+Available to all in accordance with the [Creative Commons Zero (CC0)](https://creativecommons.org/public-domain/cc0/) designation.
+
+## Contributing
+
+We welcome contributions to improve the InvestigationCIF dictionary. For changes, please open an issue first to discuss what you would like to change.
+
+## Feedback
+
+For any feedback or suggestions, email us at pdbehelp@ebi.ac.uk. Please include 'InvestigationCIF' in your subject line.
