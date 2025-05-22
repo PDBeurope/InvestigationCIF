@@ -68,11 +68,12 @@ Synchrotrons are central service centres that support experimental data generati
 Individuals from synchrotrons across Europe were involve in developing the data model for fragment-screening in this repository. 
 
 Synchrotrons and associated facilities involved in developing this data model:
+
 * [The Crystallisation Facility](https://www.embl.org/services-facilities/grenoble/high-throughput-crystallisation/) at the [European Molecular Biology Laboratory (EMBL) Grenoble]( https://www.embl.org/research/faculty/grenoble/) and [European Synchrotron Radiation Facility (ESFR)]( https://www.esrf.fr/home.html/) in France
 * [XChem: Diamond Fragment Screening](https://www.diamond.ac.uk/Instruments/Mx/Fragment-Screening.html) at [Diamond Light Source (DLS)](https://www.diamond.ac.uk/Home.html) in the United Kingdom
 * [Fragment Screening Facility](https://www.helmholtz-berlin.de/forschung/oe/ps/macromolecular-crystallography/fragment-screening/index_en.html) at [Berlin synchrotron BESSY-MX and Helmholtz-Zentrum Berlin/HZB](https://www.helmholtz-berlin.de/forschung/quellen/bessy/index_en.html) in Germany
 * [FragMAX](https://www.maxiv.lu.se/beamlines-accelerators/science-initiatives/fragmax-biomax-fragment-screening-platform/) at Swedish synchrotron [MAX IV](https://www.maxiv.lu.se/) in Sweden
-
+* [Protein Data Bank in Europe](https://www.ebi.ac.uk/pdbe/) in collaboration with [other organizations from the worldwide Protein Data Bank](https://www.wwpdb.org/)
 
 <p></p>
   <a href="https://www.esrf.fr/home.html">
@@ -93,6 +94,10 @@ Synchrotrons and associated facilities involved in developing this data model:
 <br>
   <a href="https://www.maxiv.lu.se/">
   <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/MAX%20IV_Logo.jpg?raw="true" alt="Max IV Synchrotron Logo" width="250">
+  </a>
+<br>
+  <a href="www.ebi.ac.uk/pdbe">
+  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/PDBe_Logo.png?raw="true" alt="Protein Data Bank in Europe" width="200">
   </a>
 <br>
 <p></p>
