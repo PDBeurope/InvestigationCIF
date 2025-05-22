@@ -97,7 +97,7 @@ Synchrotrons and associated facilities involved in developing this data model:
   </a>
 <br>
 <br>
-  <a href="www.ebi.ac.uk/pdbe/">
+  <a href="https://www.ebi.ac.uk/pdbe/">
   <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/PDBe_Logo.png?raw="true" alt="Protein Data Bank in Europe" width="250">
   </a>
 <br>
