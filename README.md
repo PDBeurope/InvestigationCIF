@@ -96,7 +96,8 @@ Synchrotrons and associated facilities involved in developing this data model:
   <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/MAX%20IV_Logo.jpg?raw="true" alt="Max IV Synchrotron Logo" width="250">
   </a>
 <br>
-  <a href="www.ebi.ac.uk/pdbe">
+<br>
+  <a href="www.ebi.ac.uk/pdbe/">
   <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/PDBe_Logo.png?raw="true" alt="Protein Data Bank in Europe" width="250">
   </a>
 <br>
