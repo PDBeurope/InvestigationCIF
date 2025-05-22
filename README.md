@@ -118,13 +118,16 @@ Synchrotrons and associated facilities involved in developing this data model:
  <img src="https://github.com/PDBeurope/InvestigationCIF/blob/main/logo/EN_FundedbytheEU_RGB_POS.png?raw="true" alt="Funded by the European Union" width="400">
 <p></p>
 
+<p></p>
+
 ## License
 
 Available to all in accordance with the [Creative Commons Zero (CC0)](https://creativecommons.org/public-domain/cc0/) designation.
 
 ## Contributing
 
-We welcome contributions to improve the InvestigationCIF dictionary. For changes, please open an issue first to discuss what you would like to change.
+We welcome contributions to improve the InvestigationCIF dictionary. 
+For changes, please open an issue first to discuss what you would like to change.
 
 ## Feedback
 
