@@ -66,6 +66,7 @@ The popularity of fragment screening in academic scientific research and the pha
 Synchrotrons are central service centres that support experimental data generation with multiple options related to structural biology using X-ray crystallography. 
 
 Individuals from synchrotrons across Europe were involve in developing the data model for fragment-screening in this repository. 
+[Protein Data Bank in Europe](https://www.ebi.ac.uk/pdbe/) in collaboration with [other organizations from the worldwide Protein Data Bank](https://www.wwpdb.org/) has lead the project.
 
 Synchrotrons and associated facilities involved in developing this data model:
 
@@ -73,7 +74,6 @@ Synchrotrons and associated facilities involved in developing this data model:
 * [XChem: Diamond Fragment Screening](https://www.diamond.ac.uk/Instruments/Mx/Fragment-Screening.html) at [Diamond Light Source (DLS)](https://www.diamond.ac.uk/Home.html) in the United Kingdom
 * [Fragment Screening Facility](https://www.helmholtz-berlin.de/forschung/oe/ps/macromolecular-crystallography/fragment-screening/index_en.html) at [Berlin synchrotron BESSY-MX and Helmholtz-Zentrum Berlin/HZB](https://www.helmholtz-berlin.de/forschung/quellen/bessy/index_en.html) in Germany
 * [FragMAX](https://www.maxiv.lu.se/beamlines-accelerators/science-initiatives/fragmax-biomax-fragment-screening-platform/) at Swedish synchrotron [MAX IV](https://www.maxiv.lu.se/) in Sweden
-* [Protein Data Bank in Europe](https://www.ebi.ac.uk/pdbe/) in collaboration with [other organizations from the worldwide Protein Data Bank](https://www.wwpdb.org/)
 
 <p></p>
   <a href="https://www.esrf.fr/home.html">
