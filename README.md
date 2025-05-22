@@ -43,6 +43,7 @@ Each facility stores their data internal in different formats, thus each facilit
 
 For more extensive documentation on using it: 
 <center>
+ 
 [check mmcif-gen PyPI page](https://pypi.org/project/mmcif-gen/)
 <br>
 --or-- <br>
