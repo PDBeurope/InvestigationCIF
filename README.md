@@ -66,7 +66,7 @@ The popularity of fragment screening in academic scientific research and the pha
 Synchrotrons are central service centres that support experimental data generation with multiple options related to structural biology using X-ray crystallography. 
 
 Individuals from synchrotrons across Europe were involve in developing the data model for fragment-screening in this repository. 
-[Protein Data Bank in Europe](https://www.ebi.ac.uk/pdbe/) in collaboration with [other organizations from the worldwide Protein Data Bank](https://www.wwpdb.org/) has lead the project.
+The [Protein Data Bank in Europe](https://www.ebi.ac.uk/pdbe/) in collaboration with [other organizations from the worldwide Protein Data Bank](https://www.wwpdb.org/) has lead the project.
 
 Synchrotrons and associated facilities involved in developing this data model:
 
