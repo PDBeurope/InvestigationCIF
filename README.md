@@ -26,9 +26,9 @@ https://ftp.ebi.ac.uk/pub/databases/msd/fragment_screening/investigations/
 
 ## Creating Investigation MMCIF file
 
-An investigation mmcif file can be created through [mmcif-gen](https://pypi.org/project/mmcif-gen/), which is a Python tool for generating mmCIF files.
+An **investigation mmcif file** can be created through [mmcif-gen](https://pypi.org/project/mmcif-gen/), which is a Python tool for generating mmCIF files.
 
-mmcif-gen can be used to create an Investigation mmCIF from internal databases at research facilities, such as a synchrotron, for example:
+mmcif-gen can be used to create an **investigation mmCIF file** from internal databases at research facilities, such as a synchrotron, for example:
 
 ```
 # Fetch configuration for a specific facility
