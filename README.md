@@ -21,12 +21,12 @@ Traditional PDB entries represent individual structures, but many research proje
 
 ## Investigation Files
 
-Fragment Screening Investigation files created from PDB group depositions are available at:
+Fragment Screening Investigation mmCIF files created from PDB group depositions are available at:
 https://ftp.ebi.ac.uk/pub/databases/msd/fragment_screening/investigations/
 
 ## Creating Investigation MMCIF file
 
-An **investigation mmcif file** can be created through [mmcif-gen](https://pypi.org/project/mmcif-gen/), which is a Python tool for generating mmCIF files.
+An **investigation mmCIF file** can be created through [mmcif-gen](https://pypi.org/project/mmcif-gen/), which is a Python tool for generating mmCIF files.
 
 mmcif-gen can be used to create an **investigation mmCIF file** from internal databases at research facilities, such as a synchrotron, for example:
 
@@ -38,7 +38,7 @@ mmcif-gen fetch-facility-json maxiv
 mmcif-gen fetch-facility-json maxiv -o ./mapping_operations
 ```
 
-Each facility stores their data internal in different formats, thus each facility has a different facility-json.
+Each facility stores their data internally in different formats, thus each facility has a different facility-json.
 
 
 For more extensive documentation on using it: 
