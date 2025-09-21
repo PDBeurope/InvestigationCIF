@@ -19,104 +19,94 @@ _dictionary_history.update
 _dictionary_history.revision
 0.1      2012-04-11  
 ;
-Changes (JW):
-+ Initial version
+  Changes (JW):
+  + Initial version
 ;
   
 0.2      2012-05-02  
 ;
-Changes (JW):
-+ Remove author relationship
+  Changes (JW):
+  + Remove author relationship
 ;
   
 0.3      2012-09-01  
 ;
-Changes (JW):
-+ Adjust data types
+  Changes (JW):
+  + Adjust data types
 ;
   
 0.4      2022-10-18  
 ;
-Changes (EP):
-+ Version separated from core dictonary. Many intermediate versions took place.
+  Changes (EP):
+  + Version separated from core dictonary. Many intermediate versions took place.
 ;
   
 1.0.0    2022-06-30  
 ;
-Changes (JT)
-+ Initial collation of mmcif_pdbx and mmcif_ma categories
+  Changes (JT)
+  + Initial collation of mmcif_pdbx and mmcif_ma categories
 ;
   
 1.0.1    2022-06-31  
 ;
-Changes (JT)
-+ Corrections made to parent:child links and mandatory items
+  Changes (JT)
+  + Corrections made to parent:child links and mandatory items
 ;
   
 1.0.2    2022-07-12  
 ;
-Changes (JT)
-+ Finalised namespace changes for investigation files.
+  Changes (JT)
+  + Namespace changes for investigation files.
 ;
   
 1.0.3    2022-07-15  
 ;
-Changes (JT)
-+ Added references to in silico methods and DBs
+  Changes (JT)
+  + Added references to in silico methods and DBs
 ;
   
 1.0.4    2022-01-12  
 ;
-Changes (GE)
-+ Added "instance_id" to pdbx_investigation_exp so for one experimemt_id can have a BMRB / EMDB code and PDB code.
-+ Corrections made to parent:child links, key items and mandatory items
-+ Added to _item_type_list and added _item_units_list (from mmcif_pdbx_v50)
-+ Added: _category_group.id to further clarify "investigation_group" vs "fraghub group" categories
-+ Changed data items in _pdbx_investigation category
-+ The _pdbx_investigation categories have been more standardized and now all included term the "pdbx_investigation"
-e.g. pdbi has been replaced with pdbx_investigation
-+ Changed:
-_pdbx_entity_poly          --> _pdbx_investigation_entity_poly
-_pdbx_entity_poly_link     --> _pdbx_investigation_poly_descript
-_pdbx_entity_nonpoly       --> _pdbx_investigation_entity_nonpoly
-_pdbx_entity_nonpoly_link  --> _pdbx_investigation_nonpoly_descript
-+ _pdbx_investigation_exp.exp_method is now "line" instead of "text"
-+ Url examples include either https or http
-+ The _fraghub_investigation cateories have been more standardized and now all included term the "fraghub_investigation".
-+ Changed:
-_fraghub_investigation_frag_screening_exp --> _fraghub_investigation_screening_exp
-_fraghub_entity_frag_library_link         --> _fraghub_investigation_screen_descript
-_fraghub_entity_frag_library              --> _fraghub_investigation_entity_screen
-_pdbx_investigation_series                --> added categories to _fraghub_investigation_screen_descript
-+ fraghub_investigation_frag_screening has been split into two categories: fraghub_investigation_frag_screening & fraghub_investigation_campaign
-This splitting means that there can now be more than one "campaign" and have added more text to explain concept of "campaign"
---> that is there can be multiple campaigns occurring on different years, and different facilities / with different experimental methods, but dictionary requires all campaigns occur with same target.
-By moving data items 'facility' and 'internal id' from fraghub_investigation_frag_screening to fraghub_investigation_campaign the dictionary will support campaigns at different facilities.
+  Changes (GE)
+  + Added "instance_id" to pdbx_investigation_exp so for one experimemt_id can have a BMRB / EMDB code and PDB code.
+  + Corrections made to parent:child links, key items and mandatory items
+  + Added: _category_group.id to further clarify "investigation_group" vs "fraghub group" categories
+  + Changed data items in _pdbx_investigation category
+  + The _pdbx_investigation categories have been more standardized and now all included term the "pdbx_investigation"
+    e.g. pdbi has been replaced with pdbx_investigation
+  + Changed:
+    _pdbx_entity_poly          --> _pdbx_investigation_entity_poly
+    _pdbx_entity_poly_link     --> _pdbx_investigation_poly_descript
+    _pdbx_entity_nonpoly       --> _pdbx_investigation_entity_nonpoly
+    _pdbx_entity_nonpoly_link  --> _pdbx_investigation_nonpoly_descript
+  + _pdbx_investigation_exp.exp_method is now "line" instead of "text"
+  + The _fraghub_investigation cateories have been more standardized and now all included term the "fraghub_investigation".
+  + Changed:
+    _fraghub_investigation_frag_screening_exp --> _fraghub_investigation_screening_exp
+    _fraghub_entity_frag_library_link         --> _fraghub_investigation_screen_descript
+    _fraghub_entity_frag_library              --> _fraghub_investigation_entity_screen
+    _pdbx_investigation_series                --> _fraghub_investigation_series
+    _pdbx_investigation_campaign              --> _fraghub_investigation_campaign
 ;
   
 1.0.4.5  2022-02-14  
 ;
-Changes (GE)
-+ Corrections made to parent:child links, key items and mandatory items
-+ Url examples include either https or http
-+ The _pdbx_investigation categories have been more standardized and now all included term the "pdbx_investigation"
-e.g. pdbi has been replaced with pdbx_investigation
+Minor changes (GE)
+  + Corrections made to parent:child links, key items and mandatory items
+  + Url examples include either https or http
 ;
   
 1.0.4.6  2022-12-12  
 ;
 Changes (GE)
-  + Corrections made to parent:child links, key items and mandatory items 
-  + Added to _item_type_list and added _item_units_list (from mmcif_pdbx_v50) 
-  + Added: _category_group.id to further clarify "investigation_group" vs "fraghub group" categories
-  + Changed data items in _pdbx_investigation category 
-  + The _pdbx_investigation categories have been more standardized and now all included term the "pdbx_investigation"
-    e.g. pdbi has been replaced with pdbx_investigation
+  + Multiple corrections
+  + Corrections made to parent:child links, key items and mandatory items
+  + Added to _item_type_list and added _item_units_list, etc (from mmcif_pdbx_v50)
 ;
   
 1.0.4.7  2024-02-08  
 ;
-Minor changes (GE):
+  Minor changes (GE):
   + Changed from:
     _pdbx_fraghub_investigation_campaign.pipeline_verison
     to:
@@ -126,21 +116,20 @@ Minor changes (GE):
   + Made non-mandatory: 
     _pdbx_fraghub_investigation_screening_result.fraglib_component_id
     _pdbx_fraghub_investigation_screening_exp.exp_acc
-+ Added to category:
-  _pdbx_fraghub_investigation_screening_exp
-  to:
-  _pdbx_fraghub_investigation_screening_exp.archive_db_acc
-+ In _pdbx_fraghub_investigation_screening_exp.exp_method: 
-  changed from:
-  EM 
-  to:
-  "ELECTRON MICROSCOPY"
-  (also fixed mispelling in enumeration)
+  + Added to category:
+    _pdbx_fraghub_investigation_screening_exp
+    to:
+    _pdbx_fraghub_investigation_screening_exp.archive_db_acc
+  + In _pdbx_fraghub_investigation_screening_exp.exp_method: 
+    changed from:
+    EM to:
+    "ELECTRON MICROSCOPY"
+    (also fixed mispelling in enumeration)
 ;
   
 1.0.4.8  2024-09-10  
 ;
-Minor changes (GE):
+  Minor changes (GE):
   + Added / changed enumerated list of libraries in _pdbx_fraghub_investigation_series.fragment_lib
   + Added new items to _pdbx_fraghub_investigation_fraglib_component for: 
    - inchikey_descriptor (manditory)
@@ -155,7 +144,7 @@ Minor changes (GE):
   
 1.0.4.9  2024-09-10  
 ;
-Minor changes (ge):
+  Minor changes (ge):
   + Added / changed enumerated list of libraries in _pdbx_fraghub_investigation_series.fragment_lib
   + Changed items to _pdbx_fraghub_investigation_fraglib_component for: 
    - inchi_descriptor (not required)   
@@ -167,16 +156,12 @@ Minor changes (ge):
   
 1.0.5    2025-04-11  
 ;
-Changes (ge):
+  Changes (ge):
   + Updated description for _pdbx_fraghub_investigation_series category.
   + Added / changed enumerated list of libraries in _pdbx_fraghub_investigation_series.fragment_lib
   + Added new items to _pdbx_fraghub_investigation_series to capture providence of fragment library identification: 
    - fragment_lib_purchase_year
    - fragment_lib_identification_method
-   - fragment_lib_citation_id
-  + Added new categories to captuture a reference publication for a fragment library:
-   - _pdbx_fraghub_investigation_fragment_lib_citation
-   - _pdbx_fraghub_investigation_fragment_lib_citation_author
   + Added new items to _pdbx_fraghub_investigation_fraglib_component to better capture chemical descriptors providence: 
    - isomeric_smiles
    - isomeric_smiles_program
@@ -185,7 +170,6 @@ Changes (ge):
    - inchi_descriptor_program_version
    - inchikey_descriptor_program
    - inchikey_descriptor_program_version
-   - author_id
   + Added new item to _pdbx_investigation_entity_nonpoly for: 
    - isomeric_smiles
    - isomeric_smiles_program
@@ -194,28 +178,26 @@ Changes (ge):
    - inchi_descriptor_program_version
    - inchikey_descriptor_program
    - inchikey_descriptor_program_version
-   - authors_smiles
   + Updated item description in _pdbx_fraghub_investigation_fraglib_component and _pdbx_investigation_entity_nonpoly of:
    - name
-   - authors_smiles 
    - cas_identifier
 ;
   
 1.0.6    2025-08-30  
 ;
   Changes (ge):
-   + Changed (fraghub to ligscreen changes): 
-   _pdbx_fraghub_investigation_lib_component_mix                         -->   _pdbx_ligscreen_investigation_lib_component_mix
-   _pdbx_fraghub_investigation_lib_component_mix.frag_component_mix_id   -->   _pdbx_ligscreen_investigation_lib_component_mix.lib_component_mix_id
-   _pdbx_fraghub_investigation_lib_component                             -->   _pdbx_ligscreen_investigation_lib_component
-   _pdbx_fraghub_investigation_campaign                                  -->   _pdbx_ligscreen_investigation_campaign
-   _pdbx_fraghub_investigation_series                                    -->   _pdbx_ligscreen_investigation_series 
-   _pdbx_fraghub_investigation_screening_exp                             -->   _pdbx_ligscreen_investigation_screening_exp
-   _pdbx_fraghub_investigation_screening_exp.frag_component_mix_id       -->   _pdbx_fraghub_investigation_screening_exp.lib_component_mix_id
-   + Changed to "Ligand Screening" from "Fragment Screening" in the enumerated options listed under _pdbx_investigation.type 
-   + Changed to "ligscreen" from "fraghub" in the enumerated options listed under _pdbx_investigation.db
-   + Updated _category_examples section appropriately in _pdbx_investigation.
-   + Updated category and item descriptions section appropriately to address the dictionary being relevant to all ligand screens (not just fragment screens).
+  + Changed (fraghub to ligscreen changes): 
+    _pdbx_fraghub_investigation_lib_component_mix                         -->   _pdbx_ligscreen_investigation_lib_component_mix
+    _pdbx_fraghub_investigation_lib_component_mix.frag_component_mix_id   -->   _pdbx_ligscreen_investigation_lib_component_mix.lib_component_mix_id
+    _pdbx_fraghub_investigation_lib_component                             -->   _pdbx_ligscreen_investigation_lib_component
+    _pdbx_fraghub_investigation_campaign                                  -->   _pdbx_ligscreen_investigation_campaign
+    _pdbx_fraghub_investigation_series                                    -->   _pdbx_ligscreen_investigation_series 
+    _pdbx_fraghub_investigation_screening_exp                             -->   _pdbx_ligscreen_investigation_screening_exp
+    _pdbx_fraghub_investigation_screening_exp.frag_component_mix_id       -->   _pdbx_fraghub_investigation_screening_exp.lib_component_mix_id
+  + Changed to "Ligand Screening" from "Fragment Screening" in the enumerated options listed under _pdbx_investigation.type 
+  + Changed to "ligscreen" from "fraghub" in the enumerated options listed under _pdbx_investigation.db
+  + Updated _category_examples section appropriately in _pdbx_investigation.
+  + Updated category and item descriptions section appropriately to address the dictionary being relevant to all ligand screens (not just fragment screens).
   + Various small fixes:
     - _pdbx_investigation.project --> _pdbx_investigation.project_id 
     - _pdbx_investigation_focus.component_id --> _pdbx_investigation_focus.key_component_id
@@ -224,8 +206,8 @@ Changes (ge):
   + Admin-type fixes:
     - removed, or replaced with mmcif_investigation.dic, instances of mmcif_pdbx_audit_support-extension.dic (old name for dictionary)
     - added _item_enumeration.name in all enumeration lists for items
-  + To capture history of ligand screening and time resolved additions with seperate histories in the future updated 
-    PDBX_DICTIONARY_COMPONENT and PDBX_DICTIONARY_COMPONENT_HISTORY categories and added placeholder info for dictionary_component_id:
+  + To capture history of ligand screening and time-resolved seperately in future --> changed PDBX_DICTIONARY_COMPONENT and PDBX_DICTIONARY_COMPONENT_HISTORY categories
+    For PDBX_DICTIONARY_COMPONENT_HISTORY category added placeholder info for dictionary_component_id:
     - mmcif_investigation_timeresolved.dic
     - mmcif_investigation_ligscreen.dic (replacing mmcif_investigation_fraghub.dic)
   + Updated to mmcif_investigation.dic
@@ -234,7 +216,7 @@ Changes (ge):
     - _dictionary.datablock_id 
   + Reclassify the category_group appropriately, with the following groups:
     - investigation_group
-    - investigation_sample_group
+    - investigation_sample_group (new category group)
     - ligscreen_group (changed from "fraghub_group" as id in CATEGORY_GROUP_LIST category)
   + Removed the following categories (and associated items)
     - _citation
@@ -253,82 +235,23 @@ Changes (ge):
     - inchi
     - inchikey
     - yyyy
-   + _pdbx_investigation_sample.poly_descript_id is no longer a manditory item in PDBX_INVESTIGATION_SAMPLE category
-   + Added _pdbx_investigation_sample.descript_id was added as a non-manditory item in PDBX_INVESTIGATION_SAMPLE category
    + Updated items in PDBX_INVESTIGATION_ENTITY_POLY
     - item changed: seq_one_letter_code --> seq_one_letter_code_with_nstd
     - item added: seq_one_letter_code_sample
     - item removed: src_method
-   + New category called PDBX_INVESTIGATION_ENTITY
-    - descript_id
-    - poly_entity_id
-    - src_method
-    - src_organism_scientific
-    - src_ncbi_taxonomy_id
-;
-  
-#
-loop_
-_sub_category.id
-_sub_category.description
-cartesian_coordinate       
-;              The collection of x, y, and z components of a position specified
-               with reference to a Cartesian (orthogonal angstrom) coordinate
-               system.
-;
-  
-cartesian_coordinate_esd   
-;              The collection of estimated standard deviations of the x, y, and
-               z components of a position specified with reference to a
-               Cartesian (orthogonal angstrom) coordinate system.
-;
-  
-fractional_coordinate      
-;              The collection of x, y, and z components of a position specified
-               with reference to unit cell directions.
-;
-  
-fractional_coordinate_esd  
-;              The collection of estimated standard deviations of the x, y, and
-               z components of a position specified with reference to unit cell
-               directions.
-;
-  
-matrix                     "The collection of elements of a matrix."  
-miller_index               
-;              The collection of h, k, and l components of the Miller index of
-               a reflection.
-;
-  
-cell_length                "The collection of a, b, and c axis lengths of a unit cell."  
-cell_length_esd            
-;              The collection of estimated standard deviations of the a, b, and
-               c axis lengths of a unit cell.
-;
-  
-cell_angle                 "The collection of alpha, beta, and gamma angles of a unit cell."  
-cell_angle_esd             
-;              The collection of estimated standard deviations of the alpha,
-               beta, and gamma angles of a unit cell.
-;
-  
-mm_atom_site_auth_label    
-;              The collection of asym id, atom id, comp id and seq id
-               components of an author's alternative specification for
-               a macromolecular atom site.
-;
-  
-mm_atom_site_label         
-;              The collection of alt id, asym id, atom id, comp id and seq id
-               components of the label for a macromolecular atom site.
-;
-  
-vector                     "The collection of elements of a vector."  
-unit_vector                "The collection of elements of a vector whose norm equals 1."  
-eigendecomposition         
-;              The collection of items making up the Eigendecomposition of a
-               matrix. For an n x n matrix, instances of this subcategory will
-               consist of n Eigenvectors of dimension n, and n Eigenvalues.
+   + Additions were made to enable capture of biological entity information when protein / DNA / RNA sequence is unknown.
+    - In PDBX_INVESTIGATION_SAMPLE category:
+      = Changed _pdbx_investigation_sample.poly_descript_id so it is not a manditory item
+      = Added New item _pdbx_investigation_sample.descript_id as a non-manditory item
+    - New category called PDBX_INVESTIGATION_ENTITY, with items:
+      = entity_id
+      = poly_entity_id
+      = src_method
+      = src_organism_scientific
+      = src_ncbi_taxonomy_id
+    - New category called PDBX_INVESTIGATION_DESCRIPT, with items:
+      = id
+      = entity_id
 ;
   
 #
@@ -336,110 +259,10 @@ loop_
 _category_group_list.id
 _category_group_list.parent_id
 _category_group_list.description
-inclusive_group               .                "The parent category group containing all of the data categories in the macromolecular dictionary."  
-atom_group                    inclusive_group  "Categories that describe the properties of atoms."  
-array_data_group              inclusive_group  "Categories that describe array data."  
-axis_group                    inclusive_group  "Categories that describe axes."  
-audit_group                   inclusive_group  
-;              Categories that describe dictionary maintenance and
-               identification.
-;
-  
-cell_group                    inclusive_group  "Categories that describe the unit cell."  
-chemical_group                inclusive_group  "Categories that describe chemical features derived from the experimental coordinate data."  
-chem_comp_group               inclusive_group  "Categories that define the chemical structure and nomenclature of the momoners and ligands in the experiment."  
-chem_comp_dictionary_group    inclusive_group  
-;              Categories defining chemical structure and nomenclature of the momoners and ligands used in
-               the Chemical Component Dictionary.
-;
-  
-chem_comp_model_group         inclusive_group  "Categories defining structural models for chemical components defined in the Chemical Component Dictionary."  
-bird_dictionary_group         inclusive_group  
-;              Categories defining chemical structure and nomenclature of the small polymer molecules used in
-               the Biologically Interesting Molecule Reference Dictionary (BIRD).
-;
-  
-bird_family_dictionary_group  inclusive_group  "Categories defining families of related molecules used in the Biologically Interesting Molecule Reference Dictionary (BIRD)."  
-chem_link_group               inclusive_group  
-;              Categories that describe links between components of
-               chemical structure.
-;
-  
-citation_group                inclusive_group  "Categories that provide bibliographic references."  
-computing_group               inclusive_group  "Categories that describe the computational details of the experiment."  
-compliance_group              inclusive_group  
-;              Categories that are included in this dictionary specifically to
-               comply with previous dictionaries.
-;
-  
-database_group                inclusive_group  
-;              Categories that hold references to entries in databases that
-               contain related information.
-;
-  
-diffrn_group                  inclusive_group  "Categories that describe details of the diffraction experiment."  
-em_group                      inclusive_group  "Categories that describe 3-dimensional electron microscopy."  
-em_legacy_group               inclusive_group  "Categories that describe 3-dimensional electron microscopy (legacy)."  
-emdb_admin_group              inclusive_group  "Administrative Categories for Electron Microscopy Data Bank."  
-emdb_extension_group          inclusive_group  "Categories that describe 3-dimensional electron microscopy (EMDB extension)."  
-entity_group                  inclusive_group  "Categories that describe the unique chemical and molecular entities."  
-entry_group                   inclusive_group  "Categories that pertain to the entire data block."  
-exptl_group                   inclusive_group  "Categories that hold details of the experimental conditions."  
-geom_group                    inclusive_group  "Categories that hold details of molecular and crystal geometry."  
-iucr_group                    inclusive_group  
-;              Categories that are used for manuscript submission and
-               internal processing by the staff of the International Union of
-               Crystallography.
-;
-  
-nmr_group                     inclusive_group  "Categories that describe Nuclear Magnetic Spectroscopy experiments."  
-pdb_group                     inclusive_group  
-;              Categories that pertain to the file-format or data-processing
-               codes used by the Protein Data Bank.
-;
-  
-phasing_group                 inclusive_group  "Categories that describe phasing."  
-refine_group                  inclusive_group  "Categories that describe refinement."  
-refln_group                   inclusive_group  "Categories that describe the details of reflection measurements."  
-struct_group                  inclusive_group  "Categories that contain details about the experimental structure."  
-symmetry_group                inclusive_group  "Categories that describe symmetry information."  
-pdbx_group                    inclusive_group  "Categories which have been added to support the data archiving and exchange for the Protein Data Bank."  
-pdbx_erf_group                inclusive_group  
-;             Categories which are used by RCSB PDB to store derived
-              and computed data.
-;
-  
-ccp4_group                    inclusive_group  "Categories from the CCP4 harvest dictionary."  
-ndb_group                     inclusive_group  "Categories which are used by the Nucleic Acid Database."  
-rcsb_group                    inclusive_group  "Categories which are used internally by the RCSB PDB."  
-protein_production_group      inclusive_group  "Categories which describe the details of protein production."  
-solution_scattering_group     inclusive_group  "Categories which describe the details of solution scattering experiments."  
-validate_group                inclusive_group  
-;              Categories that describe geometric properties
-               of residues that deviate from expected standards
-               by 6 * the expected RMSD
-;
-  
-view_group                    inclusive_group  "Categories which are used to storing view transformations."  
-em_specimen                   inclusive_group  "Categories that describe electron microscopy specimens."  
-em_sample                     inclusive_group  "Categories that describe electron microscopy samples."  
-em_crystallography            inclusive_group  "Categories that describe electron crystallography."  
-em_fitting                    inclusive_group  "Categories that describe electron microscopy fitting."  
-em_tomography                 inclusive_group  "Categories that describe electron tomography."  
-em_imaging                    inclusive_group  "Categories that describe electron microscopy imaging."  
-em_reconstruction             inclusive_group  "Categories that describe electron microscopy reconstruction."  
-em_symmetry_group             inclusive_group  "Categories that describe electron microscopy symmetry."  
-em_experiment                 inclusive_group  "Categories that describe electron microscopy experimental details."  
-em_symmetry                   inclusive_group  "Categories that describe electron microscopy symmetry details."  
-emd_group                     inclusive_group  "Categories describing electron microscopy that are used by the wwPDB deposition and annotation system."  
-dcc_group                     inclusive_group  "Categories output by the crystallographic data utility application DCC."  
-xfel_group                    inclusive_group  "Categories that describe X-ray Free Electron Laser (XFEL) data collection and experimental details."  
-diffrn_data_set_group         inclusive_group  "Categories extending the description of measured diffraction data."  
-branch_group                  inclusive_group  "Categories that describe branched chain carbohydrates."  
-reference_sequence_group      inclusive_group  "Categories that describe SIFTS mapping of sequence data."  
-investigation_group           inclusive_group  "Categories that describe an investigation."  
-investigation_sample_group    inclusive_group  "Categories that describe the sample details for datasets grouped by investigation."  
-ligscreen_group               inclusive_group  "Categories that describe ligand screening investigations (e.g. fragment libraries, structure-activity-relationship (SAR) series."  
+inclusive_group             .                "The parent category group containing all of the data categories in the macromolecular dictionary."  
+investigation_group         inclusive_group  "Categories that describe an investigation."  
+investigation_sample_group  inclusive_group  "Categories that describe the sample details for datasets grouped by investigation."  
+ligscreen_group             inclusive_group  "Categories that describe ligand screening investigations (e.g. fragment libraries, structure-activity-relationship (SAR) series."  
 #
 loop_
 _item_type_list.code
@@ -722,13 +545,13 @@ _pdbx_dictionary_component_history.revision
 mmcif_investigation_ligscreen.dic     1.0.6  2025-09-17  
 ;
 Changes (TBD):
-+ To be added
+  + To be added
 ;
   
 mmcif_investigation_timeresolved.dic  .      2025-09-17  
 ;
 Changes (TBD):
-+ To be added
+  + To be added
 ;
   
 #
@@ -745,6 +568,7 @@ pdbx_investigation_poly_descript     1  pdbx_investigation_poly_descript:pdbx_in
 pdbx_investigation_sample            1  pdbx_investigation_sample:pdbx_investigation:1                           .  .  
 pdbx_investigation_sample            2  pdbx_investigation_sample:pdbx_investigation_poly_descript:2             .  .  
 pdbx_investigation_sample            3  pdbx_investigation_sample:pdbx_investigation_nonpoly_descript:3          .  .  
+pdbx_investigation_sample            4  pdbx_investigation_sample:pdbx_investigation_descript:4                  .  .  
 #
 loop_
 _pdbx_item_linked_group_list.child_category_id
@@ -759,7 +583,8 @@ pdbx_investigation_poly_descript     1  "_pdbx_investigation_poly_descript.poly_
 pdbx_investigation_sample            1  "_pdbx_investigation_sample.investigation_id"             "_pdbx_investigation.id"                                pdbx_investigation                   
 pdbx_investigation_sample            2  "_pdbx_investigation_sample.poly_descript_id"             "_pdbx_investigation_poly_descript.id"                  pdbx_investigation_poly_descript     
 pdbx_investigation_sample            3  "_pdbx_investigation_sample.nonpoly_descript_id"          "_pdbx_investigation_nonpoly_descript.id"               pdbx_investigation_nonpoly_descript  
-##
+pdbx_investigation_sample            4  "_pdbx_investigation_sample.descript_id"                  "_pdbx_investigation_descript.id"                       pdbx_investigation_descript          
+#
 save_pdbx_ligscreen_investigation_author
    _category.description     
 ;              Data items in the PDBX_LIGSCREEN_INVESTIGATION_AUTHOR category record details about the authors associated
@@ -828,7 +653,7 @@ save__pdbx_ligscreen_investigation_author.campaign_id
 save_
 #
 save__pdbx_ligscreen_investigation_author.investigation_id
-   _item_description.description  "              This data item is a pointer to _pdbx_investigation.id in the PDBX_INVESTIGATION category."
+   _item_description.description  "This data item is a pointer to _pdbx_investigation.id in the PDBX_INVESTIGATION category."
    #
    _item.name            "_pdbx_ligscreen_investigation_author.investigation_id"
    _item.category_id     pdbx_ligscreen_investigation_author
@@ -1052,7 +877,7 @@ save_pdbx_investigation_focus
    _category.id              pdbx_investigation_focus
    _category.mandatory_code  no
    #
-   _category_key.name  "_pdbx_investigation_focus.component_id"
+   _category_key.name  "_pdbx_investigation_focus.key_component_id"
    #
    loop_
    _category_group.id
@@ -1068,7 +893,7 @@ save_pdbx_investigation_focus
 ;
 _pdbx_investigation_focus.investigation_id 
 _pdbx_investigation_focus.key_component_name
-_pdbx_investigation_focus.component_id  
+_pdbx_investigation_focus.key_component_id  
 _pdbx_investigation_focus.comp_ref_db_acc 
 _pdbx_investigation_focus.comp_ref_db_name 
 _pdbx_investigation_focus.comp_ref_db_code
@@ -1195,7 +1020,7 @@ save_pdbx_ligscreen_investigation_campaign
 _pdbx_ligscreen_investigation_campaign.campaign_id		     1
 _pdbx_ligscreen_investigation_campaign.investigation_id    FH123
 _pdbx_ligscreen_investigation_campaign.proc_pipeline       CRIMS
-_pdbx_ligscreen_investigation_campaign.pipeline_verison    v4
+_pdbx_ligscreen_investigation_campaign.pipeline_version    v4
 _pdbx_ligscreen_investigation_campaign.year                2022
 _pdbx_ligscreen_investigation_campaign.facility            ESRF 
 _pdbx_ligscreen_investigation_campaign.internal_id         123456789
@@ -1211,7 +1036,7 @@ loop_
 _pdbx_ligscreen_investigation_campaign.campaign_id 
 _pdbx_ligscreen_investigation_campaign.investigation_id 
 _pdbx_ligscreen_investigation_campaign.proc_pipeline 
-_pdbx_ligscreen_investigation_campaign.pipeline_verison
+_pdbx_ligscreen_investigation_campaign.pipeline_version
 _pdbx_ligscreen_investigation_campaign.year 
 _pdbx_ligscreen_investigation_campaign.facility 
 _pdbx_ligscreen_investigation_campaign.internal_id 
@@ -1541,7 +1366,7 @@ save__pdbx_ligscreen_investigation_series.library
    #
 save_
 #
-save__pdbx_ligscreen_investigation_series.libary_batch
+save__pdbx_ligscreen_investigation_series.library_batch
    _item_description.description  "Any batch-specific identifier describing the exact version of the library used."
    #
    _item.name            "_pdbx_ligscreen_investigation_series.library_batch"
@@ -1629,7 +1454,7 @@ _pdbx_ligscreen_investigation_screening_exp.exp_details
 _pdbx_ligscreen_investigation_screening_exp.exp_external_url
 _pdbx_ligscreen_investigation_screening_exp.data_deposited
 _pdbx_ligscreen_investigation_screening_exp.instance_id
-_pdbx_ligscreen_investigation_screening_exp.archived_data_idc
+_pdbx_ligscreen_investigation_screening_exp.archived_data_id
 exp1   1 1   FH123   1 1   FH123/exp1   'X-RAY DIFFRACTION'   ? http://www.fraghub.org/fh123456/1    n  1    ?   
 exp2   1 1   FH123   1 2   FH123/exp2   'X-RAY DIFFRACTION'   ? http://www.fraghub.org/fh123456/2    y  1    1   
 exp3   1 1   FH123   1 3   FH123/exp3   'ELECTRON MICROSCOPY' ? http://www.fraghub.org/fh123456/3    y  1    2   
@@ -2744,10 +2569,10 @@ save_pdbx_investigation_entity
                organelle, complex or polymer, decsribed in terms of scientific name and taxonomy id.
 ;
 
-   _category.id              pdbx_investigation_entity_poly
+   _category.id              pdbx_investigation_entity
    _category.mandatory_code  no
    #
-   _category_key.name  "_pdbx_investigation_entity.descript_id"
+   _category_key.name  "_pdbx_investigation_entity.entity_id"
    #
    loop_
    _category_group.id
@@ -2762,7 +2587,7 @@ save_pdbx_investigation_entity
    _category_examples.case    
 ;
 loop_
-_pdbx_investigation_entity.descript_id 
+_pdbx_investigation_entity.entity_id 
 _pdbx_investigation_entity.poly_entity_id 
 _pdbx_investigation_entity.src_method
 _pdbx_investigation_entity.src_organism_scientific 
@@ -2774,10 +2599,10 @@ _pdbx_investigation_entity.src_ncbi_taxonomy_id
    #
 save_
 #
-save__pdbx_investigation_entity.descript_id
-   _item_description.description  "The value of _pdbx_investigation_entity.descript_id must uniquely identify a record in the PDBX_INVESTIGATION_ENTITY list."
+save__pdbx_investigation_entity.entity_id
+   _item_description.description  "The value of _pdbx_investigation_entity.entity_id must uniquely identify a record in the PDBX_INVESTIGATION_ENTITY list."
    #
-   _item.name            "_pdbx_investigation_entity.descript_id"
+   _item.name            "_pdbx_investigation_entity.entity_id"
    _item.category_id     pdbx_investigation_entity
    _item.mandatory_code  yes
    #
@@ -2877,6 +2702,77 @@ save__pdbx_investigation_entity.src_ncbi_taxonomy_id
    #
    _pdbx_item.name            "_pdbx_investigation_entity.src_ncbi_taxonomy_id"
    _pdbx_item.mandatory_code  yes
+   #
+save_
+#
+save_pdbx_investigation_descript
+   _category.description     
+;              The PDBX_INVESTIGATION_DESCRIPT category provides a mechanism to assign distinct combinations
+               of sample source organism(s) (n=>1) a unique singular identifier. The source organism(s) will be 
+               referred to via their entity_id as defined in the PDBX_INVESTIGATION_DESCRIPT category.
+;
+
+   _category.id              pdbx_investigation_descript
+   _category.mandatory_code  no
+   #
+   loop_
+   _category_key.name
+     "_pdbx_investigation_descript.id"  
+     "_pdbx_investigation_descript.entity_id"  
+   #
+   loop_
+   _category_group.id
+     inclusive_group             
+     investigation_sample_group  
+   #
+   _category_examples.detail  
+;
+    Theoretical example.
+;
+
+   _category_examples.case    
+;
+loop_
+_pdbx_investigation_descript.id
+_pdbx_investigation_descript.entity_id
+1 1
+1 2
+#
+;
+
+   #
+save_
+#
+save__pdbx_investigation_descript.id
+   _item_description.description  
+;              The value of _pdbx_investigation_descript.id must identify a distinct combination of sample 
+               source organism(s) used in one or more experiments.
+;
+
+   #
+   _item.name            "_pdbx_investigation_descript.id"
+   _item.category_id     pdbx_investigation_descript
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_investigation_descript.entity_id
+   _item_description.description  
+;              This data item is a pointer to _pdbx_investigation_entity.entity_id in the PDBX_INVESTIGATION_ENTITY category.
+               This identifer will therefore provide reference to a singular sample source organism.
+;
+
+   #
+   _item.name            "_pdbx_investigation_descript.entity_id"
+   _item.category_id     pdbx_investigation_descript
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_investigation_entity.entity_id"
+   _item_linked.child_name   "_pdbx_investigation_descript.entity_id"
+   #
+   _item_type.code  int
    #
 save_
 #
@@ -3068,9 +2964,9 @@ save_pdbx_investigation_entity_poly
 ;
 loop_
 _pdbx_investigation_entity_poly.poly_entity_id 
-_pdbx_investigation_entity_poly.auth_asym_id 
-_pdbx_investigation_entity_poly.one_letter_code_can 
-_pdbx_investigation_entity_poly.one_letter_code_with_ntsd 
+_pdbx_investigation_entity_poly.type 
+_pdbx_investigation_entity_poly.seq_one_letter_code_sample 
+_pdbx_investigation_entity_poly.seq_one_letter_code_with_ntsd 
 _pdbx_investigation_entity_poly.ref_db_name 
 _pdbx_investigation_entity_poly.ref_db_acc 
 _pdbx_investigation_entity_poly.ref_db_code 
@@ -3116,7 +3012,7 @@ save__pdbx_investigation_entity_poly.type
    #
 save_
 #
-save__pdbx_investigation_entity_poly.pdbx_seq_one_letter_code_sample
+save__pdbx_investigation_entity_poly.seq_one_letter_code_sample
    _item_description.description  
 ;              Canonical sequence of protein or nucleic acid polymer in standard
                one-letter codes of amino acids or nucleotides,
@@ -3162,7 +3058,7 @@ X  for other
 ;
 
    #
-   _item.name            "_pdbx_investigation_entity_poly.pdbx_seq_one_letter_code_can"
+   _item.name            "_pdbx_investigation_entity_poly.seq_one_letter_code_sample"
    _item.category_id     pdbx_investigation_entity_poly
    _item.mandatory_code  no
    #
