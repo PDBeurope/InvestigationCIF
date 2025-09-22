@@ -1,5 +1,5 @@
 # InvestigationCIF
- ![Category count](https://badgen.net/static/Categories/17/orange) ![Item count](https://badgen.net/static/Items/154/purple) ![license](https://badgen.net/static/license/CC-0%201.0/gray) ![version](https://badgen.net/static/version/1.0.6/blue)
+ ![Category count](https://badgen.net/static/Categories/17/orange) ![Item count](https://badgen.net/static/Items/122/purple) ![license](https://badgen.net/static/license/CC-0%201.0/gray) ![version](https://badgen.net/static/version/1.0.6/blue)
 
 ## Overview
 
