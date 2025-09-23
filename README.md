@@ -3,7 +3,7 @@
 
 ## Overview
 
-This repository contains a [MMCIF investigation dictionary](dist/mmcif_investigation_fraghub_ext.dic) that provides a data representation to capture the relationships between macromolecule structures deposited in the worldwide Protein Data Bank (wwPDB), and data from other databases and databanks, with enrichment of additional information / metadata to describe an investigation -- aka a series of related structures that were collected for a project and together provide insight.
+This repository contains a [MMCIF investigation dictionary](dist/mmcif_investigation.dic) that provides a data representation to capture the relationships between macromolecule structures deposited in the worldwide Protein Data Bank (wwPDB), and data from other databases and databanks, with enrichment of additional information / metadata to describe an investigation -- aka a series of related structures that were collected for a project and together provide insight.
 
 This dictionary is an extension of the [PDBx/mmCIF](http://mmcif.wwpdb.org) dictionary and provides the additional definitions required for an investigation files. Investigation files are umbrella files for a set of coordinates / models and their corresponding experimental data files. 
 
