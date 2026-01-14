@@ -188,7 +188,7 @@ Changes (GE)
   Changes (ge):
   + Changed (fraghub to ligscreen changes): 
     _pdbx_fraghub_investigation_lib_component_mix                         -->   _pdbx_ligscreen_investigation_lib_component_mix
-    _pdbx_fraghub_investigation_lib_component_mix.frag_component_mix_id   -->   _pdbx_ligscreen_investigation_lib_component_mix.lib_component_mix_id
+    _pdbx_fraghub_investigation_lib_component_mix.frag_component_id       -->   _pdbx_ligscreen_investigation_lib_component_mix.lib_component_id
     _pdbx_fraghub_investigation_lib_component                             -->   _pdbx_ligscreen_investigation_lib_component
     _pdbx_fraghub_investigation_campaign                                  -->   _pdbx_ligscreen_investigation_campaign
     _pdbx_fraghub_investigation_series                                    -->   _pdbx_ligscreen_investigation_series 
