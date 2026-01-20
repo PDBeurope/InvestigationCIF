@@ -22,6 +22,7 @@ Traditional PDB entries represent individual structures, but many research proje
 ## Investigation Files
 
 Fragment Screening Investigation mmCIF files created from PDB group depositions are available at:
+<br>
 https://ftp.ebi.ac.uk/pub/databases/msd/fragment_screening/investigations/
 
 ## Creating Investigation MMCIF file
@@ -29,22 +30,24 @@ https://ftp.ebi.ac.uk/pub/databases/msd/fragment_screening/investigations/
 An **investigation mmCIF file** can be created through [mmcif-gen](https://pypi.org/project/mmcif-gen/), which is a Python tool for generating mmCIF files.
 
 mmcif-gen can be used to create an **investigation mmCIF file** from internal databases at research facilities, such as a synchrotron.
-Alterantively one can generate an investigation file from a set of PDB ids the correspond to fragment screen hits deposited to the wwPDB, for example:
+Each facility stores their data internally in different ways and the data is available in different formats (e.g. SQL files, JSON files, etc).
+Consequently each facility has a different facility-json.
+
+Alterantively, one can generate an **investigation mmCIF file** from a set of PDB ids the correspond to fragment screen hits that have been deposited to the wwPDB, for example:
 
 ```
 # Fetch configuration for PDB files
 mmcif-gen fetch-facility-json pdbe_operations
 # Generate an investigation file
 mmcif-gen make-mmcif --json pdbe_investigation.json --output-folder ./out --id I_321  pdbe --pdb-ids 5rvz, 5rvy, 5rvw
+```
 
+```
 # Specify custom output directory
 mmcif-gen fetch-facility-json pdbe_operations -o ./mapping_operations
 # Generate an investigation file
 mmcif-gen make-mmcif --json /mapping_operations/pdbe_investigation.json --output-folder ./out --id I_321  pdbe --pdb-ids 5rvz, 5rvy, 5rvw
 ```
-
-Each facility stores their data internally in different formats, thus each facility has a different facility-json.
-
 
 For more extensive documentation on using it: 
 <center>
