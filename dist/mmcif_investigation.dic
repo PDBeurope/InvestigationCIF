@@ -1,0 +1,4160 @@
+data_mmcif_investigation.dic
+
+_datablock.id           mmcif_investigation.dic
+_datablock.description  
+;
+     This data block holds the Investigation dictionary for capturing metadata for related datasets.
+     This dictionary is based on data categories found in the PDBx/mmCIF dictionary (http://mmcif.wwpdb.org).
+     This data block includes Ligand screening (e.g. Fragment libraries) investigation dictionary.
+;
+
+#
+_dictionary.title         mmcif_investigation.dic
+_dictionary.datablock_id  mmcif_investigation.dic
+_dictionary.version       1.0.6.1
+#
+loop_
+_dictionary_history.version
+_dictionary_history.update
+_dictionary_history.revision
+0.1      2012-04-11  
+;
+  Changes (JW):
+  + Initial version
+;
+  
+0.2      2012-05-02  
+;
+  Changes (JW):
+  + Remove author relationship
+;
+  
+0.3      2012-09-01  
+;
+  Changes (JW):
+  + Adjust data types
+;
+  
+0.4      2022-10-18  
+;
+  Changes (EP):
+  + Version separated from core dictonary. Many intermediate versions took place.
+;
+  
+1.0.0    2022-06-30  
+;
+  Changes (JT)
+  + Initial collation of mmcif_pdbx and mmcif_ma categories
+;
+  
+1.0.1    2022-06-31  
+;
+  Changes (JT)
+  + Corrections made to parent:child links and mandatory items
+;
+  
+1.0.2    2022-07-12  
+;
+  Changes (JT)
+  + Namespace changes for investigation files.
+;
+  
+1.0.3    2022-07-15  
+;
+  Changes (JT)
+  + Added references to in silico methods and DBs
+;
+  
+1.0.4    2022-01-12  
+;
+  Changes (GE)
+  + Added "instance_id" to pdbx_investigation_exp so for one experimemt_id can have a BMRB / EMDB code and PDB code.
+  + Corrections made to parent:child links, key items and mandatory items
+  + Added: _category_group.id to further clarify "investigation_group" vs "fraghub group" categories
+  + Changed data items in _pdbx_investigation category
+  + The _pdbx_investigation categories have been more standardized and now all included term the "pdbx_investigation"
+    e.g. pdbi has been replaced with pdbx_investigation
+  + Changed:
+    _pdbx_entity_poly          --> _pdbx_investigation_entity_poly
+    _pdbx_entity_poly_link     --> _pdbx_investigation_poly_descript
+    _pdbx_entity_nonpoly       --> _pdbx_investigation_entity_nonpoly
+    _pdbx_entity_nonpoly_link  --> _pdbx_investigation_nonpoly_descript
+  + _pdbx_investigation_exp.exp_method is now "line" instead of "text"
+  + The _fraghub_investigation cateories have been more standardized and now all included term the "fraghub_investigation".
+  + Changed:
+    _fraghub_investigation_frag_screening_exp --> _fraghub_investigation_screening_exp
+    _fraghub_entity_frag_library_link         --> _fraghub_investigation_screen_descript
+    _fraghub_entity_frag_library              --> _fraghub_investigation_entity_screen
+    _pdbx_investigation_series                --> _fraghub_investigation_series
+    _pdbx_investigation_campaign              --> _fraghub_investigation_campaign
+;
+  
+1.0.4.5  2022-02-14  
+;
+Minor changes (GE)
+  + Corrections made to parent:child links, key items and mandatory items
+  + Url examples include either https or http
+;
+  
+1.0.4.6  2022-12-12  
+;
+Changes (GE)
+  + Multiple corrections
+  + Corrections made to parent:child links, key items and mandatory items
+  + Added to _item_type_list and added _item_units_list, etc (from mmcif_pdbx_v50)
+;
+  
+1.0.4.7  2024-02-08  
+;
+  Minor changes (GE):
+  + Changed from:
+    _pdbx_fraghub_investigation_campaign.pipeline_verison
+    to:
+    _pdbx_fraghub_investigation_campaign.pipeline-verison
+  + Enumeration list expanded for pdbx _fraghub_investigation_campaign.facility
+    (also: changed _item_type.code to line from code)
+  + Made non-mandatory: 
+    _pdbx_fraghub_investigation_screening_result.fraglib_component_id
+    _pdbx_fraghub_investigation_screening_exp.exp_acc
+  + Added to category:
+    _pdbx_fraghub_investigation_screening_exp
+    to:
+    _pdbx_fraghub_investigation_screening_exp.archive_db_acc
+  + In _pdbx_fraghub_investigation_screening_exp.exp_method: 
+    changed from:
+    EM to:
+    "ELECTRON MICROSCOPY"
+    (also fixed mispelling in enumeration)
+;
+  
+1.0.4.8  2024-09-10  
+;
+  Minor changes (GE):
+  + Added / changed enumerated list of libraries in _pdbx_fraghub_investigation_series.fragment_lib
+  + Added new items to _pdbx_fraghub_investigation_fraglib_component for: 
+   - inchikey_descriptor (manditory)
+   - authors_SMILES (this item maybe removed -- added to test usefulness of capturing authors SMILES but need to discuss as not standardized) 
+  + Changed items to _pdbx_fraghub_investigation_fraglib_component for: 
+   - inchi_descriptor (not required)   
+  + Added new item to _pdbx_investigation_entity_nonpoly for: 
+   - inchikey_descriptor (manditory) 
+  + Changed items to _pdbx_investigation_entity_nonpoly for:  
+   - inchi_descriptor (not required)
+;
+  
+1.0.4.9  2024-09-10  
+;
+  Minor changes (ge):
+  + Added / changed enumerated list of libraries in _pdbx_fraghub_investigation_series.fragment_lib
+  + Changed items to _pdbx_fraghub_investigation_fraglib_component for: 
+   - inchi_descriptor (not required)   
+  + Added new item to _pdbx_investigation_entity_nonpoly for: 
+   - inchikey_descriptor (manditory) 
+  + Changed items to _pdbx_investigation_entity_nonpoly for:  
+   - inchi_descriptor (not required)
+;
+  
+1.0.5    2025-04-11  
+;
+  Changes (ge):
+  + Updated description for _pdbx_fraghub_investigation_series category.
+  + Added / changed enumerated list of libraries in _pdbx_fraghub_investigation_series.fragment_lib
+  + Added new items to _pdbx_fraghub_investigation_series to capture providence of fragment library identification: 
+   - fragment_lib_purchase_year
+   - fragment_lib_identification_method
+  + Added new items to _pdbx_fraghub_investigation_fraglib_component to better capture chemical descriptors providence: 
+   - isomeric_smiles
+   - isomeric_smiles_program
+   - isomeric_smiles_program_version
+   - inchi_descriptor_program
+   - inchi_descriptor_program_version
+   - inchikey_descriptor_program
+   - inchikey_descriptor_program_version
+  + Added new item to _pdbx_investigation_entity_nonpoly for: 
+   - isomeric_smiles
+   - isomeric_smiles_program
+   - isomeric_smiles_program_version
+   - inchi_descriptor_program
+   - inchi_descriptor_program_version
+   - inchikey_descriptor_program
+   - inchikey_descriptor_program_version
+  + Updated item description in _pdbx_fraghub_investigation_fraglib_component and _pdbx_investigation_entity_nonpoly of:
+   - name
+   - cas_identifier
+;
+  
+1.0.6    2025-08-30  
+;
+  Changes (ge):
+  + Changed (fraghub to ligscreen changes): 
+    _pdbx_fraghub_investigation_lib_component_mix                         -->   _pdbx_ligscreen_investigation_lib_component_mix
+    _pdbx_fraghub_investigation_lib_component_mix.frag_component_id       -->   _pdbx_ligscreen_investigation_lib_component_mix.lib_component_id
+    _pdbx_fraghub_investigation_lib_component                             -->   _pdbx_ligscreen_investigation_lib_component
+    _pdbx_fraghub_investigation_campaign                                  -->   _pdbx_ligscreen_investigation_campaign
+    _pdbx_fraghub_investigation_series                                    -->   _pdbx_ligscreen_investigation_series 
+    _pdbx_fraghub_investigation_screening_exp                             -->   _pdbx_ligscreen_investigation_screening_exp
+    _pdbx_fraghub_investigation_screening_exp.frag_component_mix_id       -->   _pdbx_fraghub_investigation_screening_exp.lib_component_mix_id
+  + Changed to "Ligand Screening" from "Fragment Screening" in the enumerated options listed under _pdbx_investigation.type 
+  + Changed to "ligscreen" from "fraghub" in the enumerated options listed under _pdbx_investigation.db
+  + Updated _category_examples section appropriately in _pdbx_investigation.
+  + Updated category and item descriptions section appropriately to address the dictionary being relevant to all ligand screens (not just fragment screens).
+  + Various small fixes:
+    - _pdbx_investigation.project --> _pdbx_investigation.project_id 
+    - _pdbx_investigation_focus.component_id --> _pdbx_investigation_focus.key_component_id
+    - _pdbx_ligscreen_investigation_campaign.pipeline-version --> _pdbx_ligscreen_investigation_campaign.pipeline_version
+    - in _pdbx_investigation_archived_data.archive_db_name enumeration list changed PDB-DEV to PDB-IHM
+  + Admin-type fixes:
+    - removed, or replaced with mmcif_investigation.dic, instances of mmcif_pdbx_audit_support-extension.dic (old name for dictionary)
+    - added _item_enumeration.name in all enumeration lists for items
+  + To capture history of ligand screening and time-resolved seperately in future --> changed PDBX_DICTIONARY_COMPONENT and PDBX_DICTIONARY_COMPONENT_HISTORY categories
+    For PDBX_DICTIONARY_COMPONENT_HISTORY category added placeholder info for dictionary_component_id:
+    - mmcif_investigation_timeresolved.dic
+    - mmcif_investigation_ligscreen.dic (replacing mmcif_investigation_fraghub.dic)
+  + Updated to mmcif_investigation.dic
+    - _datablock.id 
+    - _dictionary.title        
+    - _dictionary.datablock_id 
+  + Reclassify the category_group appropriately, with the following groups:
+    - investigation_group
+    - investigation_sample_group (new category group)
+    - ligscreen_group (changed from "fraghub_group" as id in CATEGORY_GROUP_LIST category)
+  + Removed the following categories (and associated items)
+    - _citation
+    - _citation_author
+    - _pdbx_audit
+    - _pdbx_audit_support
+    - _pdbx_investigation_status
+    - _contact_author
+  + Added category: PDBX_LIGSCREEN_INVESTIGATION_AUTHOR, including the following items:
+    - campaign_id
+    - investigation_id
+    - ordinal
+    - name
+    - identifier_orcid
+   + Added items to ITEM_TYPE_LIST category, with the following new _item_type_list.code:
+    - inchi
+    - inchikey
+    - yyyy
+   + Updated items in PDBX_INVESTIGATION_ENTITY_POLY
+    - item changed: seq_one_letter_code --> seq_one_letter_code_with_nstd
+    - item added: seq_one_letter_code_sample
+    - item removed: src_method
+   + Additions were made to enable capture of biological entity information when protein / DNA / RNA sequence is unknown.
+    - In PDBX_INVESTIGATION_SAMPLE category:
+      = Changed _pdbx_investigation_sample.poly_descript_id so it is not a manditory item
+      = Added New item _pdbx_investigation_sample.descript_id as a non-manditory item
+    - New category called PDBX_INVESTIGATION_ENTITY, with items:
+      = entity_id
+      = poly_entity_id
+      = src_method
+      = src_organism_scientific
+      = src_ncbi_taxonomy_id
+    - New category called PDBX_INVESTIGATION_DESCRIPT, with items:
+      = id
+      = entity_id
+;
+  
+1.0.6.1  2026-01-18  
+;
+  Changes (ge):
+  + added value to _pdbx_ligscreen_investigation_campaign.proc_pipeline enumeration list:
+   - value: XCE-XCA 
+   - detail: "XChem Explorer and XChem Align"
+  + added enumeration list _pdbx_ligscreen_investigation_screening_exp.data_deposited:
+   - values: N, Y
+   - detail: "No. Data is NOT deposited.", "Yes. Data is deposited"
+  + _pdbx_ligscreen_investigation_screening_exp.data_deposited was updated from 'line' to 'code' (aka no space)
+  + _pdbx_ligscreen_investigation_lib_component:
+   - inchi_descriptor was update from 'text' to 'inchi'
+   - inchikey was update from 'text' to 'inchikey'
+  + for _pdbx_investigation_entity_nonpoly:
+   - inchi_descriptor was update from 'text' to 'inchi'
+   - inchikey was update from 'text' to 'inchikey'
+  + for _pdbx_ligscreen_investigation_screening_result added: 
+   - item reflns_res_high reports the high resolution cut-off used in data processing.
+  + added new category _pdbx_ligscreen_investigation_audit_conform with the following items:
+   - dict_name, dict_version, dict_location
+  + added new category _pdbx_ligscreen_investigation_revision with the following items:
+   - investigation_id, revision_ordinal, revision_date, revision_type, major_revision, minor_revision, revision_description
+  + added new category _pdbx_ligscreen_investigation_revision_details with the following items:
+   - ordinal, revision_ordinal, revision_category, revision_item
+  + added new category _pdbx_ligscreen_investigation_software with the following items:
+   - ordinal, name, version, version_year, contact_author, contact_author_email, location, language, mods, description, reference_DOI
+;
+  
+#
+loop_
+_category_group_list.id
+_category_group_list.parent_id
+_category_group_list.description
+inclusive_group             .                "The parent category group containing all of the data categories in the macromolecular dictionary."  
+investigation_group         inclusive_group  "Categories that describe an investigation."  
+investigation_sample_group  inclusive_group  "Categories that describe the sample details for datasets grouped by investigation."  
+ligscreen_group             inclusive_group  "Categories that describe ligand screening investigations (e.g. fragment libraries, structure-activity-relationship (SAR) series."  
+#
+loop_
+_item_type_list.code
+_item_type_list.primitive_code
+_item_type_list.construct
+_item_type_list.detail
+code                      char   
+;[_,.;:"&<>()/\{}'`~!@#$%A-Za-z0-9*|+-]*
+;
+  "Single word codes"  
+ucode                     uchar  
+;[_,.;:"&<>()/\{}'`~!@#$%A-Za-z0-9*|+-]*
+;
+  "Single word codes (case insensitive)"  
+line                      char   
+;[ \t_(),.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*
+;
+  "Multi-word items"  
+uline                     uchar  
+;[ \t_(),.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*
+;
+  "Multi-word items (case insensitive)"  
+text                      char   
+;[ \n\t()_,.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*
+;
+  "Multi-line text"  
+int                       numb   "[+-]?[0-9]+"  "Signed integers"  
+float                     numb   -?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)?  "Floating point numbers"  
+positive_int              numb   "[1-9][0-9]*"  "Positive integers (1,2,3,...)"  
+int-range                 numb   "[+-]?[0-9]+-[+-]?[0-9]+"  "Integer ranges"  
+float-range               numb   -?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)?(--?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)?)?  "Floating point ranges"  
+name                      uchar  "_[_A-Za-z0-9]+[.][_A-Za-z0-9\<\>%/-]+"  "mmCIF data item names"  
+idname                    uchar  "[_A-Za-z0-9]+"  "Simple identifiers"  
+asym_id                   char   "[A-Za-z0-9]+"  "Chain or asymmetric unit identifiers"  
+pdb_id                    char   ([1-9][A-Z0-9]{3}|PDB_[A-Z0-9]{8})  "PDB entry codes"  
+emd_id                    char   EMD-[0-9]{4,}  "EMDB entry codes"  
+yyyy-mm-dd                char   "[0-9]?[0-9]?[0-9][0-9]-[0-9]?[0-9]-[0-9][0-9]"  "Standard CIF date format"  
+yyyy                      char   "[0-9]?[0-9]?[0-9][0-9]"  "Year only"  
+yyyy-mm-dd:hh:mm          char   "[0-9]?[0-9]?[0-9][0-9]-[0-9]?[0-9](-[0-9]?[0-9])?(:[0-9]?[0-9]:[0-9][0-9])?"  "Date with optional time"  
+yyyy-mm-dd:hh:mm-flex     char   "[0-9][0-9][0-9][0-9](-[0-9]?[0-9])?(-[0-9][0-9])?(:[0-9]?[0-9]:[0-9][0-9])?"  "Flexible date-time format"  
+date_dep                  char   ([1-9][0-9](([02468][048])|([13579][26]))-02-29)|[1-9][0-9][0-9][0-9]-((((0[1-9])|(1[0-2]))-((0[1-9])|(1[0-9])|(2[0-8])))|((((0[13578])|(1[02]))-31)|(((0[1,3-9])|(1[0-2]))-(29|30))))  "Validated deposition date"  
+uchar1                    uchar  "[+]?[A-Za-z0-9]"  "Single character codes"  
+uchar3                    uchar  "[+]?[A-Za-z0-9][A-Za-z0-9]?[A-Za-z0-9]?"  "Three character codes"  
+uchar5                    uchar  "[+]?[A-Za-z0-9][A-Za-z0-9]?[A-Za-z0-9]?[A-Za-z0-9]?[A-Za-z0-9]?"  "Five character codes"  
+code30                    char   .?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?.?  "String limited to 30 characters"  
+email                     uchar  "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9.-]+"  "Email addresses"  
+deposition_email          uchar  "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9.-]+"  "Deposition contact email"  
+phone                     uchar  
+;[_,.;:"&<>/\\{}'`~!@#$%A-Za-z0-9*|+-]*
+;
+  "Phone numbers"  
+fax                       uchar  
+;[_,.;:"&<>/\\{}'`~!@#$%A-Za-z0-9*|+-]*
+;
+  "Fax numbers"  
+orcid_id                  char   "[0-9]{4}-[0-9]{4}-[0-9]{4}-([0-9]{3}X|[0-9]{4})"  "ORCID identifiers"  
+citation_doi              char   10\\..*  "Citation DOI"  
+exp_data_doi              char   10\\.[0-9]{4,9}/[-._;()/:A-Za-z0-9]+  "Experimental data DOI"  
+inchi                     char   InChI=1S?/[A-Za-z0-9\\-\\+\\.,;()/]+  "InChI chemical identifiers"  
+inchikey                  char   "[a-zA-Z]{14}-[a-zA-Z]{10}-[a-zA-Z]"  "InChI key identifiers"  
+seq-one-letter-code       char   ([\\nUGPAVLIMCFYWHKRQNEDSTX]+|\\([0-9A-Z][0-9A-Z]?[0-9A-Z]?\\))+  "One-letter amino acid codes with modifications"  
+sequence_dep              char   "[a-zA-Z0-9\\t \\r\\n\\v\\f\\(\\)]+$"  "Deposition sequence format"  
+atcode                    char   
+;[ _(),.;:"&<>/\\{}'`~!@#$%?+=*A-Za-z0-9|^-]*
+;
+  "Atom name codes"  
+symop                     char   ([1-9]|[1-9][0-9]|1[0-8][0-9]|19[0-2])(_[1-9][1-9][1-9])?  "Symmetry operation codes"  
+symmetry_operation        char   "[-+0-9XxYyZ/ ]+,[-+0-9XxYyZ/ ]+,[-+0-9XxYyZ/ ]+"  "Symmetry operation expressions"  
+point_symmetry            char   "[CD][1-9]|[CD][1-9][0-9]*|T|O|I"  "Point symmetry notation"  
+point_group               char   (C[1-9][0-9]*|D[2-9]|D[1-9][0-9]+|O|T|I)  "Point group in Schoenflies notation"  
+point_group_helical       char   "[CD][1-9][0-9]*"  "Helical point group symmetry"  
+3x4_matrix                char   "((([ \\t]*-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)? +){3})?(-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)? *\\n([\\t ]*\\n)*)){2}((([ \\t]*-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)? +){3})(-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)? *\\n?([\\t ]*\\n)*))[ \\t]*"  "Single 3x4 transformation matrix"  
+3x4_matrices              char   "(((([ \\t]*-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)? +){3})?(-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)? *\\n([\\t ]*\\n)*)){3})*((([ \\t]*-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)? +){3})?(-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)? *\\n([\\t ]*\\n)*)){2}((([ \\t]*-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)? +){3})(-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)? *\\n?([\\t ]*\\n)*))[ \\t]*"  "Multiple 3x4 transformation matrices"  
+operation_expression      char   
+;[ \\t_(),.;:"&<>/\\{}'`~!@#$%?+=*A-Za-z0-9|^-]*
+;
+  "Parenthetical operation expressions"  
+id_list                   char   "[A-Za-z0-9]+(,[A-Za-z0-9]+)*"  "Comma-separated identifier lists"  
+id_list_spc               char   "[ \\t]*[A-Za-z0-9]+([ \\t]*,[ \\t]*[A-Za-z0-9]+)*[ \\t]*"  "Spaced comma-separated identifier lists"  
+ucode-alphanum-csv        uchar  "[A-Za-z0-9]+(,[A-Za-z0-9]+)?"  "Comma-separated alphanumeric codes"  
+pdbx_PDB_obsoleted_db_id  char   "[0-9][0-9a-zA-Z]{3}( [0-9][0-9a-zA-Z]{3})*"  "Space-separated PDB obsolete IDs"  
+ec-type                   char   "([1-7]((.[1-9][0-9]?)|(.-))((.[1-9][0-9]?)|(.-))((.[1-9][0-9]?[0-9]?)|(.-)))(([ ]*,[ ]*)([1-7]((.[1-9][0-9]?)|(.-))((.[1-9][0-9]?)|(.-))((.[1-9][0-9]?[0-9]?)|(.-))))*"  "Enzyme Commission numbers"  
+author                    char   "[A-Za-z0-9_]+(( |-|'|\\. )[A-Za-z0-9_]+)*( Jr.| III)?, [A-Za-z0-9_]\\.(-?[A-Za-z0-9_]+\\.)*$"  "Author names in PDB format"  
+boolean                   char   YES|NO  "Boolean values"  
+any                       char   .*  "Any data type (catch-all)"  
+binary                    char   
+;\\n--CIF-BINARY-FORMAT-SECTION--\\n\\[ \\n\\t()_,.;:"&<>/\\{}'`~!@#$%?+=*A-Za-z0-9|^-]*\\\\n--CIF-BINARY-FORMAT-SECTION----\\n
+;
+  "Binary data sections"  
+pdbx_related_db_id        char   
+;[_.:"&<>()/\\{}'`~!@#$%A-Za-z0-9*|+-]*
+;
+  "Related database identifiers"  
+#
+loop_
+_item_units_list.code
+_item_units_list.detail
+metres                          "metres (metres)"  
+centimetres                     "centimetres (metres * 10^( -2)^)"  
+millimetres                     "millimetres (metres * 10^( -3)^)"  
+micrometres                     "micrometres (metres * 10^( -6)^)"  
+nanometres                      "nanometres  (metres * 10^( -9)^)"  
+nanometers                      "nanometers  (metres * 10^( -9)^)"  
+angstroms                       "angstroms   (metres * 10^(-10)^)"  
+picometres                      "picometres  (metres * 10^(-12)^)"  
+femtometres                     "femtometres (metres * 10^(-15)^)"  
+reciprocal_metres               "reciprocal metres (metres^(-1)^)"  
+reciprocal_centimetres          "reciprocal centimetres ((metres * 10^( -2))^(-1))"  
+reciprocal_millimetres          "reciprocal millimetres ((metres * 10^( -3)^)^(-1)^)"  
+reciprocal_nanometres           "reciprocal nanometres  ((metres * 10^( -9)^)^(-1)^)"  
+reciprocal_angstroms            "reciprocal angstroms   ((metres * 10^(-10)^)^(-1)^)"  
+reciprocal_picometres           "reciprocal picometres  ((metres * 10^(-12)^)^(-1)^)"  
+micrometres_squared             "micrometres squared (metres * 10^( -6)^)^2^"  
+nanometres_squared              "nanometres squared (metres * 10^( -9)^)^2^"  
+angstroms_squared               "angstroms squared  (metres * 10^(-10)^)^2^"  
+8pi2_angstroms_squared          "8pi^2^ * angstroms squared (metres * 10^(-10)^)^2^"  
+picometres_squared              "picometres squared (metres * 10^(-12)^)^2^"  
+nanometres_cubed                "nanometres cubed (metres * 10^( -9)^)^3^"  
+angstroms_cubed                 "angstroms cubed  (metres * 10^(-10)^)^3^"  
+picometres_cubed                "picometres cubed (metres * 10^(-12)^)^3^"  
+kilopascals                     kilopascals  
+gigapascals                     gigapascals  
+hours                           hours  
+minutes                         minutes  
+seconds                         seconds  
+microseconds                    "microseconds (seconds * 10^( -6)^)"  
+femtoseconds                    "femtoseconds (seconds * 10^( -15)^)"  
+degrees                         "degrees (of arc)"  
+milliradians                    "milliradians (of arc)"  
+degrees_per_minute              "degrees (of arc) per minute"  
+celsius                         "degrees (of temperature) Celsius"  
+kelvins                         "temperature in Kelvin"  
+electrons                       electrons  
+electrons_squared               "electrons squared"  
+electrons_per_nanometres_cubed  "electrons per nanometres cubed (electrons/(metres * 10^( -9)^)^(-3)^)"  
+electrons_per_angstroms_cubed   "electrons per angstroms cubed (electrons/(metres * 10^(-10)^)^(-3)^)"  
+electrons_per_picometres_cubed  "electrons per picometres cubed (electrons/(metres * 10^(-12)^)^(-3)^)"  
+ions_per_cm_squared_per_sec     "ions per centimetre squared per second (ions/(meters * 10^(-2)^)^(-2)/second^)"  
+kilowatts                       kilowatts  
+milliamperes                    milliamperes  
+kilovolts                       kilovolts  
+volts                           volts  
+arbitrary                       "arbitrary system of units."  
+angstroms_degrees               "angstroms * degrees"  
+degrees_squared                 "degrees squared"  
+mg_per_ml                       "milliliter per milligram"  
+ml_per_min                      "milliliters per minute"  
+microliters_per_min             "microliters per minute"  
+milliliters                     "liter / 1000"  
+milligrams                      "grams / 1000"  
+megadaltons                     megadaltons  
+kilodaltons                     kilodaltons  
+kilodaltons/nanometer           kilodaltons/nanometer  
+microns_squared                 "micrometres squared (metres * 10^( -6)^)^2^"  
+microns                         "micrometres  (metres * 10^( -6)^)"  
+electrons_angstrom_squared      "electrons square angstrom"  
+electron_volts                  "electron volts"  
+kiloelectron_volts              "KeV (electron volts * 10^( 3)^)"  
+millimolar                      millimolar  
+megagrams_per_cubic_metre       "megagrams per cubic metre"  
+pixels_per_millimetre           "pixels per millimetre"  
+counts                          counts  
+counts_per_photon               "counts per photon"  
+pascals                         pascals  
+teraphotons_per_pulse           "(photons * 10^( 12)^) per pulse"  
+joules                          Joules  
+microjoules                     "joules * 10^( -6)^"  
+hertz                           "reciprocal seconds"  
+#
+loop_
+_item_units_conversion.from_code
+_item_units_conversion.to_code
+_item_units_conversion.operator
+_item_units_conversion.factor
+metres                          centimetres                     *  1.0E+02  
+metres                          millimetres                     *  1.0E+03  
+metres                          nanometres                      *  1.0E+09  
+metres                          angstroms                       *  1.0E+10  
+metres                          picometres                      *  1.0E+12  
+metres                          femtometres                     *  1.0E+15  
+centimetres                     millimetres                     *  1.0E+01  
+centimetres                     nanometres                      *  1.0E+07  
+centimetres                     angstroms                       *  1.0E+08  
+centimetres                     picometres                      *  1.0E+10  
+centimetres                     femtometres                     *  1.0E+13  
+millimetres                     centimetres                     *  1.0E-01  
+millimetres                     nanometres                      *  1.0E+06  
+millimetres                     angstroms                       *  1.0E+07  
+millimetres                     picometres                      *  1.0E+09  
+millimetres                     femtometres                     *  1.0E+12  
+nanometres                      centimetres                     *  1.0E-07  
+nanometres                      millimetres                     *  1.0E-06  
+nanometres                      angstroms                       *  1.0E+01  
+nanometres                      picometres                      *  1.0E+03  
+nanometres                      femtometres                     *  1.0E+06  
+angstroms                       centimetres                     *  1.0E-08  
+angstroms                       millimetres                     *  1.0E-07  
+angstroms                       nanometres                      *  1.0E-01  
+angstroms                       picometres                      *  1.0E+02  
+angstroms                       femtometres                     *  1.0E+05  
+picometres                      centimetres                     *  1.0E-10  
+picometres                      millimetres                     *  1.0E-09  
+picometres                      nanometres                      *  1.0E-03  
+picometres                      angstroms                       *  1.0E-02  
+picometres                      femtometres                     *  1.0E+03  
+femtometres                     centimetres                     *  1.0E-13  
+femtometres                     millimetres                     *  1.0E-12  
+femtometres                     nanometres                      *  1.0E-06  
+femtometres                     angstroms                       *  1.0E-05  
+femtometres                     picometres                      *  1.0E-03  
+reciprocal_centimetres          reciprocal_millimetres          *  1.0E-01  
+reciprocal_centimetres          reciprocal_nanometres           *  1.0E-07  
+reciprocal_centimetres          reciprocal_angstroms            *  1.0E-08  
+reciprocal_centimetres          reciprocal_picometres           *  1.0E-10  
+reciprocal_millimetres          reciprocal_centimetres          *  1.0E+01  
+reciprocal_millimetres          reciprocal_nanometres           *  1.0E-06  
+reciprocal_millimetres          reciprocal_angstroms            *  1.0E-07  
+reciprocal_millimetres          reciprocal_picometres           *  1.0E-09  
+reciprocal_nanometres           reciprocal_centimetres          *  1.0E+07  
+reciprocal_nanometres           reciprocal_millimetres          *  1.0E+06  
+reciprocal_nanometres           reciprocal_angstroms            *  1.0E-01  
+reciprocal_nanometres           reciprocal_picometres           *  1.0E-03  
+reciprocal_angstroms            reciprocal_centimetres          *  1.0E+08  
+reciprocal_angstroms            reciprocal_millimetres          *  1.0E+07  
+reciprocal_angstroms            reciprocal_nanometres           *  1.0E+01  
+reciprocal_angstroms            reciprocal_picometres           *  1.0E-02  
+reciprocal_picometres           reciprocal_centimetres          *  1.0E+10  
+reciprocal_picometres           reciprocal_millimetres          *  1.0E+09  
+reciprocal_picometres           reciprocal_nanometres           *  1.0E+03  
+reciprocal_picometres           reciprocal_angstroms            *  1.0E+01  
+nanometres_squared              angstroms_squared               *  1.0E+02  
+nanometres_squared              picometres_squared              *  1.0E+06  
+angstroms_squared               nanometres_squared              *  1.0E-02  
+angstroms_squared               picometres_squared              *  1.0E+04  
+angstroms_squared               8pi2_angstroms_squared          *  78.9568  
+picometres_squared              nanometres_squared              *  1.0E-06  
+picometres_squared              angstroms_squared               *  1.0E-04  
+nanometres_cubed                angstroms_cubed                 *  1.0E+03  
+nanometres_cubed                picometres_cubed                *  1.0E+09  
+angstroms_cubed                 nanometres_cubed                *  1.0E-03  
+angstroms_cubed                 picometres_cubed                *  1.0E+06  
+picometres_cubed                nanometres_cubed                *  1.0E-09  
+picometres_cubed                angstroms_cubed                 *  1.0E-06  
+kilopascals                     gigapascals                     *  1.0E-06  
+gigapascals                     kilopascals                     *  1.0E+06  
+hours                           minutes                         *  6.0E+01  
+hours                           seconds                         *  3.6E+03  
+hours                           microseconds                    *  3.6E+09  
+minutes                         hours                           /  6.0E+01  
+minutes                         seconds                         *  6.0E+01  
+minutes                         microseconds                    *  6.0E+07  
+seconds                         hours                           /  3.6E+03  
+seconds                         minutes                         /  6.0E+01  
+seconds                         microseconds                    *  1.0E+06  
+microseconds                    hours                           /  3.6E+09  
+microseconds                    minutes                         /  6.0E+07  
+microseconds                    seconds                         /  1.0E+06  
+celsius                         kelvins                         -    273.0  
+kelvins                         celsius                         +    273.0  
+electrons_per_nanometres_cubed  electrons_per_angstroms_cubed   *  1.0E+03  
+electrons_per_nanometres_cubed  electrons_per_picometres_cubed  *  1.0E+09  
+electrons_per_angstroms_cubed   electrons_per_nanometres_cubed  *  1.0E-03  
+electrons_per_angstroms_cubed   electrons_per_picometres_cubed  *  1.0E+06  
+electrons_per_picometres_cubed  electrons_per_nanometres_cubed  *  1.0E-09  
+electrons_per_picometres_cubed  electrons_per_angstroms_cubed   *  1.0E-06  
+#
+_pdbx_dictionary_component.datablock_id             mmcif_investigation.dic
+_pdbx_dictionary_component.dictionary_component_id  mmcif_investigation_ligscreen.dic
+_pdbx_dictionary_component.title                    "ligscreen extension"
+_pdbx_dictionary_component.version                  1.0.6.1
+#
+_pdbx_dictionary_component_history.dictionary_component_id  mmcif_investigation_ligscreen.dic
+_pdbx_dictionary_component_history.version                  1.0.6.1
+_pdbx_dictionary_component_history.update                   2025-09-17
+_pdbx_dictionary_component_history.revision                 
+;
+Changes (TBD):
+  + To be added
+;
+
+#
+loop_
+_pdbx_item_linked_group.category_id
+_pdbx_item_linked_group.link_group_id
+_pdbx_item_linked_group.label
+_pdbx_item_linked_group.context
+_pdbx_item_linked_group.condition_id
+pdbx_investigation_archived_data                1  pdbx_investigation_archived_data:pdbx_investigation:1                                        .  .  
+pdbx_investigation_focus                        1  pdbx_investigation_focus:pdbx_investigation:1                                                .  .  
+pdbx_ligscreen_investigation_author             1  pdbx_ligscreen_investigation_author:pdbx_investigation:1                                     .  .  
+pdbx_ligscreen_investigation_author             2  pdbx_ligscreen_investigation_author:pdbx_ligscreen_investigation_campaign:2                  .  .  
+pdbx_ligscreen_investigation_campaign           1  pdbx_ligscreen_investigation_campaign:pdbx_investigation:1                                   .  .  
+pdbx_ligscreen_investigation_series             1  pdbx_ligscreen_investigation_series:pdbx_investigation:1                                     .  .  
+pdbx_ligscreen_investigation_series             2  pdbx_ligscreen_investigation_series:pdbx_ligscreen_investigation_campaign:2                  .  .  
+pdbx_ligscreen_investigation_screening_exp      1  pdbx_ligscreen_investigation_screening_exp:pdbx_investigation:1                              .  .  
+pdbx_ligscreen_investigation_screening_exp      2  pdbx_ligscreen_investigation_screening_exp:pdbx_ligscreen_investigation_campaign:2           .  .  
+pdbx_ligscreen_investigation_screening_exp      3  pdbx_ligscreen_investigation_screening_exp:pdbx_ligscreen_investigation_series:3             .  .  
+pdbx_ligscreen_investigation_screening_exp      4  pdbx_ligscreen_investigation_screening_exp:pdbx_investigation_sample:4                       .  .  
+pdbx_ligscreen_investigation_screening_exp      5  pdbx_ligscreen_investigation_screening_exp:pdbx_ligscreen_investigation_lib_component_mix:5  .  .  
+pdbx_ligscreen_investigation_screening_exp      6  pdbx_ligscreen_investigation_screening_exp:pdbx_investigation_archived_data:6                .  .  
+pdbx_ligscreen_investigation_screening_result   1  pdbx_ligscreen_investigation_screening_result:pdbx_ligscreen_investigation_screening_exp:1   .  .  
+pdbx_ligscreen_investigation_screening_result   2  pdbx_ligscreen_investigation_screening_result:pdbx_ligscreen_investigation_lib_component:2   .  .  
+pdbx_ligscreen_investigation_lib_component_mix  1  pdbx_ligscreen_investigation_lib_component_mix:pdbx_ligscreen_investigation_lib_component:1  .  .  
+pdbx_investigation_poly_descript                1  pdbx_investigation_poly_descript:pdbx_investigation_entity_poly:1                            .  .  
+pdbx_investigation_nonpoly_descript             1  pdbx_investigation_nonpoly_descript:pdbx_investigation_entity_nonpoly:1                      .  .  
+pdbx_investigation_descript                     1  pdbx_investigation_descript:pdbx_investigation_entity:1                                      .  .  
+pdbx_investigation_entity                       1  pdbx_investigation_entity:pdbx_investigation_entity_poly:1                                   .  .  
+pdbx_investigation_sample                       1  pdbx_investigation_sample:pdbx_investigation:1                                               .  .  
+pdbx_investigation_sample                       2  pdbx_investigation_sample:pdbx_investigation_poly_descript:2                                 .  .  
+pdbx_investigation_sample                       3  pdbx_investigation_sample:pdbx_investigation_nonpoly_descript:3                              .  .  
+pdbx_investigation_sample                       4  pdbx_investigation_sample:pdbx_investigation_descript:4                                      .  .  
+pdbx_ligscreen_investigation_revision_details   1  pdbx_ligscreen_investigation_revision_details:pdbx_ligscreen_investigation_revision:1        .  .  
+#
+loop_
+_pdbx_item_linked_group_list.child_category_id
+_pdbx_item_linked_group_list.link_group_id
+_pdbx_item_linked_group_list.child_name
+_pdbx_item_linked_group_list.parent_name
+_pdbx_item_linked_group_list.parent_category_id
+pdbx_investigation_archived_data                1  "_pdbx_investigation_archived_data.investigation_id"                "_pdbx_investigation.id"                                        pdbx_investigation                              
+pdbx_investigation_focus                        1  "_pdbx_investigation_focus.investigation_id"                        "_pdbx_investigation.id"                                        pdbx_investigation                              
+pdbx_ligscreen_investigation_author             1  "_pdbx_ligscreen_investigation_author.investigation_id"             "_pdbx_investigation.id"                                        pdbx_investigation                              
+pdbx_ligscreen_investigation_author             2  "_pdbx_ligscreen_investigation_author.campaign_id"                  "_pdbx_ligscreen_investigation_campaign.campaign_id"            pdbx_ligscreen_investigation_campaign           
+pdbx_ligscreen_investigation_campaign           1  "_pdbx_ligscreen_investigation_campaign.investigation_id"           "_pdbx_investigation.id"                                        pdbx_investigation                              
+pdbx_ligscreen_investigation_series             1  "_pdbx_ligscreen_investigation_series.investigation_id"             "_pdbx_investigation.id"                                        pdbx_investigation                              
+pdbx_ligscreen_investigation_series             2  "_pdbx_ligscreen_investigation_series.campaign_id"                  "_pdbx_ligscreen_investigation_campaign.campaign_id"            pdbx_ligscreen_investigation_campaign           
+pdbx_ligscreen_investigation_screening_exp      1  "_pdbx_ligscreen_investigation_screening_exp.investigation_id"      "_pdbx_investigation.id"                                        pdbx_investigation                              
+pdbx_ligscreen_investigation_screening_exp      2  "_pdbx_ligscreen_investigation_screening_exp.campaign_id"           "_pdbx_ligscreen_investigation_campaign.campaign_id"            pdbx_ligscreen_investigation_campaign           
+pdbx_ligscreen_investigation_screening_exp      3  "_pdbx_ligscreen_investigation_screening_exp.series_id"             "_pdbx_ligscreen_investigation_series.series_id"                pdbx_ligscreen_investigation_series             
+pdbx_ligscreen_investigation_screening_exp      4  "_pdbx_ligscreen_investigation_screening_exp.sample_id"             "_pdbx_investigation_sample.sample_id"                          pdbx_investigation_sample                       
+pdbx_ligscreen_investigation_screening_exp      5  "_pdbx_ligscreen_investigation_screening_exp.lib_component_mix_id"  "_pdbx_ligscreen_investigation_lib_component_mix.id"            pdbx_ligscreen_investigation_lib_component_mix  
+pdbx_ligscreen_investigation_screening_exp      6  "_pdbx_ligscreen_investigation_screening_exp.archived_data_id"      "_pdbx_investigation_archived_data.id"                          pdbx_investigation_archived_data                
+pdbx_ligscreen_investigation_screening_result   1  "_pdbx_ligscreen_investigation_screening_result.screening_exp_id"   "_pdbx_ligscreen_investigation_screening_exp.screening_exp_id"  pdbx_ligscreen_investigation_screening_exp      
+pdbx_ligscreen_investigation_screening_result   2  "_pdbx_ligscreen_investigation_screening_result.lib_component_id"   "_pdbx_ligscreen_investigation_lib_component.id"                pdbx_ligscreen_investigation_lib_component      
+pdbx_ligscreen_investigation_lib_component_mix  1  "_pdbx_ligscreen_investigation_lib_component_mix.lib_component_id"  "_pdbx_ligscreen_investigation_lib_component.id"                pdbx_ligscreen_investigation_lib_component      
+pdbx_investigation_poly_descript                1  "_pdbx_investigation_poly_descript.poly_entity_id"                  "_pdbx_investigation_entity_poly.poly_entity_id"                pdbx_investigation_entity_poly                  
+pdbx_investigation_nonpoly_descript             1  "_pdbx_investigation_nonpoly_descript.nonpoly_entity_id"            "_pdbx_investigation_entity_nonpoly.nonpoly_entity_id"          pdbx_investigation_entity_nonpoly               
+pdbx_investigation_descript                     1  "_pdbx_investigation_descript.entity_id"                            "_pdbx_investigation_entity.entity_id"                          pdbx_investigation_entity                       
+pdbx_investigation_entity                       1  "_pdbx_investigation_entity.poly_entity_id"                         "_pdbx_investigation_entity_poly.poly_entity_id"                pdbx_investigation_entity_poly                  
+pdbx_investigation_sample                       1  "_pdbx_investigation_sample.investigation_id"                       "_pdbx_investigation.id"                                        pdbx_investigation                              
+pdbx_investigation_sample                       2  "_pdbx_investigation_sample.poly_descript_id"                       "_pdbx_investigation_poly_descript.id"                          pdbx_investigation_poly_descript                
+pdbx_investigation_sample                       3  "_pdbx_investigation_sample.nonpoly_descript_id"                    "_pdbx_investigation_nonpoly_descript.id"                       pdbx_investigation_nonpoly_descript             
+pdbx_investigation_sample                       4  "_pdbx_investigation_sample.descript_id"                            "_pdbx_investigation_descript.id"                               pdbx_investigation_descript                     
+pdbx_ligscreen_investigation_revision_details   1  "_pdbx_ligscreen_investigation_revision_details.revision_ordinal"   "_pdbx_ligscreen_investigation_revision.revision_ordinal"       pdbx_ligscreen_investigation_revision           
+##
+save_pdbx_ligscreen_investigation_author
+   _category.description     
+;              Data items in the PDBX_LIGSCREEN_INVESTIGATION_AUTHOR category record details about the authors associated
+               with an investigation campaign generating data for a small molecule library or series screened against a target.
+;
+
+   _category.id              pdbx_ligscreen_investigation_author
+   _category.mandatory_code  no
+   #
+   loop_
+   _category_key.name
+     "_pdbx_ligscreen_investigation_author.campaign_id"  
+     "_pdbx_ligscreen_investigation_author.ordinal"  
+   #
+   loop_
+   _category_group.id
+     inclusive_group  
+     ligscreen_group  
+   #
+   _category_examples.detail  
+;
+    Sample data.
+;
+
+   _category_examples.case    
+;
+    loop_
+    _pdbx_ligscreen_investigation_author.campaign_id"  
+    _pdbx_ligscreen_investigation_author.investigation_id"  
+    _pdbx_ligscreen_investigation_author.ordinal"  
+    _pdbx_ligscreen_investigation_author.name"  
+      1   FH123     1  'Navia, M.A.'
+      1   FH123     2  'Fitzgerald, P.M.D.'
+      1   FH123     3  'McKeever, B.M.'
+      1   FH123     4  'Leu, C.-T.'
+      1   FH123     5  'Heimbach, J.C.'
+      1   FH123     6  'Herber, W.K.'
+      1   FH123     7  'Sigal, I.S.'
+      1   FH123     8  'Darke, P.L.'
+      1   FH123     9  'Springer, J.P.'
+      2   FH123     1  'Navia, M.A.'
+      2   FH123     2  'Fitzgerald, P.M.D.'
+      2   FH123     3  'McKeever, B.M.'
+      2   FH123     4  'Leu, C.-T.'
+      2   FH123     5  'Heimbach, J.C.'
+      2   FH123     6  'Herber, W.K.'
+      2   FH123     7  'Sigal, I.S.'
+      2   FH123     8  'Diehl, R.E.'
+      2   FH123     9  'Hill, W.S.'
+;
+
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_author.campaign_id
+   _item_description.description  
+;              This data item is a pointer to _pdbx_ligscreen_investigation_campaign.campaign_id in the PDBX_LIGSCREEN_INVESTIGATION_CAMPAIGN
+               category.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_author.campaign_id"
+   _item.category_id     pdbx_ligscreen_investigation_author
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_ligscreen_investigation_campaign.campaign_id"
+   _item_linked.child_name   "_pdbx_ligscreen_investigation_author.campaign_id"
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_author.investigation_id
+   _item_description.description  "This data item is a pointer to _pdbx_investigation.id in the PDBX_INVESTIGATION category."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_author.investigation_id"
+   _item.category_id     pdbx_ligscreen_investigation_author
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_investigation.id"
+   _item_linked.child_name   "_pdbx_ligscreen_investigation_author.investigation_id"
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_author.ordinal
+   _item_description.description  
+;              This data item defines the order of the author's name in the
+               list of authors associated with a campaign.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_author.ordinal"
+   _item.category_id     pdbx_ligscreen_investigation_author
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+   loop_
+   _item_examples.case
+     1  
+     2  
+     3  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_author.name
+   _item_description.description  
+;              Name of an author or authors associated with a campaign of the investigation.
+               The family name(s), followed by a comma and including any
+               dynastic components, precedes the first name(s) or initial(s).
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_author.name"
+   _item.category_id     pdbx_ligscreen_investigation_author
+   _item.mandatory_code  yes
+   #
+   _item_type.code  line
+   #
+   loop_
+   _item_examples.case
+     "Bleary, Percival R."  
+     "O'Neil, F.K."  
+     "Van den Bossche, G."  
+     "Yang, D.-L."  
+     "Simonov, Yu.A"  
+   #
+   _pdbx_item.name            "_pdbx_ligscreen_investigation_author.name"
+   _pdbx_item.category_id     pdbx_ligscreen_investigation_author
+   _pdbx_item.mandatory_code  yes
+   #
+   _pdbx_item_type.name  "_pdbx_ligscreen_investigation_author.name"
+   _pdbx_item_type.code  author
+   #
+   _pdbx_item_description.name         "_pdbx_ligscreen_investigation_author.name"
+   _pdbx_item_description.description  "List people responsible for the contents of this entry. Hyphens, apostrophes and blank spaces are allowed in the last names. Special characters and character modifiers should NOT be used."
+   #
+   _pdbx_item_examples.name    "_pdbx_ligscreen_investigation_author.name"
+   _pdbx_item_examples.case    "Jones, T.J."
+   _pdbx_item_examples.detail  .
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_author.identifier_ORCID
+   _item_description.description  "The Open Researcher and Contributor ID (ORCID)."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_author.identifier_ORCID"
+   _item.category_id     pdbx_ligscreen_investigation_author
+   _item.mandatory_code  no
+   #
+   _item_type.code  orcid_id
+   #
+   _item_examples.case  0000-0002-6681-547X
+   #
+save_
+#
+save_pdbx_investigation
+   _category.description     "The PDBX_INVESTIGATION category provides a information of an investigation associated with this file."
+   _category.id              pdbx_investigation
+   _category.mandatory_code  yes
+   #
+   _category_key.name  "_pdbx_investigation.id"
+   #
+   loop_
+   _category_group.id
+     inclusive_group      
+     investigation_group  
+   #
+   _category_examples.detail  
+;
+    Example 1
+;
+
+   _category_examples.case    
+;
+_pdbx_investigation.id            FH123
+_pdbx_investigation.type          "Ligand Screening"
+_pdbx_investigation.db            ligscreen
+_pdbx_investigation.project_id    fh123456
+_pdbx_investigation.title         "Frag Screen Investigation XYZ"
+_pdbx_investigation.details       "Fragment screening project for Hemoglobin"
+_pdbx_investigation.external_url  https://www.fragscreen-facility.org/123456789
+;
+
+   #
+save_
+#
+save__pdbx_investigation.id
+   _item_description.description  "Uniquely identifies an investigation."
+   #
+   _item.name            "_pdbx_investigation.id"
+   _item.category_id     pdbx_investigation
+   _item.mandatory_code  yes
+   #
+   _item_type.code  code
+   #
+   _item_examples.case  1
+   #
+save_
+#
+save__pdbx_investigation.type
+   _item_description.description  "Describes the type of investigation."
+   #
+   _item.name            "_pdbx_investigation.type"
+   _item.category_id     pdbx_investigation
+   _item.mandatory_code  yes
+   #
+   _item_type.code  line
+   #
+   _item_examples.case  "Ligand Screening"
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.detail
+     "_pdbx_investigation.type"  "Ligand Screening"           .  
+     "_pdbx_investigation.type"  "Crystallization Screening"  .  
+     "_pdbx_investigation.type"  Time-resolved                .  
+     "_pdbx_investigation.type"  Other                        .  
+   #
+save_
+#
+save__pdbx_investigation.db
+   _item_description.description  "Database for investigation. Defined categories. Other types to be determined at later date."
+   #
+   _item.name            "_pdbx_investigation.db"
+   _item.category_id     pdbx_investigation
+   _item.mandatory_code  yes
+   #
+   _item_type.code  text
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.detail
+     "_pdbx_investigation.db"  ligscreen  "Ligand screening investigation"  
+     "_pdbx_investigation.db"  other      "Customized investigation"  
+   #
+save_
+#
+save__pdbx_investigation.project_id
+   _item_description.description  "Another id; however not mandatory and with no child categories. From an external source."
+   #
+   _item.name            "_pdbx_investigation.project_id"
+   _item.category_id     pdbx_investigation
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+   _item_examples.case  fh123456
+   #
+save_
+#
+save__pdbx_investigation.title
+   _item_description.description  
+;              A title for the data block. The author should attempt to convey
+               the essence of the investigation archived in the CIF in the title,
+               and to distinguish this investigation result from others.
+;
+
+   #
+   _item.name            "_pdbx_investigation.title"
+   _item.category_id     pdbx_investigation
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_investigation.details
+   _item_description.description  "Additional details relevant to the investigation."
+   #
+   _item.name            "_pdbx_investigation.details"
+   _item.category_id     pdbx_investigation
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_investigation.external_url
+   _item_description.description  "A URL link to investigation-level data at an external resource."
+   #
+   _item.name            "_pdbx_investigation.external_url"
+   _item.category_id     pdbx_investigation
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+save_
+#
+save_pdbx_investigation_focus
+   _category.description     
+;              The PDBX_INVESTIGATION_FOCUS category contains top level data for the investigation. 
+               This catogory is designed to capture the focus / commonality between the set of experiments.
+;
+
+   _category.id              pdbx_investigation_focus
+   _category.mandatory_code  no
+   #
+   _category_key.name  "_pdbx_investigation_focus.key_component_id"
+   #
+   loop_
+   _category_group.id
+     inclusive_group      
+     investigation_group  
+   #
+   _category_examples.detail  
+;
+    Theoretical example.
+;
+
+   _category_examples.case    
+;
+_pdbx_investigation_focus.investigation_id 
+_pdbx_investigation_focus.key_component_name
+_pdbx_investigation_focus.key_component_id  
+_pdbx_investigation_focus.comp_ref_db_acc 
+_pdbx_investigation_focus.comp_ref_db_name 
+_pdbx_investigation_focus.comp_ref_db_code
+FH123   Hemoglobin1    1  P68871  UNP  HBB_HUMAN
+FH123   Hemoglobin2    2  P69905  UNP  HBA_HUMAN
+;
+
+   #
+save_
+#
+save__pdbx_investigation_focus.investigation_id
+   _item_description.description  "This data item is a pointer to _pdbx_investigation.id in the PDBX_INVESTIGATION category."
+   #
+   _item.name            "_pdbx_investigation_focus.investigation_id"
+   _item.category_id     pdbx_investigation_focus
+   _item.mandatory_code  yes
+   #
+   _item_linked.child_name   "_pdbx_investigation_focus.investigation_id"
+   _item_linked.parent_name  "_pdbx_investigation.id"
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_investigation_focus.key_component_id
+   _item_description.description  
+;              The value of _pdbx_investigation_focus.key_component_id must uniquely identify a record
+               in the PDBX_INVESTIGATION_FOCUS list.
+;
+
+   #
+   _item.name            "_pdbx_investigation_focus.key_component_id"
+   _item.category_id     pdbx_investigation_focus
+   _item.mandatory_code  yes
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_investigation_focus.key_component_name
+   _item_description.description  "A textual description of the macromolecular target."
+   #
+   _item.name            "_pdbx_investigation_focus.key_component_name"
+   _item.category_id     pdbx_investigation_focus
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_investigation_focus.comp_ref_db_acc
+   _item_description.description  "The accession code for the related reference information at the relevant external sequence resource."
+   #
+   _item.name            "_pdbx_investigation_focus.comp_ref_db_acc"
+   _item.category_id     pdbx_investigation_focus
+   _item.mandatory_code  no
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_investigation_focus.comp_ref_db_name
+   _item_description.description  "The external resource where reference sequence information is stored."
+   #
+   _item.name            "_pdbx_investigation_focus.comp_ref_db_name"
+   _item.category_id     pdbx_investigation_focus
+   _item.mandatory_code  no
+   #
+   _item_type.code  code
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.detail
+     "_pdbx_investigation_focus.comp_ref_db_name"  GB   Genbank  
+     "_pdbx_investigation_focus.comp_ref_db_name"  UNP  UniProt  
+   #
+save_
+#
+save__pdbx_investigation_focus.comp_ref_db_code
+   _item_description.description  
+;
+                            More related reference information, for example an additional identifier for db and db_acc. 
+                            However, this additional identifier may not be unchanged between database releases 
+                            (aka it is not a stable_identifier and thus it is not enough to be the only identifier).
+;
+
+   #
+   _item.name            "_pdbx_investigation_focus.comp_ref_db_code"
+   _item.category_id     pdbx_investigation_focus
+   _item.mandatory_code  no
+   #
+   _item_type.code  code
+   #
+save_
+#
+save_pdbx_ligscreen_investigation_campaign
+   _category.description     
+;              The PDBX_LIGSCREEN_INVESTIGATION_CAMPAIGN category is another top level category. 
+               This category 'campaign' can cluster information in child catergories per year or facility or processing pipeline software used.
+               Key aspect: there can be more than one campaign per investigation. 
+               Also, an investigation might take more than one year and pipeline software may change.
+;
+
+   _category.id              pdbx_ligscreen_investigation_campaign
+   _category.mandatory_code  no
+   #
+   _category_key.name  "_pdbx_ligscreen_investigation_campaign.campaign_id"
+   #
+   loop_
+   _category_group.id
+     inclusive_group  
+     ligscreen_group  
+   #
+   loop_
+   _category_examples.detail
+   _category_examples.case
+     
+;
+    Theoretical example 1.
+;
+  
+;
+_pdbx_ligscreen_investigation_campaign.campaign_id		     1
+_pdbx_ligscreen_investigation_campaign.investigation_id    FH123
+_pdbx_ligscreen_investigation_campaign.proc_pipeline       CRIMS
+_pdbx_ligscreen_investigation_campaign.pipeline_version    v4
+_pdbx_ligscreen_investigation_campaign.year                2022
+_pdbx_ligscreen_investigation_campaign.facility            ESRF 
+_pdbx_ligscreen_investigation_campaign.internal_id         123456789
+;
+  
+     
+;
+    Theoretical example 2.
+;
+  
+;
+loop_
+_pdbx_ligscreen_investigation_campaign.campaign_id 
+_pdbx_ligscreen_investigation_campaign.investigation_id 
+_pdbx_ligscreen_investigation_campaign.proc_pipeline 
+_pdbx_ligscreen_investigation_campaign.pipeline_version
+_pdbx_ligscreen_investigation_campaign.year 
+_pdbx_ligscreen_investigation_campaign.facility 
+_pdbx_ligscreen_investigation_campaign.internal_id 
+1  FH123    CRIMS       v3        2020     ESRF       ?       
+2  FH123    CRIMS       v4        2022     ESRF       ?
+;
+  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_campaign.campaign_id
+   _item_description.description  
+;              The value of _pdbx_ligscreen_investigation_campaign.campaign_id enables there to be different campaigns associated for 
+               one investigation. Details shared between campaigns can be found in PDBX_LIGSCREEN_INVESTIGATION_SCREENING_EXP category.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_campaign.campaign_id"
+   _item.category_id     pdbx_ligscreen_investigation_campaign
+   _item.mandatory_code  yes
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_campaign.investigation_id
+   _item_description.description  
+;              This data item is a pointer to _pdbx_investigation.id in the
+               PDBX_INVESTIGATION category.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_campaign.investigation_id"
+   _item.category_id     pdbx_ligscreen_investigation_campaign
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_investigation.id"
+   _item_linked.child_name   "_pdbx_ligscreen_investigation_campaign.investigation_id"
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_campaign.proc_pipeline
+   _item_description.description  "The computational pipeline used for data analysis."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_campaign.proc_pipeline"
+   _item.category_id     pdbx_ligscreen_investigation_campaign
+   _item.mandatory_code  no
+   #
+   _item_type.code  code
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.detail
+     "_pdbx_ligscreen_investigation_campaign.proc_pipeline"  CRIMS    "Crystallographic Information Management System"  
+     "_pdbx_ligscreen_investigation_campaign.proc_pipeline"  XCE      "XChem Explorer"  
+     "_pdbx_ligscreen_investigation_campaign.proc_pipeline"  XCE-XCA  "XChem Explorer and XChem Align"  
+     "_pdbx_ligscreen_investigation_campaign.proc_pipeline"  FMA      FragMaxApp  
+     "_pdbx_ligscreen_investigation_campaign.proc_pipeline"  OTHER    Other  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_campaign.pipeline_version
+   _item_description.description  "The verison of the computational pipeline version used for data analysis."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_campaign.pipeline_version"
+   _item.category_id     pdbx_ligscreen_investigation_campaign
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+   _item_examples.case  v4
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_campaign.year
+   _item_description.description  "The year that the ligand or fragment screening campaign started."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_campaign.year"
+   _item.category_id     pdbx_ligscreen_investigation_campaign
+   _item.mandatory_code  no
+   #
+   _item_type.code  int
+   #
+   _item_examples.case  2022
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_campaign.facility
+   _item_description.description  "The facility where the ligand or fragment screening was carried out."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_campaign.facility"
+   _item.category_id     pdbx_ligscreen_investigation_campaign
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.detail
+     "_pdbx_ligscreen_investigation_campaign.facility"  AichiSR                           "Aichi Synchrotron Radiation Center, Seto (Japan)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  ALBA                              "ALBA Synchrotron, Barcelona (Spain)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  ALS                               "Advanced Light Source, Berkeley (USA)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  APS                               "Advanced Photon Source, Argonne (USA)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "Australian Synchrotron"          "Australian Synchrotron, Melbourne (Australia)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  BESSY                             "Berlin Electron Storage ring company for SYnchrotron radiation, Berlin (Germany)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  BSRF                              "Beijing Synchrotron Radiation Facility, Beijing (China)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  CAMD                              "Center for Advanced Microstructures and Devices, Baton Rouge (USA)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  CHESS                             "Cornell High Energy Synchrotron Source, Ithaca (USA)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  CLSI                              "Canadian Light Source (Canada)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  Diamond                           "Diamond Light source, South Oxfordshire (UK)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  ELETTRA                           "Elettra Sincrotrone, Trieste (Italy)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "EMBL/DESY, HAMBURG"              "DESY NanoLab / EMBL, Hamburg (Germany)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  ESRF                              "ESRF and EMBL, Grenoble (France)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "European XFEL"                   "European X-Ray Free-Electron Laser Facility, Schenefeld (Germany)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "FRM II"                          "The Research Neutron Source Heinz Maier-Leibnitz, Garching (Germany)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "KURCHATOV SNC"                   "Kurchatov Center for Synchrotron Radiation and Nanotechnology, Moscow (Russia)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "JPARC MLF"                       "Japan Proton Accelerator Research Complex, Tokai (Japan)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  JRR-3M                            "JRR-3M Neutron Source, Japan Research Reactor No.3 Modified, Tokai (Japan)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  KCSRNT                            "Kurchatov Center for Synchrotron Radiation and Nanotechnology, Moscow (Russia)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  ILL                               "Institut Laue-Langevin neutron scattering facilities, Grenoble (France)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  ISIS                              "ISIS Neutron and Muon Source, Rutherford Appleton Laboratory of the Science and Technology Facilities Council, South Oxfordshire (UK)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  LANSCE                            "Los Alamos Neutron Science Center, Los Alamos (USA)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  LNLS                              "Laboratorio Nacional de Luz Sincrotron, Campinas (Brazil)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "LNLS SIRIUS"                     "Laboratorio Nacional de Luz Sincrotron - SIRIUS, Campinas (Brazil)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  LURE                              "LURE synchrotron radiation Laboratory, Orsay (France)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "MAX II"                          "MAX II, Lund (Sweden)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "MAX IV"                          "MAX IV, Lund (Sweden)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "MPG/DESY, HAMBURG"               "MPG/DESY at DORIS III, Hamburg (Germany)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  NFPSS                             "National Facility for Protein Science, Shanghai (China)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  NSLS                              "National Synchrotron Light Source, Upton (USA)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  NSLS-II                           "National Synchrotron Light Source II, Upton (USA)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  NSRL                              "National Synchrotron Radiation Laboratory, Hefei (China)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  NSRRC                             "National Synchroton Radiation Research Center, Taipei (Taiwan)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "ORNL High Flux Isotope Reactor"  "Oak Ridge National Laboratory - High Flux Isotope Reactor (USA)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "ORNL Spallation Neutron Source"  "Oak Ridge National Laboratory - Spallation Neutron Source (USA)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  PAL/PLS                           "Pohang Accelerator Laboratory - Synchrotron, Pohang (Korea)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  PAL-XFEL                          "Pohang Accelerator Laboratory - X-ray free-electron laser, Pohang (Korea)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "PETRA II, DESY"                  "Positron&#8211;Electron Tandem Ring Accelerator (PETRA) II and DESY NanoLab, Hamburg-Bahrenfeld (Germany)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "PETRA III, EMBL c/o DESY"        "Positron&#8211;Electron Tandem Ring Accelerator (PETRA) III, EMBL and DESY NanoLab, Hamburg-Bahrenfeld (Germany)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "PETRA III, DESY"                 "Positron&#8211;Electron Tandem Ring Accelerator (PETRA) III and DESY NanoLab, Hamburg-Bahrenfeld (Germany)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "Photon Factory"                  "Photon Factory, Tsukuba (Japan)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "RRCAT INDUS-2"                   "Raja Ramanna Centre for Advanced Technology, Indus-2, Indore City (India)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  SACLA                             "SACLA, Japan's First X-ray Free Electron Laser (XFEL) facility, Aioi (Japan)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  SAGA-LS                           "Saga Light Source, Tosu, Saga (Japan)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "SLAC LCLS"                       "Stanford Linear Accelerator Center - Linac Coherent Light Source, Menlo Park (USA)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  SLRI                              "Synchrotron Light Research Institute, Nakhon Ratchasima (Thailand)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  SLS                               "Swiss Light Source, Villigen (Switzerland)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  SOLEIL                            "SOLEIL, The French National Synchrotron Facility, Saint-Aubin (France)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  SPring-8                          "Super Photon ring 8 GeV, Aioi (Japan)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  SRS                               "Synchrotron Radiation Source, Daresbury (UK)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  SSRF                              "Shanghai Synchrotron Radiation Facility, Shanghai (China)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  SSRL                              "Stanford Synchrotron Radiation Lightsource, Menlo Park (USA)"  
+     "_pdbx_ligscreen_investigation_campaign.facility"  "SwissFEL ARAMIS"                 "SwissFEL, X-ray free-electron laser, Canton of Aargau (Switzerland)"  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_campaign.internal_id
+   _item_description.description  "The internal investigation ID used at the fragment screening facility."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_campaign.internal_id"
+   _item.category_id     pdbx_ligscreen_investigation_campaign
+   _item.mandatory_code  no
+   #
+   _item_type.code  code
+   #
+save_
+#
+save_pdbx_ligscreen_investigation_series
+   _category.description     
+;              The PDBX_LIGSCREEN_INVESTIGATION_SERIES category contains data pertinent to common sets (series)
+               of experiments within an investigation. If a named fragments screen was used, it is captured here.
+               Multiple experimental series could exist for a fragment screening investigation campaign.
+;
+
+   _category.id              pdbx_ligscreen_investigation_series
+   _category.mandatory_code  no
+   #
+   _category_key.name  "_pdbx_ligscreen_investigation_series.series_id"
+   #
+   loop_
+   _category_group.id
+     inclusive_group  
+     ligscreen_group  
+   #
+   loop_
+   _category_examples.detail
+   _category_examples.case
+     
+;
+    Theoretical example 1.
+;
+  
+;
+_pdbx_ligscreen_investigation_series.series_id                     1
+_pdbx_ligscreen_investigation_series.campaign_id                   1
+_pdbx_ligscreen_investigation_series.investigation_id              FH123
+_pdbx_ligscreen_investigation_series.type_of_library               FRAGLIB
+_pdbx_ligscreen_investigation_series.library                       EUOPEN-EFSL
+_pdbx_ligscreen_investigation_series.library_batch                 ?
+_pdbx_ligscreen_investigation_series.lib_identification_method     manual_curation
+_pdbx_ligscreen_investigation_series.lib_details                   ?
+;
+  
+     
+;
+    Theoretical example 2.
+;
+  
+;
+loop_
+_pdbx_ligscreen_investigation_series.series_id 
+_pdbx_ligscreen_investigation_series.campaign_id 
+_pdbx_ligscreen_investigation_series.investigation_id 
+_pdbx_ligscreen_investigation_series.type_of_library
+_pdbx_ligscreen_investigation_series.library 
+_pdbx_ligscreen_investigation_series.library_batch 
+_pdbx_ligscreen_investigation_series.lib_identification_method
+_pdbx_ligscreen_investigation_series.lib_details 
+
+1  1  FH123     FRAGLIB    SpotXplorer       ?    facility_curation   'Chemical library was purchased and received in 2015.' 
+2  1  FH123     FRAGLIB    Fraglites         ?    facility_curation   'Chemical library was purchased and received in 2022.' 
+3  1  FH123     FRAGLIB    Other-Fraglib     v1.1 author              'Fragment library designed by analysis of previous hits'
+4  2  FH123     FRAGLIB    FragMAXlib        ?    facility_curation   ?
+5  2  FH123     SAR        Other             ?    unknown             ?
+;
+  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_series.series_id
+   _item_description.description  "The value of _investigation_series.id must uniquely identify a record in the pdbx_ligscreen_investigation_series list."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_series.series_id"
+   _item.category_id     pdbx_ligscreen_investigation_series
+   _item.mandatory_code  yes
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_series.campaign_id
+   _item_description.description  "This data item is a pointer to pdbx_ligscreen_investigation_campaign.campaign_id in the PDBX_LIGSCREEN_INVESTIGATION_CAMPAIGN category."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_series.campaign_id"
+   _item.category_id     pdbx_ligscreen_investigation_series
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_ligscreen_investigation_campaign.campaign_id"
+   _item_linked.child_name   "_pdbx_ligscreen_investigation_series.campaign_id"
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_series.investigation_id
+   _item_description.description  "This data item is a pointer to _pdbx_investigation.id in the PDBX_INVESTIGATION category."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_series.investigation_id"
+   _item.category_id     pdbx_ligscreen_investigation_series
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_investigation.id"
+   _item_linked.child_name   "_pdbx_ligscreen_investigation_series.investigation_id"
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_series.type_of_library
+   _item_description.description  "The type of the library, screen or series of chemicals used."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_series.type_of_library"
+   _item.category_id     pdbx_ligscreen_investigation_series
+   _item.mandatory_code  yes
+   #
+   _item_type.code  code
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.pdbx_value_display
+   _item_enumeration.detail
+     "_pdbx_ligscreen_investigation_series.type_of_library"  COMBLIB     "Combinatorial library"                             "Combinatorial library - systematic sets of building blocks"  
+     "_pdbx_ligscreen_investigation_series.type_of_library"  DOS         "Diversity-Oriented library"                        "Diversity-Oriented library - covers broad chemical space"  
+     "_pdbx_ligscreen_investigation_series.type_of_library"  FRAGLIB     "Fragment screening library"                        "Fragment screening library - low molecular weight compounds (fragments)"  
+     "_pdbx_ligscreen_investigation_series.type_of_library"  FOCUSEDLIB  "Focused library"                                   "Focused library - specific therapeutic target or area"  
+     "_pdbx_ligscreen_investigation_series.type_of_library"  HTS         "High-throughput screening library"                 "High-throughput screening library"  
+     "_pdbx_ligscreen_investigation_series.type_of_library"  NATPROD     "Natural product library"                           "Natural product library - compounds observed in natural sources"  
+     "_pdbx_ligscreen_investigation_series.type_of_library"  SAR         "Structure-activity-relationship series"            "Structure-activity-relationship series"  
+     "_pdbx_ligscreen_investigation_series.type_of_library"  OTHER       "Customized / in-house library or chemical series"  "Customized / in-house library or chemical series"  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_series.library
+   _item_description.description  "The name of the library used."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_series.library"
+   _item.category_id     pdbx_ligscreen_investigation_series
+   _item.mandatory_code  yes
+   #
+   _item_type.code  code
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.pdbx_value_display
+   _item_enumeration.detail
+     "_pdbx_ligscreen_investigation_series.library"  Astex_MiniFrags   "Fragment Library: MiniFrags developed at Astex Pharmaceuticals"                                               "Reference: https://doi.org/10.1016/j.drudis.2019.03.009"  
+     "_pdbx_ligscreen_investigation_series.library"  Cambridge3D       "Fragment library: Diversity-oriented synthesis (DOS)-derived fragments developed at University of Cambridge"  "Reference: https://doi.org/10.1039/d0sc01232g"  
+     "_pdbx_ligscreen_investigation_series.library"  DLS-DSiPoised     "Fragment Library: DSi-P (Diamond-SGC-iNEXT Poised) fragments developed at Diamond Light Source (DLS)"         "Reference: https://doi.org/10.1039/C5SC03115J"  
+     "_pdbx_ligscreen_investigation_series.library"  EmamineEF         "Fragment Library: Emamine Essential fragments developed with researchers at University of Cambridge"          "Reference: https://enamine.net/compound-libraries/fragment-libraries/essential-library"  
+     "_pdbx_ligscreen_investigation_series.library"  EUOPEN-EFSL       "Fragment Library: EU-OPENSCREEN, Fragment Library (EFSL)"                                                     "Reference: https://doi.org/10.1039/D3MD00724C"  
+     "_pdbx_ligscreen_investigation_series.library"  EUOPEN-MiniFrags  "Fragment Library: EU-OPENSCREEN, MiniFrags Fragment Library"                                                  "Reference: https://doi.org/10.1039/D3MD00724C"  
+     "_pdbx_ligscreen_investigation_series.library"  Fraglites         "Fragment Library: Fraglites Fragment Library"                                                                 "Reference: https://doi.org/10.1021/acs.jmedchem.9b00304"  
+     "_pdbx_ligscreen_investigation_series.library"  FragMAXlib        "Fragment Library: FragMAX Fragment Library"                                                                   "Reference: https://fragmax.github.io/loginsetup.html#library-view"  
+     "_pdbx_ligscreen_investigation_series.library"  F2X-Entry         "Fragment Library: F2X-Entry"                                                                                  "Reference: https://doi.org/10.1016/j.str.2020.04.019"  
+     "_pdbx_ligscreen_investigation_series.library"  F2X-Universal     "Fragment Library: F2X-Universal"                                                                              "Reference: https://doi.org/10.1016/j.str.2020.04.019"  
+     "_pdbx_ligscreen_investigation_series.library"  Leeds-3D          "Fragment Library: Highly 3D in character fragment libraries developed at University of Leeds"                 "Reference: https://doi.org/10.1039/C8OB00688A"  
+     "_pdbx_ligscreen_investigation_series.library"  SpotXplorer       "Fragment Library: SpotXplorer Fragment Library"                                                               "Reference: https://doi.org/10.1038/s41467-021-23443-y"  
+     "_pdbx_ligscreen_investigation_series.library"  York-3D           "Fragment Library: Highly 3D in character fragment libraries developed at University of York"                  "Reference: https://doi.org/10.1002/chem.202001123"  
+     "_pdbx_ligscreen_investigation_series.library"  Other-Fraglib     "Fragment Library: Customized / in-house fragment library"                                                     .  
+     "_pdbx_ligscreen_investigation_series.library"  Other             "Chemical Library: Customized / in-house series or library"                                                    .  
+     "_pdbx_ligscreen_investigation_series.library"  Unknown           "Chemical Library: Chemical library or series is unidentified"                                                 .  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_series.library_batch
+   _item_description.description  "Any batch-specific identifier describing the exact version of the library used."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_series.library_batch"
+   _item.category_id     pdbx_ligscreen_investigation_series
+   _item.mandatory_code  no
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_series.lib_identification_method
+   _item_description.description  "The method used to identify the library used. The provenance for the library name (listed in _pdbx_ligscreen_investigation_series.library item)."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_series.lib_identification_method"
+   _item.category_id     pdbx_ligscreen_investigation_series
+   _item.mandatory_code  yes
+   #
+   _item_type.code  code
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.detail
+     "_pdbx_ligscreen_investigation_series.lib_identification_method"  author              "Researcher who provided data confirmed the fragment libary identity."  
+     "_pdbx_ligscreen_investigation_series.lib_identification_method"  manual_curation     "Reviewed by human curator, including examining publication associated with the research."  
+     "_pdbx_ligscreen_investigation_series.lib_identification_method"  facility_curation   "Information provided from the facility where the experiment was performed."  
+     "_pdbx_ligscreen_investigation_series.lib_identification_method"  automated_curation  "Script comparing chemicals from a set of known fragment libraries assigned most likely fragment library utilized."  
+     "_pdbx_ligscreen_investigation_series.lib_identification_method"  other               "Undefined method."  
+     "_pdbx_ligscreen_investigation_series.lib_identification_method"  unknown             "Unknown. Fragment library name may or may not be listed."  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_series.lib_details
+   _item_description.description  "A description of any library or series-specific information."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_series.lib_details"
+   _item.category_id     pdbx_ligscreen_investigation_series
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+   _item_examples.case  "Chemical library was purchased and received in 2015."
+   #
+save_
+#
+save_pdbx_ligscreen_investigation_screening_exp
+   _category.description     
+;              The PDBX_LIGSCREEN_INVESTIGATION_SCREENING_EXP category contains the data records for each experiment 
+               in a ligand screening series. This includes the experimental method used, a list of any fragment(s) 
+               or library chemicals present, the other contents in the sample, and whether any data generated from the 
+               experiment was deposited in an archive. An "instance" item also allows for the description of experiments 
+               with multiple fragment hits results. A URL link to experiment-level data files at an external resource may also be given.
+;
+
+   _category.id              pdbx_ligscreen_investigation_screening_exp
+   _category.mandatory_code  no
+   #
+   loop_
+   _category_key.name
+     "_pdbx_ligscreen_investigation_screening_exp.screening_exp_id"  
+     "_pdbx_ligscreen_investigation_screening_exp.instance_id"  
+   #
+   loop_
+   _category_group.id
+     inclusive_group  
+     ligscreen_group  
+   #
+   _category_examples.detail  
+;
+    Theoretical example.
+;
+
+   _category_examples.case    
+;
+loop_
+_pdbx_ligscreen_investigation_screening_exp.screening_exp_id
+_pdbx_ligscreen_investigation_screening_exp.series_id
+_pdbx_ligscreen_investigation_screening_exp.campaign_id
+_pdbx_ligscreen_investigation_screening_exp.investigation_id
+_pdbx_ligscreen_investigation_screening_exp.sample_id
+_pdbx_ligscreen_investigation_screening_exp.lib_component_mix_id
+_pdbx_ligscreen_investigation_screening_exp.exp_acc
+_pdbx_ligscreen_investigation_screening_exp.exp_method
+_pdbx_ligscreen_investigation_screening_exp.exp_details
+_pdbx_ligscreen_investigation_screening_exp.exp_external_url
+_pdbx_ligscreen_investigation_screening_exp.data_deposited
+_pdbx_ligscreen_investigation_screening_exp.instance_id
+_pdbx_ligscreen_investigation_screening_exp.archived_data_id
+exp1   1 1   FH123   1 1   FH123/exp1   'X-RAY DIFFRACTION'   ? http://www.fraghub.org/fh123456/1    N  1    ?   
+exp2   1 1   FH123   1 2   FH123/exp2   'X-RAY DIFFRACTION'   ? http://www.fraghub.org/fh123456/2    Y  1    1   
+exp3   1 1   FH123   1 3   FH123/exp3   'ELECTRON MICROSCOPY' ? http://www.fraghub.org/fh123456/3    Y  1    2   
+exp3   1 1   FH123   1 3   FH123/exp3   'ELECTRON MICROSCOPY' ? http://www.fraghub.org/fh123456/3    Y  2    3   
+exp4   1 1   FH123   1 4   FH123/exp4   'X-RAY DIFFRACTION'   ? http://www.fraghub.org/fh123456/4    N  1    ?   
+exp5   1 1   FH123   2 5   FH123/exp5   'X-RAY DIFFRACTION'   ? http://www.fraghub.org/fh123456/5    N  1    ?   
+exp6   1 1   FH123   2 6   FH123/exp6   'X-RAY DIFFRACTION'   ? http://www.fraghub.org/fh123456/6    N  1    ?   
+exp7   1 1   FH123   2 7   FH123/exp7   'X-RAY DIFFRACTION'   ? http://www.fraghub.org/fh123456/7    N  1    ?   
+exp8   1 1   FH123   2 8   FH123/exp8   'X-RAY DIFFRACTION'   ? http://www.fraghub.org/fh123456/8    N  1    ?
+;
+
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_exp.screening_exp_id
+   _item_description.description  "The value of _pdbx_ligscreen_investigation_screening_exp.id must uniquely identify a record in the pdbx_ligscreen_investigation_screening_exp list."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_exp.screening_exp_id"
+   _item.category_id     pdbx_ligscreen_investigation_screening_exp
+   _item.mandatory_code  yes
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_exp.instance_id
+   _item_description.description  
+;              This value of _pdbx_ligscreen_investigation_screening_exp.instance_id identifiers a specific data record, 
+               for a given experiment, in the pdbx_ligscreen_investigation_screening_exp category.
+               For example if a liagnd or fragment is characterized by "Electron diffraction microscopy" an experiment will have two data records to link to both PDB and EMDB.
+               Another example, to have both a hit ("On-site binding") and partial-hit ("Off-site binding"), an experiment will have two data records.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_exp.instance_id"
+   _item.category_id     pdbx_ligscreen_investigation_screening_exp
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_exp.series_id
+   _item_description.description  "This data item is a pointer to _pdbx_ligscreen_investigation_series.series_id in the PDBX_LIGSCREEN_INVESTIGATION_SERIES category."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_exp.series_id"
+   _item.category_id     pdbx_ligscreen_investigation_screening_exp
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_ligscreen_investigation_series.series_id"
+   _item_linked.child_name   "_pdbx_ligscreen_investigation_screening_exp.series_id"
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_exp.campaign_id
+   _item_description.description  "This data item is a pointer to _pdbx_ligscreen_investigation_campaign.campaign_id in the PDBX_LIGSCREEN_INVESTIGATION_CAMPAIGN category."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_exp.campaign_id"
+   _item.category_id     pdbx_ligscreen_investigation_screening_exp
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_ligscreen_investigation_campaign.campaign_id"
+   _item_linked.child_name   "_pdbx_ligscreen_investigation_screening_exp.campaign_id"
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_exp.investigation_id
+   _item_description.description  "This data item is a pointer to _pdbx_investigation.id in the PDBX_INVESTIGATION category."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_exp.investigation_id"
+   _item.category_id     pdbx_ligscreen_investigation_screening_exp
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_investigation.id"
+   _item_linked.child_name   "_pdbx_ligscreen_investigation_screening_exp.investigation_id"
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_exp.sample_id
+   _item_description.description  
+;              This data item is a pointer to _pdbx_investigation_sample.sample_id in the 
+               PDBX_INVESTIGATION_SAMPLE category. This identifer indicates the 
+               non-fragment screening components in the sample composition.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_exp.sample_id"
+   _item.category_id     pdbx_ligscreen_investigation_screening_exp
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_investigation_sample.sample_id"
+   _item_linked.child_name   "_pdbx_ligscreen_investigation_screening_exp.sample_id"
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_exp.lib_component_mix_id
+   _item_description.description  
+;             This data item is a pointer to _pdbx_ligscreen_investigation_lib_component_mix.id in the 
+              PDBX_LIGSCREEN_INVETSIGATION_LIB_COMPONENT_MIX category. This identifer will form a reference
+              to an aggregated list (n=>1) of components derived from the Chemical Library or Series.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_exp.lib_component_mix_id"
+   _item.category_id     pdbx_ligscreen_investigation_screening_exp
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_ligscreen_investigation_lib_component_mix.id"
+   _item_linked.child_name   "_pdbx_ligscreen_investigation_screening_exp.lib_component_mix_id"
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_exp.exp_acc
+   _item_description.description  "An experiment-specific accession code."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_exp.exp_acc"
+   _item.category_id     pdbx_ligscreen_investigation_screening_exp
+   _item.mandatory_code  no
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_exp.exp_method
+   _item_description.description  "The experimental method used for characterisation of the experimental record."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_exp.exp_method"
+   _item.category_id     pdbx_ligscreen_investigation_screening_exp
+   _item.mandatory_code  yes
+   #
+   _item_type.code  line
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.detail
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  DLS                             "Dynamic Light Scattering"  
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  "ELECTRON MICROSCOPY"           "Electron Microscopy"  
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  "EM CRYST"                      "Electron Crystallography"  
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  EPR                             "Electron Paramagnetic Resonance"  
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  "Fiber diffraction"             "Fiber Diffraction"  
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  FRET                            "Fluorescence Transfer"  
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  IR                              "Infrared Spectroscopy"  
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  ITC                             "Isothermal Titration Calorimetry"  
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  "NEUTRON DIFFRACTION"           "Neutron Diffraction"  
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  "PREDICTION - Homology model"   "Homology or comparative model based on existing templates"  
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  "PREDICTION - Ab initio model"  "Ab initio or template-free models"  
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  "POWDER DIFFRACTION"            "Powder Diffraction"  
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  "SOLUTION NMR"                  "Solution NMR"  
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  "SOLID-STATE NMR"               "Solid-state NMR"  
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  "SOLUTION SCATTERING"           "Solution Scattering"  
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  SPR                             "Surface Plasmon Resonance"  
+     "_pdbx_ligscreen_investigation_screening_exp.exp_method"  "X-RAY DIFFRACTION"             "X-ray Diffraction"  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_exp.exp_details
+   _item_description.description  "A description of any experiment specific aspects."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_exp.exp_details"
+   _item.category_id     pdbx_ligscreen_investigation_screening_exp
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_exp.exp_external_url
+   _item_description.description  "A URL link to investigation-level data at an external resource."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_exp.exp_external_url"
+   _item.category_id     pdbx_ligscreen_investigation_screening_exp
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_exp.data_deposited
+   _item_description.description  "Indicate whether data was deposited for this experiment or not."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_exp.data_deposited"
+   _item.category_id     pdbx_ligscreen_investigation_screening_exp
+   _item.mandatory_code  no
+   #
+   _item_type.code  code
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.detail
+     "_pdbx_ligscreen_investigation_screening_exp.data_deposited"  N  "No. Data is NOT deposited."  
+     "_pdbx_ligscreen_investigation_screening_exp.data_deposited"  Y  "Yes. Data is deposited."  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_exp.archived_data_id
+   _item_description.description  "This data item is a pointer to _pdbx_investigation_archived.data_id in the PDBX_INVESTIGATION_ARCHIVED_DATA category."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_exp.archived_data_id"
+   _item.category_id     pdbx_ligscreen_investigation_screening_exp
+   _item.mandatory_code  no
+   #
+   _item_linked.parent_name  "_pdbx_investigation_archived_data.id"
+   _item_linked.child_name   "_pdbx_ligscreen_investigation_screening_exp.archived_data_id"
+   #
+   _item_type.code  int
+   #
+save_
+#
+save_pdbx_ligscreen_investigation_screening_result
+   _category.description     
+;              The PDBX_LIGSCREEN_INVESTIGATION_SCREENING_RESULT category relates experiment records to the 
+               any chemical library compound-binding or fragment-binding specific information. This includes 
+               the list of any chemical library ligand(s) or fragment(s) present, the assessment of the result, 
+               how that assessment was made, and any depositor provided details. An 'result' item also allows 
+               for the description of experiments with multiple ligand or fragment results.
+;
+
+   _category.id              pdbx_ligscreen_investigation_screening_result
+   _category.mandatory_code  no
+   #
+   loop_
+   _category_key.name
+     "_pdbx_ligscreen_investigation_screening_result.screening_exp_id"  
+     "_pdbx_ligscreen_investigation_screening_result.result_id"  
+   #
+   loop_
+   _category_group.id
+     inclusive_group  
+     ligscreen_group  
+   #
+   _category_examples.detail  
+;
+    Theoretical example.
+;
+
+   _category_examples.case    
+;
+loop_
+_pdbx_ligscreen_investigation_screening_result.screening_exp_id
+_pdbx_ligscreen_investigation_screening_result.result_id
+_pdbx_ligscreen_investigation_screening_result.outcome
+_pdbx_ligscreen_investigation_screening_result.lib_component_id
+_pdbx_ligscreen_investigation_screening_result.outcome_assessment
+_pdbx_ligscreen_investigation_screening_result.outcome_description
+_pdbx_ligscreen_investigation_screening_result.outcome_details
+_pdbx_ligscreen_investigation_screening_result.reflns_res_high
+exp1  1        miss           ?   automatic   Unknown                     ?   ?    
+exp2  1        partial-hit    2   automatic   "Off-site binding"          ?   2.18 
+exp3  1        hit            3   manual      "On-site binding"           ?   2.22 
+exp3  2        partial-hit    3   manual      "Off-site binding"          ?   2.22 
+exp4  1        partial-hit    4   refined     "On-site binding"           ?   1.90 
+exp5  1        hit            5   refined     "Highest affinity hit"      ?   2.45 
+exp6  1        miss           ?   manual      "No diffraction"            ?   ? 
+exp7  1        miss           ?   manual      "No diffraction"            ?   ? 
+exp8  1        miss           ?   manual      "Fragment unobserved"       ?   1.80
+;
+
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_result.screening_exp_id
+   _item_description.description  
+;              This data item is a pointer to _pdbx_ligscreen_investigation_screening_exp.screening_exp_id in the
+               PDBX_LIGSCREEN_INVESTIGATION_SCREENING_EXP category. Each result listed in this category is thus 
+               linked to the experiment that generated the result.
+
+               This id combined witn "result_id" gives each reported result a unique identifier.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_result.screening_exp_id"
+   _item.category_id     pdbx_ligscreen_investigation_screening_result
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_ligscreen_investigation_screening_exp.screening_exp_id"
+   _item_linked.child_name   "_pdbx_ligscreen_investigation_screening_result.screening_exp_id"
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_result.result_id
+   _item_description.description  
+;              This value of _pdbx_ligscreen_investigation_screening_exp.result_id identifiers a specific data result record, 
+               for a given experiment, in the PDBX_LIGSCREEN_INVESTIGATION_SCREENING_EXP category.
+               For example if a fragment is observed in the same experiment / structure to have binding in different places 
+               ('On-site binding') and partial-hit ('Off-site binding') there would be a result_id = 1 and result_id = 2.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_result.result_id"
+   _item.category_id     pdbx_ligscreen_investigation_screening_result
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_result.lib_component_id
+   _item_description.description  
+;              This data item is a pointer to _pdbx_ligscreen_investigation_lib_component.id 
+               in the PDBX_LIGSCREEN_INVESTIGATION_LIB_COMPONENT category. This therefore identifies 
+               a specific ligand or fragment component within the Chemical Library / Libraries / Series screened.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_result.lib_component_id"
+   _item.category_id     pdbx_ligscreen_investigation_screening_result
+   _item.mandatory_code  no
+   #
+   _item_linked.parent_name  "_pdbx_ligscreen_investigation_lib_component.id"
+   _item_linked.child_name   "_pdbx_ligscreen_investigation_screening_result.lib_component_id"
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_result.outcome
+   _item_description.description  "The approximate assessment of the Chemical Library or Series ligand-binding event. This is to be provided at deposition."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_result.outcome"
+   _item.category_id     pdbx_ligscreen_investigation_screening_result
+   _item.mandatory_code  yes
+   #
+   _item_type.code  code
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.detail
+     "_pdbx_ligscreen_investigation_screening_result.outcome"  hit          .  
+     "_pdbx_ligscreen_investigation_screening_result.outcome"  miss         .  
+     "_pdbx_ligscreen_investigation_screening_result.outcome"  partial-hit  .  
+     "_pdbx_ligscreen_investigation_screening_result.outcome"  in-progress  .  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_result.outcome_assessment
+   _item_description.description  "The method used for hit assessment of the chemical library or series ligand-binding event."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_result.outcome_assessment"
+   _item.category_id     pdbx_ligscreen_investigation_screening_result
+   _item.mandatory_code  no
+   #
+   _item_type.code  code
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.detail
+     "_pdbx_ligscreen_investigation_screening_result.outcome_assessment"  automatic    "Binding assessed as part of the screening-facility's automated pipeline"  
+     "_pdbx_ligscreen_investigation_screening_result.outcome_assessment"  refined      "Binding assessed after atomistic refinement"  
+     "_pdbx_ligscreen_investigation_screening_result.outcome_assessment"  manual       "Binding assessed by direct human evaluation"  
+     "_pdbx_ligscreen_investigation_screening_result.outcome_assessment"  in-progress  "Binding is still undergoing assessment"  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_result.outcome_description
+   _item_description.description  "Simplified description of any specific chemical library or series ligand-binding aspects."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_result.outcome_description"
+   _item.category_id     pdbx_ligscreen_investigation_screening_result
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.detail
+     "_pdbx_ligscreen_investigation_screening_result.outcome_description"  Unknown                        "detail decription to be added"  
+     "_pdbx_ligscreen_investigation_screening_result.outcome_description"  "Off-site binding"             "detail decription to be added"  
+     "_pdbx_ligscreen_investigation_screening_result.outcome_description"  "On-site binding"              "detail decription to be added"  
+     "_pdbx_ligscreen_investigation_screening_result.outcome_description"  "Fragment unobserved"          "detail decription to be added"  
+     "_pdbx_ligscreen_investigation_screening_result.outcome_description"  "Library chemical unobserved"  "detail decription to be added"  
+     "_pdbx_ligscreen_investigation_screening_result.outcome_description"  "Highest affinity hit"         "detail decription to be added"  
+     "_pdbx_ligscreen_investigation_screening_result.outcome_description"  "No diffraction"               "detail decription to be added"  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_result.outcome_details
+   _item_description.description  "Further details about the chemical library or series ligand-binding result."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_result.outcome_details"
+   _item.category_id     pdbx_ligscreen_investigation_screening_result
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_screening_result.reflns_res_high
+   _item_description.description  
+;              The high resolution limit used for data processing in angstroms. For data archived to wwPDB, the coordinates deposited 
+               should have the same number in the _reflns.d_resolution_high item. The criteria used to determine data resolution is 
+               captured in other items in REFLNS category.  Resolution impacts on the certainity of a ligands position and/or identity.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_screening_result.reflns_res_high"
+   _item.category_id     pdbx_ligscreen_investigation_screening_result
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save_pdbx_ligscreen_investigation_lib_component_mix
+   _category.description     
+;              The PDBX_LIGSCREEN_INVESTIGATION_LIB_COMPONENT_MIX category provides a mechanism to assign distinct combinations from the screened
+               Chemical Library or Series compounds (n=>1) a unique singular identifier. This is particularly useful when each experiment involves the 
+               target being exposed to a mixture of compounds, as occurs on occasion with fragment screening libraries. Individual ligands 
+               or fragments in this category are referred to via their id as defined in the PDBX_LIGSCREEN_INVESTIGATION_LIB_COMPONENT category.
+;
+
+   _category.id              pdbx_ligscreen_investigation_lib_component_mix
+   _category.mandatory_code  no
+   #
+   loop_
+   _category_group.id
+     inclusive_group  
+     ligscreen_group  
+   #
+   loop_
+   _category_key.name
+     "_pdbx_ligscreen_investigation_lib_component_mix.id"  
+     "_pdbx_ligscreen_investigation_lib_component_mix.lib_component_id"  
+   #
+   _category_examples.detail  
+;
+    Theoretical example.
+;
+
+   _category_examples.case    
+;
+loop_
+_pdbx_ligscreen_investigation_lib_component_mix.id
+_pdbx_ligscreen_investigation_lib_component_mix.lib_component_id
+_pdbx_ligscreen_investigation_lib_component_mix.internal_id
+1 1  Plate1_A1
+1 2  Plate1_A1
+1 3  Plate1_A1
+2 4  Plate1_B1
+2 5  Plate1_B1
+2 6  Plate1_B1
+3 7  Plate1_C1
+3 8  Plate1_C1
+3 9  Plate1_C1
+;
+
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component_mix.id
+   _item_description.description  
+;          The value of _pdbx_ligscreen_investigation_lib_component_mix.id must identify a distinct combination of
+           one or more Chemical Library, Chemical Series or Fragment compound(s) used in one or more experiments.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component_mix.id"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component_mix
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component_mix.lib_component_id
+   _item_description.description  
+;              This data item is a pointer to _pdbx_ligscreen_investigation_lib_component.id in the
+               PDBX_LIGSCREEN_INVESTIGATION_LIB_COMPONENT category. This identifer will therefore provide reference
+               to a singular Chemical Library, Chemical Series or Fragment compound.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component_mix.lib_component_id"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component_mix
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_ligscreen_investigation_lib_component.id"
+   _item_linked.child_name   "_pdbx_ligscreen_investigation_lib_component_mix.lib_component_id"
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component_mix.internal_id
+   _item_description.description  
+;              The internal ID for screening solution for the Chemical library, Chemical Series or Fragment screening facility. 
+               For example the ID could refered to the well in the plate, in combination of the screening plate number.
+               This informationis from the author of investigation and provided as-is.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component_mix.internal_id"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component_mix
+   _item.mandatory_code  no
+   #
+   _item_type.code  code
+   #
+save_
+#
+save_pdbx_ligscreen_investigation_lib_component
+   _category.description     
+;              The PDBX_LIGSCREEN_INVESTIGATION_LIB_COMPONENT category records information about the chemical compounds
+               in the Chemical Library (e.g. fragment), or Chemical Series used in the investigation such as name, 
+               molecular weight, an InChI and InChIkey descriptor.
+;
+
+   _category.id              pdbx_ligscreen_investigation_lib_component
+   _category.mandatory_code  no
+   #
+   _category_key.name  "_pdbx_ligscreen_investigation_lib_component.id"
+   #
+   loop_
+   _category_group.id
+     inclusive_group  
+     ligscreen_group  
+   #
+   _category_examples.detail  
+;
+    Theoretical example.
+;
+
+   _category_examples.case    
+;
+loop_
+_pdbx_ligscreen_investigation_lib_component.id
+_pdbx_ligscreen_investigation_lib_component.parent_id
+_pdbx_ligscreen_investigation_lib_component.name
+_pdbx_ligscreen_investigation_lib_component.details
+_pdbx_ligscreen_investigation_lib_component.chem_comp_id
+_pdbx_ligscreen_investigation_lib_component.formula
+_pdbx_ligscreen_investigation_lib_component.formula_weight
+_pdbx_ligscreen_investigation_lib_component.inchi_descriptor
+_pdbx_ligscreen_investigation_lib_component.inchi_descriptor_software
+_pdbx_ligscreen_investigation_lib_component.inchi_descriptor_software_version
+_pdbx_ligscreen_investigation_lib_component.inchikey
+_pdbx_ligscreen_investigation_lib_component.inchikey_software
+_pdbx_ligscreen_investigation_lib_component.inchikey_software_version
+_pdbx_ligscreen_investigation_lib_component.isomeric_smiles
+_pdbx_ligscreen_investigation_lib_component.isomeric_smiles_software
+_pdbx_ligscreen_investigation_lib_component.isomeric_smiles_software_version
+_pdbx_ligscreen_investigation_lib_component.cas_identifier
+1  1   VT00249  "unbound form"  ?   C9H9NO2      163.2  'InChI=1S/C9H9NO2/c11-9-10-8(6-12-9)7-4-2-1-3-5-7/h1-5,8H,6H2,(H,10,11)/t8-/m0/s1'                                    INCHI  1.03  QDMNNMIOWVJVLY-QMMMGPOBSA-N   INCHI  1.03   ?   ?   ?   ? 
+2  1   VT00245  ?               ?   C9H8N2O2S    208.2  'InChI=1S/C9H8N2O2S/c1-5-2-3-8(14-5)6-4-7(9(12)13)11-10-6/h2-4H,1H3,(H,10,11)(H,12,13)'                               INCHI  1.03  JIJVBLCUMDFCFW-UHFFFAOYSA-N   INCHI  1.03   ?   ?   ?   ? 
+3  1   VT00220  ?               ?   C6H6F3N3O    193.1  'InChI=1S/C6H6F3N3O/c1-12-3(5(10)13)2-4(11-12)6(7,8)9/h2H,1H3,(H2,10,13)'                                             INCHI  1.03  RGXJDXSOGHNPHB-UHFFFAOYSA-N   INCHI  1.03   ?   ?   ?   ? 
+4  1   VT00087  ?               ?   C8H12N4      164.2  'InChI=1S/C8H12N4/c9-7-5-10-6-8(11-7)12-3-1-2-4-12/h5-6H,1-4H2,(H2,9,11)'                                             INCHI  1.03  DRGYQBNAVLYUSQ-UHFFFAOYSA-N   INCHI  1.03   ?   ?   ?   ? 
+5  1   VT00225  ?               ?   C5H5F3N2     150.1  'InChI=1S/C5H5F3N2/c1-3-2-4(10-9-3)5(6,7)8/h2H,1H3,(H,9,10)'                                                          INCHI  1.03  DLCHCAYDSKIFIN-UHFFFAOYSA-N   INCHI  1.03   ?   ?   ?   ? 
+6  1   VT00162  ?               ?   C12H9N3      195.2  'InChI=1S/C12H9N3/c1-2-6-11-10(5-1)14-12(15-11)9-4-3-7-13-8-9/h1-8H,(H,14,15)'                                        INCHI  1.03  BOUOQESVDURNSB-UHFFFAOYSA-N   INCHI  1.03   ?   ?   ?   ? 
+7  1   VT00257  ?               ?   C6H10N2O3S   190.2  'InChI=1S/C6H10N2O3S/c1-4-6(5(2)11-8-4)12(9,10)7-3/h7H,1-3H3'                                                         INCHI  1.03  PBAHROBCZQANJL-UHFFFAOYSA-N   INCHI  1.03   ?   ?   ?   ? 
+8  1   VT00084  ?               ?   C12H15NO4S   269.3  'InChI=1S/C12H15NO4S/c1-9-4-6-10(7-5-9)18(16,17)13-8-2-3-11(13)12(14)15/h4-7,11H,2-3,8H2,1H3,(H,14,15)/t11-/m0/s1'    INCHI  1.03  CGPHGPCHVUSFFA-NSHDSACASA-N   INCHI  1.03   ?   ?   ?   ? 
+9  1   VT00190  ?               ?   C10H12N2O    176.2  'InChI=1S/C10H12N2O/c1-8-11-9-4-2-3-5-10(9)12(8)6-7-13/h2-5,13H,6-7H2,1H3'                                            INCHI  1.03  CURPBJGJXFWNMF-UHFFFAOYSA-N   INCHI  1.03   ?   ?   ?   ?
+;
+
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.id
+   _item_description.description  "The value of pdbx_ligscreen_investigation_lib_component.id must uniquely identify a record in the PDBX_LIGSCREEN_INVESTIGATION_LIB_COMPONENT list."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.id"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.parent_id
+   _item_description.description  
+;          This data item is enables there to be a precursor decsribed as well as the reacted chemical entity once it is covalently bound to the protein. 
+           This data item has been designed to capture before and after chemical structures of fragments in fragment-based covalent ligand discovery investigation
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.parent_id"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  no
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.name
+   _item_description.description  "The full name or alphanumeric identifier for the Chemical Library or Series compound."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.name"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.details
+   _item_description.description  "A description of any specific aspects relating to the Chemical Library or Series compound."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.details"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.chem_comp_id
+   _item_description.description  
+;              The wwPDB Chemical Component Dictionary (CCD) code for the Chemical Library or Series compound. In instances 
+               where codes are unknown or yet-to-be processed, '?' can be used as placeholders.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.chem_comp_id"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.formula
+   _item_description.description  
+;              The formula for the Chemical Library or Series component. Formulae 
+               are written according to the following rules:
+
+               (1) Only recognized element symbols may be used.
+
+               (2) Each element symbol is followed by a 'count' number. A count
+                  of '1' may be omitted.
+
+               (3) A space or parenthesis must separate each cluster of
+                  (element symbol + count), but in general parentheses are
+                  not used.
+
+               (4) The order of elements depends on whether carbon is
+                  present or not. If carbon is present, the order should be:
+                  C, then H, then the other elements in alphabetical order
+                  of their symbol. If carbon is not present, the elements
+                  are listed purely in alphabetic order of their symbol. This
+                  is the 'Hill' system used by Chemical Abstracts.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.formula"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+   _item_examples.case  "C29 H40 N2 O7 S"
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.formula_weight
+   _item_description.description  "Formula mass in daltons of the Chemical Library or Chemical Series compound."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.formula_weight"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  no
+   #
+   loop_
+   _item_range.maximum
+   _item_range.minimum
+       .  1.0  
+     1.0  1.0  
+   #
+   _item_type.code  float
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.inchi_descriptor
+   _item_description.description  "This InChI descriptor value for the Chemical Library or Chemical Series compound."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.inchi_descriptor"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  yes
+   #
+   _item_type.code  inchi
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.inchi_descriptor_software
+   _item_description.description  
+;              This data item contains the name of the program or software library used 
+               to compute the InChI descriptor for the Chemical Library or Chemical Series compound.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.inchi_descriptor_software"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+   loop_
+   _item_examples.case
+   _item_examples.detail
+     OPENEYE    "OpenEye software library"  
+     CACTVS     "CACTVS software library"  
+     RDKIT      "RDKIT software library"  
+     DAYLIGHT   "Daylight software library"  
+     INCHI      "IUPAC's InChI software library"  
+     OPENBABEL  "OpenBabel software library"  
+     OTHER      "Other program or library"  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.inchi_descriptor_software_version
+   _item_description.description  
+;              This data item contains the version of the program or software library used 
+               to compute the InChI descriptor for the Chemical Library or Chemical Series compound.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.inchi_descriptor_software_version"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.inchikey
+   _item_description.description  "This InChIKey descriptor value for the Chemical Library or Chemical Series compound."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.inchikey"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  yes
+   #
+   _item_type.code  inchikey
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.inchikey_software
+   _item_description.description  
+;              This data item contains the name of the program or software library used to compute 
+               the InChIKey descriptor for the Chemical Library or Chemical Series compound.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.inchikey_software"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+   loop_
+   _item_examples.case
+   _item_examples.detail
+     OPENEYE    "OpenEye software library"  
+     CACTVS     "CACTVS software library"  
+     RDKIT      "RDKIT software library"  
+     DAYLIGHT   "Daylight software library"  
+     INCHI      "IUPAC's InChI software library"  
+     OPENBABEL  "OpenBabel software library"  
+     OTHER      "Other program or library"  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.inchikey_software_version
+   _item_description.description  
+;              This data item contains the version of the program or software library used 
+               to compute the InChI descriptor for the Chemical Library or Chemical Series compound.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.inchikey_software_version"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.isomeric_smiles
+   _item_description.description  
+;
+               This SMILES descriptor for Chemical Library or Chemical Series compound including information about configuration around
+               double bonds and chirality. An isomeric SMILES is also known as an CANONICALIZED SMILES.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.isomeric_smiles"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.isomeric_smiles_software
+   _item_description.description  
+;              This data item contains the name of the program or library used to compute the 
+               SMILES descriptor for the Chemical Library or Chemical Series compound.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.isomeric_smiles_software"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+   loop_
+   _item_examples.case
+   _item_examples.detail
+     OPENEYE    "OpenEye software library"  
+     CACTVS     "CACTVS software library"  
+     RDKIT      "RDKIT software library"  
+     DAYLIGHT   "Daylight software library"  
+     INCHI      "IUPAC's InChI software library"  
+     OPENBABEL  "OpenBabel software library"  
+     OTHER      "Other program or software library"  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.isomeric_smiles_software_version
+   _item_description.description  
+;              This data item contains the version of the program or library used to compute the 
+               SMILES descriptor for the Chemical Library or Chemical Series compound.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.isomeric_smiles_software_version"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_lib_component.cas_identifier
+   _item_description.description  "This Chemical Abstracts Service (CAS) identifier for the Chemical Library or Chemical Series compound."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_lib_component.cas_identifier"
+   _item.category_id     pdbx_ligscreen_investigation_lib_component
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save_pdbx_investigation_archived_data
+   _category.description     "The PDBX_INVESTIGATION_ARCHIVED_DATA category contains the entries (PDB / EMDB / BMRB / etc) that are contained in the investigation."
+   _category.id              pdbx_investigation_archived_data
+   _category.mandatory_code  no
+   #
+   _category_key.name  "_pdbx_investigation_archived_data.id"
+   #
+   loop_
+   _category_group.id
+     inclusive_group      
+     investigation_group  
+   #
+   _category_examples.detail  
+;
+    Theoretical example.
+;
+
+   _category_examples.case    
+;
+_pdbx_investgation_archived_data.investigation_id 
+_pdbx_investgation_archived_data.id 
+_pdbx_investgation_archived_data.archive_db_name 
+_pdbx_investgation_archived_data.archive_db_acc 
+_pdbx_investgation_archived_data.archived_data_details 
+_pdbx_investgation_archived_data.archived_url 
+_pdbx_investgation_archived_data.archived_doi
+FH123   1  'X-ray Diffraction'  PDB   1A3N 'DEOXY HUMAN HEMOGLOBIN'  https://www.wwpdb.org/pdb?id=pdb_00001a3n   10.2210/pdb1a3n/pdb
+FH123   2  'X-ray Diffraction'  PDB   4NI0 'Quaternary R3 CO-liganded hemoglobin structure in complex with a thiol containing compound'  https://www.wwpdb.org/pdb?id=pdb_00004ni0   10.2210/pdb4ni0/pdb
+;
+
+   #
+save_
+#
+save__pdbx_investigation_archived_data.id
+   _item_description.description  
+;              The value of _pdbx_investigation_archived_data.archived_data_id must uniquely identify a record
+               in the PDBX_INVESTIGATION_ARCHIVED_DATA list.
+;
+
+   #
+   _item.name            "_pdbx_investigation_archived_data.id"
+   _item.category_id     pdbx_investigation_archived_data
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_investigation_archived_data.investigation_id
+   _item_description.description  "This data item is a pointer to _pdbx_investigation.id in the PDBX_INVESTIGATION category."
+   #
+   _item.name            "_pdbx_investigation_archived_data.investigation_id"
+   _item.category_id     pdbx_investigation_archived_data
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_investigation.id"
+   _item_linked.child_name   "_pdbx_investigation_archived_data.investigation_id"
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_investigation_archived_data.archive_db_name
+   _item_description.description  "The primary external resource where relevant experimental or processed data is archived."
+   #
+   _item.name            "_pdbx_investigation_archived_data.archive_db_name"
+   _item.category_id     pdbx_investigation_archived_data
+   _item.mandatory_code  yes
+   #
+   _item_type.code  code
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.detail
+     "_pdbx_investigation_archived_data.archive_db_name"  AlphaFoldDB  AlphaFoldDB  
+     "_pdbx_investigation_archived_data.archive_db_name"  BMRB         "Biological Magnetic Resonance Bank"  
+     "_pdbx_investigation_archived_data.archive_db_name"  EMDB         "Electron Microscopy Data Bank"  
+     "_pdbx_investigation_archived_data.archive_db_name"  EMPIAR       "Electron Microscopy Public Image Archive"  
+     "_pdbx_investigation_archived_data.archive_db_name"  IRRMC        "Integrated Resource for Reproducibility in Macromolecular Crystallography"  
+     "_pdbx_investigation_archived_data.archive_db_name"  MA           "Model Archive"  
+     "_pdbx_investigation_archived_data.archive_db_name"  Other        Other  
+     "_pdbx_investigation_archived_data.archive_db_name"  PCDDB        "Protein Circular Dichroism Data Bank"  
+     "_pdbx_investigation_archived_data.archive_db_name"  PDB          "Protein Data Bank"  
+     "_pdbx_investigation_archived_data.archive_db_name"  PDB-IHM      PDB-IHM  
+     "_pdbx_investigation_archived_data.archive_db_name"  PubChem      PubChem  
+     "_pdbx_investigation_archived_data.archive_db_name"  SASBDB       "Small Angle Scattering Biological Data Bank"  
+     "_pdbx_investigation_archived_data.archive_db_name"  SBGRID       "SBGrid Consortium, Harvard Medical School"  
+     "_pdbx_investigation_archived_data.archive_db_name"  SWISS-MODEL  "SWISS-MODEL, SIB"  
+     "_pdbx_investigation_archived_data.archive_db_name"  Zenodo       "Zenodo, CERN"  
+   #
+save_
+#
+save__pdbx_investigation_archived_data.archive_db_acc
+   _item_description.description  "The specific cc code for the data, e.g. pdb ID 1ABC."
+   #
+   _item.name            "_pdbx_investigation_archived_data.archive_db_acc"
+   _item.category_id     pdbx_investigation_archived_data
+   _item.mandatory_code  no
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_investigation_archived_data.archived_data_details
+   _item_description.description  
+;              A description of any experiment/arcived data specific aspects.
+               This can potential be the data archive entry title. 
+               Potentially this entry title can be pulled into the system if the section is blank.
+;
+
+   #
+   _item.name            "_pdbx_investigation_archived_data.archived_data_details"
+   _item.category_id     pdbx_investigation_archived_data
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_investigation_archived_data.archived_data_url
+   _item_description.description  "A URL link to experiment-level data at an external resource."
+   #
+   _item.name            "_pdbx_investigation_archived_data.archived_data_url"
+   _item.category_id     pdbx_investigation_archived_data
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+save_
+#
+save__pdbx_investigation_archived_data.archived_data_doi
+   _item_description.description  "A doi to experiment-level data at an external resource."
+   #
+   _item.name            "_pdbx_investigation_archived_data.archived_data_doi"
+   _item.category_id     pdbx_investigation_archived_data
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+save_
+#
+save_pdbx_investigation_sample
+   _category.description     
+;              The PDBX_INVESTIGATION_SAMPLE category contains the description of sample that was common 
+               for a series of experiments. Each record is an aggregation of polymers and non-polymers.
+;
+
+   _category.id              pdbx_investigation_sample
+   _category.mandatory_code  yes
+   #
+   loop_
+   _category_key.name
+     "_pdbx_investigation_sample.sample_id"  
+     "_pdbx_investigation_sample.investigation_id"  
+   #
+   loop_
+   _category_group.id
+     inclusive_group             
+     investigation_sample_group  
+   #
+   _category_examples.detail  
+;
+    Theoretical example 1.
+;
+
+   _category_examples.case    
+;
+loop_
+_pdbx_investigation_sample.sample_id
+_pdbx_investigation_sample.investigation_id
+_pdbx_investigation_sample.poly_descript_id
+_pdbx_investigation_sample.nonpoly_descript_id
+_pdbx_investigation_sample.descript_id
+1  1     1   1   1   
+2  1     1   2   1   
+3  1     2   3   2   
+4  1     3   4   3
+;
+
+   #
+save_
+#
+save__pdbx_investigation_sample.sample_id
+   _item_description.description  
+;              The value of _pdbx_investigation_sample.sample_id must uniquely identify a record
+               in the PDBX_INVESTIGATION_SAMPLE list.
+;
+
+   #
+   _item.name            "_pdbx_investigation_sample.sample_id"
+   _item.category_id     pdbx_investigation_sample
+   _item.mandatory_code  yes
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_investigation_sample.investigation_id
+   _item_description.description  "This data item is a pointer to _pdbx_investigation.id in the PDBX_INVESTIGATION category."
+   #
+   _item.name            "_pdbx_investigation_sample.investigation_id"
+   _item.category_id     pdbx_investigation_sample
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_investigation.id"
+   _item_linked.child_name   "_pdbx_investigation_sample.investigation_id"
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_investigation_sample.poly_descript_id
+   _item_description.description  
+;              This data item is a pointer to _pdbx_investigation_poly_descript.id in the 
+               PDBX_INVESTIGATION_POLY_DESCRIPT category. This identifer will form a reference
+               to an aggregated list (n=>1) of macromolecular sample components.
+;
+
+   #
+   _item.name            "_pdbx_investigation_sample.poly_descript_id"
+   _item.category_id     pdbx_investigation_sample
+   _item.mandatory_code  no
+   #
+   _item_linked.parent_name  "_pdbx_investigation_poly_descript.id"
+   _item_linked.child_name   "_pdbx_investigation_sample.poly_descript_id"
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_investigation_sample.nonpoly_descript_id
+   _item_description.description  
+;              This data item is a pointer to _pdbx_investigation_nonpoly_descript.id in the 
+               PDBX_INVESTIGATION_NONPOLY_DESCRIPT category. This identifer will form a reference
+               to an aggregated list (n=>1) of small molecule sample components.
+               
+               These "small molecules" are those which are not classes as polymers 
+               or compounds (or those directly derived from) the fragment library.
+               If an experiment has an associated PDB entry - these non-polymers do
+               not have to be modelled. However they should be described as a sample
+               component.
+;
+
+   #
+   _item.name            "_pdbx_investigation_sample.nonpoly_descript_id"
+   _item.category_id     pdbx_investigation_sample
+   _item.mandatory_code  no
+   #
+   _item_linked.parent_name  "_pdbx_investigation_nonpoly_descript.id"
+   _item_linked.child_name   "_pdbx_investigation_sample.nonpoly_descript_id"
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_investigation_sample.descript_id
+   _item_description.description  
+;              This data item is a pointer to _pdbx_investigation_entity.descript_id in the 
+               PDBX_INVESTIGATION_ENTITY category. This identifer will form a reference
+               to an aggregated list (n=>1) of describing the source organism(s).
+;
+
+   #
+   _item.name            "_pdbx_investigation_sample.descript_id"
+   _item.category_id     pdbx_investigation_sample
+   _item.mandatory_code  no
+   #
+   _item_linked.parent_name  "_pdbx_investigation_descript.id"
+   _item_linked.child_name   "_pdbx_investigation_sample.descript_id"
+   #
+   _item_type.code  int
+   #
+save_
+#
+save_pdbx_investigation_entity
+   _category.description     
+;              The PDBX_INVESTIGATION_ENTITY category records information about the sample used in the investigation
+               such as the source organism of the gene, or if isolated from natural source, the source organism for the 
+               organelle, complex or polymer, decsribed in terms of scientific name and taxonomy id.
+;
+
+   _category.id              pdbx_investigation_entity
+   _category.mandatory_code  no
+   #
+   _category_key.name  "_pdbx_investigation_entity.entity_id"
+   #
+   loop_
+   _category_group.id
+     inclusive_group             
+     investigation_sample_group  
+   #
+   _category_examples.detail  
+;
+    Theoretical example.
+;
+
+   _category_examples.case    
+;
+loop_
+_pdbx_investigation_entity.entity_id 
+_pdbx_investigation_entity.poly_entity_id 
+_pdbx_investigation_entity.src_method
+_pdbx_investigation_entity.src_organism_scientific 
+_pdbx_investigation_entity.src_ncbi_taxonomy_id 
+1  1   man  'Homo sapiens' 9606
+2  2   man  'Homo sapiens' 9606
+;
+
+   #
+save_
+#
+save__pdbx_investigation_entity.entity_id
+   _item_description.description  "The value of _pdbx_investigation_entity.entity_id must uniquely identify a record in the PDBX_INVESTIGATION_ENTITY list."
+   #
+   _item.name            "_pdbx_investigation_entity.entity_id"
+   _item.category_id     pdbx_investigation_entity
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_investigation_entity.poly_entity_id
+   _item_description.description  
+;              This data item is a pointer to _pdbx_investigation_entity_poly.poly_entity_id in the PDBX_INVESTIGATION_ENTITY_POLY category.
+               This identifer will therefore provide reference to a singular polymer entity.
+;
+
+   #
+   _item.name            "_pdbx_investigation_entity.poly_entity_id"
+   _item.category_id     pdbx_investigation_entity
+   _item.mandatory_code  no
+   #
+   _item_linked.parent_name  "_pdbx_investigation_entity_poly.poly_entity_id"
+   _item_linked.child_name   "_pdbx_investigation_entity.poly_entity_id"
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_investigation_entity.src_method
+   _item_description.description  "Defines the production method for the entity."
+   #
+   _item.name            "_pdbx_investigation_entity.src_method"
+   _item.category_id     pdbx_investigation_entity
+   _item.mandatory_code  yes
+   #
+   _item_type.code  ucode
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.detail
+     "_pdbx_investigation_entity.src_method"  man  "Entity isolated from a genetically manipulated source"  
+     "_pdbx_investigation_entity.src_method"  nat  "Entity isolated from a natural source"  
+     "_pdbx_investigation_entity.src_method"  syn  "Entity obtained synthetically"  
+   #
+   _pdbx_item.name            "_pdbx_investigation_entity.src_method"
+   _pdbx_item.mandatory_code  yes
+   #
+save_
+#
+save__pdbx_investigation_entity.src_organism_scientific
+   _item_description.description  
+;              The scientific name of the organism from which an entity within the sample was derived.
+               The organism name is for the source of the gene for samples that are isolated from a 
+               genetically manipulated source (e.g. recombinant expression), or which are chemically 
+               synthesized. The organism name is for both the source of the gene and/or the entity 
+               if sample is isolated from a natural source.
+;
+
+   #
+   _item.name            "_pdbx_investigation_entity.src_organism_scientific"
+   _item.category_id     pdbx_investigation_entity
+   _item.mandatory_code  yes
+   #
+   _item_type.code  text
+   #
+   _item_examples.case  "Mus musculus"
+   #
+   _pdbx_item.name            "_pdbx_investigation_entity.src_organism_scientific"
+   _pdbx_item.mandatory_code  yes
+   #
+save_
+#
+save__pdbx_investigation_entity.src_ncbi_taxonomy_id
+   _item_description.description  
+;  NCBI Taxonomy identifier for the source organism.
+   In this context, the source organism is the source of the gene 
+   for samples that are isolated from a genetically manipulated source 
+   (e.g. recombinant expression), or which are chemically synthesized. 
+   The organism name is for both the source of the gene and/or the entity 
+   if sample is isolated from a natural source.
+
+   Reference:
+
+   Wheeler DL, Chappey C, Lash AE, Leipe DD, Madden TL, Schuler GD,
+   Tatusova TA, Rapp BA (2000). Database resources of the National
+   Center for Biotechnology Information. Nucleic Acids Res 2000 Jan
+   1;28(1):10-4
+
+   Benson DA, Karsch-Mizrachi I, Lipman DJ, Ostell J, Rapp BA,
+   Wheeler DL (2000). GenBank. Nucleic Acids Res 2000 Jan 1;28(1):15-18.
+;
+
+   #
+   _item.name            "_pdbx_investigation_entity.src_ncbi_taxonomy_id"
+   _item.category_id     pdbx_investigation_entity
+   _item.mandatory_code  yes
+   #
+   _item_type.code  line
+   #
+   _pdbx_item.name            "_pdbx_investigation_entity.src_ncbi_taxonomy_id"
+   _pdbx_item.mandatory_code  yes
+   #
+save_
+#
+save_pdbx_investigation_descript
+   _category.description     
+;              The PDBX_INVESTIGATION_DESCRIPT category provides a mechanism to assign distinct combinations
+               of sample source organism(s) (n=>1) a unique singular identifier. The source organism(s) will be 
+               referred to via their entity_id as defined in the PDBX_INVESTIGATION_DESCRIPT category.
+;
+
+   _category.id              pdbx_investigation_descript
+   _category.mandatory_code  no
+   #
+   loop_
+   _category_key.name
+     "_pdbx_investigation_descript.id"  
+     "_pdbx_investigation_descript.entity_id"  
+   #
+   loop_
+   _category_group.id
+     inclusive_group             
+     investigation_sample_group  
+   #
+   _category_examples.detail  
+;
+    Theoretical example.
+;
+
+   _category_examples.case    
+;
+loop_
+_pdbx_investigation_descript.id
+_pdbx_investigation_descript.entity_id
+1 1
+1 2
+#
+;
+
+   #
+save_
+#
+save__pdbx_investigation_descript.id
+   _item_description.description  
+;              The value of _pdbx_investigation_descript.id must identify a distinct combination of sample 
+               source organism(s) used in one or more experiments.
+;
+
+   #
+   _item.name            "_pdbx_investigation_descript.id"
+   _item.category_id     pdbx_investigation_descript
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_investigation_descript.entity_id
+   _item_description.description  
+;              This data item is a pointer to _pdbx_investigation_entity.entity_id in the PDBX_INVESTIGATION_ENTITY category.
+               This identifer will therefore provide reference to a singular sample source organism.
+;
+
+   #
+   _item.name            "_pdbx_investigation_descript.entity_id"
+   _item.category_id     pdbx_investigation_descript
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_investigation_entity.entity_id"
+   _item_linked.child_name   "_pdbx_investigation_descript.entity_id"
+   #
+   _item_type.code  int
+   #
+save_
+#
+save_pdbx_investigation_poly_descript
+   _category.description     
+;              The PDBX_INVESTIGATION_POLY_DESCRIPT category provides a mechanism to assign distinct combinations
+               of polymers (n=>1) a unique singular identifier. Polymers will be referred to via
+               their entity_id as defined in the PDBX_INVESTIGATION_POLY_DESCRIPT category.
+;
+
+   _category.id              pdbx_investigation_poly_descript
+   _category.mandatory_code  no
+   #
+   loop_
+   _category_key.name
+     "_pdbx_investigation_poly_descript.id"  
+     "_pdbx_investigation_poly_descript.poly_entity_id"  
+   #
+   loop_
+   _category_group.id
+     inclusive_group             
+     investigation_sample_group  
+   #
+   _category_examples.detail  
+;
+    Theoretical example.
+;
+
+   _category_examples.case    
+;
+loop_
+_pdbx_investigation_poly_descript.id
+_pdbx_investigation_poly_descript.poly_entity_id
+1 1
+1 2
+#
+;
+
+   #
+save_
+#
+save__pdbx_investigation_poly_descript.id
+   _item_description.description  
+;              The value of _pdbx_investigation_poly_descript.id must identify a distinct combination of polymer
+               components used in one or more experiments.
+;
+
+   #
+   _item.name            "_pdbx_investigation_poly_descript.id"
+   _item.category_id     pdbx_investigation_poly_descript
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_investigation_poly_descript.poly_entity_id
+   _item_description.description  
+;              This data item is a pointer to _pdbx_investigation_poly_entity.poly_entity_id in the PDBX_INVESTIGATION_ENTITY_POLY category.
+               This identifer will therefore provide reference to a singular polymer entity.
+;
+
+   #
+   _item.name            "_pdbx_investigation_poly_descript.poly_entity_id"
+   _item.category_id     pdbx_investigation_poly_descript
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_investigation_entity_poly.poly_entity_id"
+   _item_linked.child_name   "_pdbx_investigation_poly_descript.poly_entity_id"
+   #
+   _item_type.code  int
+   #
+save_
+#
+save_pdbx_investigation_nonpoly_descript
+   _category.description     
+;              The PDBX_INVESTIGATION_NONPOLY_DESCRIPT category describes the chemical components in the protein sample or crystallization conditions.
+               It provides a mechanism to assign distinct combinations of small molecules (n=>1) a unique singular identifier. For example if there are 
+               two crystal condition, id 1 corresponse to one buffer, precipitant, additive combination, whereas id 2 is a different combination. 
+               The small molecules in the comnbination will be referred to via their entity_id as defined in the PDBX_INVESTIGATION_ENTITY_NONPOLY category.
+;
+
+   _category.id              pdbx_investigation_nonpoly_descript
+   _category.mandatory_code  no
+   #
+   loop_
+   _category_key.name
+     "_pdbx_investigation_nonpoly_descript.id"  
+     "_pdbx_investigation_nonpoly_descript.nonpoly_entity_id"  
+   #
+   loop_
+   _category_group.id
+     inclusive_group             
+     investigation_sample_group  
+   #
+   _category_examples.detail  
+;
+    Theoretical example.
+;
+
+   _category_examples.case    
+;
+loop_
+_pdbx_investigation_nonpoly_descript.id
+_pdbx_investigation_nonpoly_descript.nonpoly_entity_id
+1 1
+1 4
+1 5
+1 6 
+1 7
+2 2
+2 4
+2 5
+2 6
+2 7
+3 2
+3 3
+3 4
+3 5
+3 6
+3 7
+4 1
+4 3
+4 4
+4 5
+4 6
+4 7
+#
+;
+
+   #
+save_
+#
+save__pdbx_investigation_nonpoly_descript.id
+   _item_description.description  
+;              The value of _pdbx_investigation_nonpoly_descript.id must identify a distinct combination of small
+               molecule components used in one or more experiments.
+;
+
+   #
+   _item.name            "_pdbx_investigation_nonpoly_descript.id"
+   _item.category_id     pdbx_investigation_nonpoly_descript
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_investigation_nonpoly_descript.nonpoly_entity_id
+   _item_description.description  
+;          This data item is a pointer to _pdbx_investigation_entity_nonpoly.nonpoly_entity_id in the PDBX_INVESTIGATION_ENTITY_NONPOLY
+           category. This identifer will therefore provide reference to a singular small molecule.
+;
+
+   #
+   _item.name            "_pdbx_investigation_nonpoly_descript.nonpoly_entity_id"
+   _item.category_id     pdbx_investigation_nonpoly_descript
+   _item.mandatory_code  yes
+   #
+   _item_linked.parent_name  "_pdbx_investigation_entity_nonpoly.nonpoly_entity_id"
+   _item_linked.child_name   "_pdbx_investigation_nonpoly_descript.nonpoly_entity_id"
+   #
+   _item_type.code  int
+   #
+save_
+#
+save_pdbx_investigation_entity_poly
+   _category.description     
+;              The PDBX_INVESTIGATION_ENTITY_POLY category records information about the polymers used in the investigation
+               such as polymer-type, one-letter sequence code, and any external DB accession.
+;
+
+   _category.id              pdbx_investigation_entity_poly
+   _category.mandatory_code  no
+   #
+   _category_key.name  "_pdbx_investigation_entity_poly.poly_entity_id"
+   #
+   loop_
+   _category_group.id
+     inclusive_group             
+     investigation_sample_group  
+   #
+   _category_examples.detail  
+;
+    Theoretical example.
+;
+
+   _category_examples.case    
+;
+loop_
+_pdbx_investigation_entity_poly.poly_entity_id 
+_pdbx_investigation_entity_poly.type 
+_pdbx_investigation_entity_poly.seq_one_letter_code_sample 
+_pdbx_investigation_entity_poly.seq_one_letter_code_with_ntsd 
+_pdbx_investigation_entity_poly.ref_db_name 
+_pdbx_investigation_entity_poly.ref_db_acc 
+_pdbx_investigation_entity_poly.ref_db_code 
+1  polypeptide(L)   MVHLTPEEKSAVTALWGKVNVDEVGGEALGRLLVVYPWTQRFFESFGDLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTFATLSELHCDKLHVDPENFRLLGNVLVCVLAHHFGKEFTPPVQAAYQKVVAGVANALAHKYH (MSE)VHLTPEEKSAVTALWGKVNVDEVGGEALGRLLVVYPWTQRFFESFGDLSTPDAV(MSE)GNPKVKAHGKKVLGAFSDGLAHLDNLKGTFATLSELHCDKLHVDPENFRLLGNVLVCVLAHHFGKEFTPPVQAAYQKVVAGVANALAHKYH    UNP  P68871   HBB_HUMAN
+2  polypeptide(L)   MVLSPADKTNVKAAWGKVGAHAGEYGAEALERMFLSFPTTKTYFPHFDLSHGSAQVKGHGKKVADALTNAVAHVDDMPNALSALSDLHAHKLRVDPVNFKLLSHCLLVTLAAHLPAEFTPAVHASLDKFLASVSTVLTSKYR      (MSE)VLSPADKTNVKAAWGKVGAHAGEYGAEALER(MSE)FLSFPTTKTYFPHFDLSHGSAQVKGHGKKVADALTNAVAHVDD(MSE)PNALSALSDLHAHKLRVDPVNFKLLSHCLLVTLAAHLPAEFTPAVHASLDKFLASVSTVLTSKYR     UNP  P69905   HBA_HUMAN
+;
+
+   #
+save_
+#
+save__pdbx_investigation_entity_poly.poly_entity_id
+   _item_description.description  "The value of _pdbx_investigation_entity_poly.poly_entity_id must uniquely identify a record in the PDBX_INVESTIGATION_ENTITY_POLY list."
+   #
+   _item.name            "_pdbx_investigation_entity_poly.poly_entity_id"
+   _item.category_id     pdbx_investigation_entity_poly
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_investigation_entity_poly.type
+   _item_description.description  "Defines the type of the entity."
+   #
+   _item.name            "_pdbx_investigation_entity_poly.type"
+   _item.category_id     pdbx_investigation_entity_poly
+   _item.mandatory_code  yes
+   #
+   _item_type.code  ucode
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.detail
+     "_pdbx_investigation_entity_poly.type"  polypeptide(D)                                       .  
+     "_pdbx_investigation_entity_poly.type"  polypeptide(L)                                       .  
+     "_pdbx_investigation_entity_poly.type"  polydeoxyribonucleotide                              .  
+     "_pdbx_investigation_entity_poly.type"  polyribonucleotide                                   .  
+     "_pdbx_investigation_entity_poly.type"  "polydeoxyribonucleotide/polyribonucleotide hybrid"  .  
+     "_pdbx_investigation_entity_poly.type"  cyclic-pseudo-peptide                                .  
+     "_pdbx_investigation_entity_poly.type"  "peptide nucleic acid"                               .  
+     "_pdbx_investigation_entity_poly.type"  other                                                .  
+   #
+save_
+#
+save__pdbx_investigation_entity_poly.seq_one_letter_code_sample
+   _item_description.description  
+;              Canonical sequence of protein or nucleic acid polymer in standard
+               one-letter codes of amino acids or nucleotides,
+               corresponding to the sequence in
+               _pdbx_investigation_entity_poly.seq_one_letter_code_with_ntsd. 
+
+               Non-standard amino acids/nucleotides are represented by letter 'X', 
+               or the parent amino acid/nucleotide if the Chemical Component Dictionary 
+               (CCD) code has _chem_comp.mon_nstd_parent_comp_id record.
+
+               For modifications with several parent amino acids,
+	            all corresponding parent amino acid codes will be listed
+	            (ex. chromophores).
+               
+               Deoxynucleotides are represented by their canonical one-letter codes of A,
+               C, G, or T.
+
+A  for alanine or adenine
+B  for ambiguous asparagine/aspartic-acid
+R  for arginine
+N  for asparagine
+D  for aspartic-acid
+C  for cysteine or cystine or cytosine
+Q  for glutamine
+E  for glutamic-acid
+Z  for ambiguous glutamine/glutamic acid
+G  for glycine or guanine
+H  for histidine
+I  for isoleucine
+L  for leucine
+K  for lysine
+M  for methionine
+F  for phenylalanine
+P  for proline
+S  for serine
+T  for threonine or thymine
+W  for tryptophan
+Y  for tyrosine
+V  for valine
+U  for uracil
+O  for water
+X  for other
+;
+
+   #
+   _item.name            "_pdbx_investigation_entity_poly.seq_one_letter_code_sample"
+   _item.category_id     pdbx_investigation_entity_poly
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+   _item_examples.case  
+;
+MSHHWGYGKHNGPEHWHKDFPIAKGERQSPVDIDTHTAKYDPSLKPLSVSYDQATSLRILNNGAAFNVEFD
+;
+
+   #
+save_
+#
+save__pdbx_investigation_entity_poly.seq_one_letter_code_with_ntsd
+   _item_description.description  
+;              Sequence of protein or nucleic acid polymer in standard one-letter codes of amino
+               acids or nucleotides. Non-standard amino acids/nucleotides are represented by their
+               Chemical Component Dictionary (CCD) codes in parenthesis. Deoxynucleotides are
+               represented by the specially-assigned 2-letter CCD codes in parenthesis, with 'D'
+               prefix added to their ribonucleotide counterparts.
+
+A for Alanine or Adenosine-5'-monophosphate
+C for Cysteine or Cytidine-5'-monophosphate
+D for Aspartic acid
+E for Glutamic acid
+F for Phenylalanine
+G for Glycine or Guanosine-5'-monophosphate
+H for Histidine
+I for Isoleucine or Inosinic Acid
+L for Leucine
+K for Lysine
+M for Methionine
+N for Asparagine  or Unknown ribonucleotide
+O for Pyrrolysine
+P for Proline
+Q for Glutamine
+R for Arginine
+S for Serine
+T for Threonine
+U for Selenocysteine or Uridine-5'-monophosphate
+V for Valine
+W for Tryptophan
+Y for Tyrosine
+(DA) for 2'-deoxyadenosine-5'-monophosphate
+(DC) for 2'-deoxycytidine-5'-monophosphate
+(DG) for 2'-deoxyguanosine-5'-monophosphate
+(DT) for Thymidine-5'-monophosphate
+(MSE) for Selenomethionine
+(SEP) for Phosphoserine
+(PTO) for Phosphothreonine
+(PTR) for Phosphotyrosine
+(PCA) for Pyroglutamic acid
+(UNK) for Unknown amino acid
+(ACE) for Acetylation cap
+(NH2) for Amidation cap
+;
+
+   #
+   _item.name            "_pdbx_investigation_entity_poly.seq_one_letter_code_with_ntsd"
+   _item.category_id     pdbx_investigation_entity_poly
+   _item.mandatory_code  yes
+   #
+   _item_type.code  text
+   #
+   _item_examples.case  (MSE)SHHWGYGKHNGPEHWHKDFPIAKGERQSPVDIDTHTAKYDPSLKPLSVSYDQATSLRILNNGAAFNVEFD
+   #
+save_
+#
+save__pdbx_investigation_entity_poly.ref_db_name
+   _item_description.description  "The external resource where reference sequence information is stored."
+   #
+   _item.name            "_pdbx_investigation_entity_poly.ref_db_name"
+   _item.category_id     pdbx_investigation_entity_poly
+   _item.mandatory_code  no
+   #
+   _item_type.code  code
+   #
+   loop_
+   _item_enumeration.name
+   _item_enumeration.value
+   _item_enumeration.detail
+     "_pdbx_investigation_entity_poly.ref_db_name"  GB   Genbank  
+     "_pdbx_investigation_entity_poly.ref_db_name"  UNP  UniProt  
+   #
+save_
+#
+save__pdbx_investigation_entity_poly.ref_db_acc
+   _item_description.description  "The accession code for the related reference information at the relevant external sequence resource."
+   #
+   _item.name            "_pdbx_investigation_entity_poly.ref_db_acc"
+   _item.category_id     pdbx_investigation_entity_poly
+   _item.mandatory_code  no
+   #
+   _item_type.code  code
+   #
+save_
+#
+save__pdbx_investigation_entity_poly.ref_db_code
+   _item_description.description  
+;                           
+                            More related reference information, for example an additional identifier for ref_db_name and ref_db_acc. 
+                            However, this additional identifier may not be unchanged between database releases 
+                            (aka it is not a stable_identifier and thus it is not enough to be the only identifier).
+;
+
+   #
+   _item.name            "_pdbx_investigation_entity_poly.ref_db_code"
+   _item.category_id     pdbx_investigation_entity_poly
+   _item.mandatory_code  no
+   #
+   _item_type.code  code
+   #
+save_
+#
+save_pdbx_investigation_entity_nonpoly
+   _category.description     
+;              The PDBX_INVESTIGATION_ENTITY_NONPOLY category records information about the small molecules /  non-polymers present
+               in the sample and includes information such as name, molecular weight, an InChI and InChIkey descriptor. 
+               This can include sample buffer components, protein crystallization conditions, additatives, ligands that co-exist with protein 
+               (e.g. heme for hemoglobin), cryoprotectant agents, etc, etc.
+;
+
+   _category.id              pdbx_investigation_entity_nonpoly
+   _category.mandatory_code  no
+   #
+   _category_key.name  "_pdbx_investigation_entity_nonpoly.nonpoly_entity_id"
+   #
+   loop_
+   _category_group.id
+     inclusive_group             
+     investigation_sample_group  
+   #
+   _category_examples.detail  
+;
+    Theoretical example.
+;
+
+   _category_examples.case    
+;
+loop_
+_pdbx_investigation_entity_nonpoly.nonpoly_entity_id 
+_pdbx_investigation_entity_nonpoly.name                
+_pdbx_investigation_entity_nonpoly.chem_comp_id
+_pdbx_investigation_entity_nonpoly.formula 
+_pdbx_investigation_entity_nonpoly.formula_weight 
+_pdbx_investigation_entity_nonpoly.inchi_descriptor
+_pdbx_investigation_entity_nonpoly.inchi_descriptor_software
+_pdbx_investigation_entity_nonpoly.inchi_descriptor_software_version
+_pdbx_investigation_entity_nonpoly.inchikey
+_pdbx_investigation_entity_nonpoly.inchikey_software
+_pdbx_investigation_entity_nonpoly.inchikey_software_version
+_pdbx_investigation_entity_nonpoly.isomeric_smiles
+_pdbx_investigation_entity_nonpoly.isomeric_smiles_software
+_pdbx_investigation_entity_nonpoly.isomeric_smiles_software_version
+_pdbx_investigation_entity_nonpoly.cas_identifier
+1 'Tris Buffer'        TRS 'C4 H12 N O3'   122.143 'InChI=1S/C4H11NO3/c5-4(1-6,2-7)3-8/h6-8H,1-3,5H2/p+1'                   INCHI  1.03  LENZDBCJOHFCAS-UHFFFAOYSA-O  INCHI  1.03  '[NH3+]C(CO)(CO)CO'         CACTVS  3.341   77-86-1
+2 'MOPS Buffer'        MPO 'C7 H15 N O4 S' 209.263 'InChI=1S/C7H15NO4S/c9-13(10,11)7-1-2-8-3-5-12-6-4-8/h1-7H2,(H,9,10,11)' INCHI  1.03  DVLFYONBTKHTER-UHFFFAOYSA-N  INCHI  1.03  'O[S](=O)(=O)CCCN1CCOCC1'   CACTVS  3.341   1132-61-2
+3 'DTT'                DTT 'C4 H10 O2 S2'  154.251 'InChI=1S/C4H10O2S2/c5-3(1-7)4(6)2-8/h3-8H,1-2H2/t3-,4-/m0/s1'           INCHI  1.03  VHJLVAABSRFDPM-IMJSIDKUSA-N  INCHI  1.03  'O[C@@H](CS)[C@@H](O)CS'    CACTVS  3.341   3483-12-3
+4 'CALCIUM ION'        CA   Ca              40.078 'InChI=1S/Ca/q+2'                                                        INCHI  1.03  BHPQYMZQTOCNFJ-UHFFFAOYSA-N  INCHI  1.03  '[Ca++]'                    CACTVS  3.341   ?
+5 'MAGNESIUM ION'      MG   Mg              24.305 'InChI=1S/Mg/q+2'                                                        INCHI  1.03  JLVVSXFLKOJNIY-UHFFFAOYSA-N  INCHI  1.03  '[Mg++]'                    CACTVS  3.341   ?
+6 'TRIETHYLENE GLYCOL' PGE 'C6 H14 O4'     150.173 'InChI=1S/C6H14O4/c7-1-3-9-5-6-10-4-2-8/h7-8H,1-6H2'                     INCHI  1.03  ZIBGPFATKBEMQZ-UHFFFAOYSA-N  INCHI  1.03  CCOCCOCCO                   CACTVS  3.341   ?
+7  water               HOH 'H2 O'           18.015 'InChI=1S/H2O/h1H2'                                                      INCHI  1.03  XLYOFNOQVPJJNP-UHFFFAOYSA-N  INCHI  1.03  O                           CACTVS  3.341   ?
+#
+;
+
+   #
+save_
+#
+save__pdbx_investigation_entity_nonpoly.nonpoly_entity_id
+   _item_description.description  "The value of _pdbx_investigation_entity_nonpoly.entity_id must uniquely identify a record in the PDBX_INVESTIGATION_ENTITY_NONPOLY list."
+   #
+   _item.name            "_pdbx_investigation_entity_nonpoly.nonpoly_entity_id"
+   _item.category_id     pdbx_investigation_entity_nonpoly
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+save_
+#
+save__pdbx_investigation_entity_nonpoly.name
+   _item_description.description  "The full name of the small molecule component."
+   #
+   _item.name            "_pdbx_investigation_entity_nonpoly.name"
+   _item.category_id     pdbx_investigation_entity_nonpoly
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+   loop_
+   _item_examples.case
+     alanine   
+     valine    
+     adenine   
+     cytosine  
+   #
+save_
+#
+save__pdbx_investigation_entity_nonpoly.chem_comp_id
+   _item_description.description  
+;          The Chemical Component Dictionary (CCD) code for the small molecule. In instances where
+           codes are unknown or yet-to-be processed "?" can be used as a placeholder.
+;
+
+   #
+   _item.name            "_pdbx_investigation_entity_nonpoly.chem_comp_id"
+   _item.category_id     pdbx_investigation_entity_nonpoly
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_investigation_entity_nonpoly.formula
+   _item_description.description  
+;              The formula for the chemical component. Formulae are written
+               according to the following rules:
+
+               (1) Only recognized element symbols may be used.
+
+               (2) Each element symbol is followed by a 'count' number. A count
+                  of '1' may be omitted.
+
+               (3) A space or parenthesis must separate each cluster of
+                  (element symbol + count), but in general parentheses are
+                  not used.
+
+               (4) The order of elements depends on whether carbon is
+                  present or not. If carbon is present, the order should be:
+                  C, then H, then the other elements in alphabetical order
+                  of their symbol. If carbon is not present, the elements
+                  are listed purely in alphabetic order of their symbol. This
+                  is the 'Hill' system used by Chemical Abstracts.
+;
+
+   #
+   _item.name            "_pdbx_investigation_entity_nonpoly.formula"
+   _item.category_id     pdbx_investigation_entity_nonpoly
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+   _item_examples.case  "C18 H19 N7 O8 S"
+   #
+save_
+#
+save__pdbx_investigation_entity_nonpoly.formula_weight
+   _item_description.description  "Formula mass in daltons of the small molecule component."
+   #
+   _item.name            "_pdbx_investigation_entity_nonpoly.formula_weight"
+   _item.category_id     pdbx_investigation_entity_nonpoly
+   _item.mandatory_code  no
+   #
+   loop_
+   _item_range.maximum
+   _item_range.minimum
+       .  1.0  
+     1.0  1.0  
+   #
+   _item_type.code  float
+   #
+save_
+#
+save__pdbx_investigation_entity_nonpoly.inchi_descriptor
+   _item_description.description  "This InChI descriptor value for the small molecule component."
+   #
+   _item.name            "_pdbx_investigation_entity_nonpoly.inchi_descriptor"
+   _item.category_id     pdbx_investigation_entity_nonpoly
+   _item.mandatory_code  yes
+   #
+   _item_type.code  inchi
+   #
+save_
+#
+save__pdbx_investigation_entity_nonpoly.inchi_descriptor_software
+   _item_description.description  
+;              This data item contains the name of the program or software library used 
+               to compute the InChI descriptor for the small molecule component.
+;
+
+   #
+   _item.name            "_pdbx_investigation_entity_nonpoly.inchi_descriptor_software"
+   _item.category_id     pdbx_investigation_entity_nonpoly
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+   loop_
+   _item_examples.case
+   _item_examples.detail
+     OPENEYE    "OpenEye software library"  
+     CACTVS     "CACTVS software library"  
+     RDKIT      "RDKIT software library"  
+     DAYLIGHT   "Daylight software library"  
+     INCHI      "IUPAC's InChI software library"  
+     OPENBABEL  "OpenBabel software library"  
+     OTHER      "Other program or library"  
+   #
+save_
+#
+save__pdbx_investigation_entity_nonpoly.inchi_descriptor_software_version
+   _item_description.description  
+;              This data item contains the version of the program or software library used 
+               to compute the InChI descriptor for the small molecule component.
+;
+
+   #
+   _item.name            "_pdbx_investigation_entity_nonpoly.inchi_descriptor_software_version"
+   _item.category_id     pdbx_investigation_entity_nonpoly
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_investigation_entity_nonpoly.inchikey
+   _item_description.description  "This InChIKey descriptor descriptor value for the small molecule component."
+   #
+   _item.name            "_pdbx_investigation_entity_nonpoly.inchikey"
+   _item.category_id     pdbx_investigation_entity_nonpoly
+   _item.mandatory_code  yes
+   #
+   _item_type.code  inchikey
+   #
+save_
+#
+save__pdbx_investigation_entity_nonpoly.inchikey_software
+   _item_description.description  
+;              This data item contains the name of the program or software library used 
+               to compute the InChIKey descriptor for the small molecule component.
+;
+
+   #
+   _item.name            "_pdbx_investigation_entity_nonpoly.inchikey_software"
+   _item.category_id     pdbx_investigation_entity_nonpoly
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+   loop_
+   _item_examples.case
+   _item_examples.detail
+     OPENEYE    "OpenEye software library"  
+     CACTVS     "CACTVS software library"  
+     RDKIT      "RDKIT software library"  
+     DAYLIGHT   "Daylight software library"  
+     INCHI      "IUPAC's InChI software library"  
+     OPENBABEL  "OpenBabel software library"  
+     OTHER      "Other program or library"  
+   #
+save_
+#
+save__pdbx_investigation_entity_nonpoly.inchikey_software_version
+   _item_description.description  
+;              This data item contains the version of the program or software library used 
+               to compute the InChIKey descriptor for the small molecule component.
+;
+
+   #
+   _item.name            "_pdbx_investigation_entity_nonpoly.inchikey_software_version"
+   _item.category_id     pdbx_investigation_entity_nonpoly
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_investigation_entity_nonpoly.isomeric_smiles
+   _item_description.description  
+;
+               This SMILES descriptor for the small molecule component including information about configuration around
+               double bonds and chirality. An isomeric SMILES is also known as an CANONICALIZED SMILES.
+;
+
+   #
+   _item.name            "_pdbx_investigation_entity_nonpoly.isomeric_smiles"
+   _item.category_id     pdbx_investigation_entity_nonpoly
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_investigation_entity_nonpoly.isomeric_smiles_software
+   _item_description.description  
+;              This data item contains the name of the program or software library used 
+               to compute the SMILES descriptor for the small molecule component.
+;
+
+   #
+   _item.name            "_pdbx_investigation_entity_nonpoly.isomeric_smiles_software"
+   _item.category_id     pdbx_investigation_entity_nonpoly
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+   loop_
+   _item_examples.case
+   _item_examples.detail
+     OPENEYE    "OpenEye software library"  
+     CACTVS     "CACTVS software library"  
+     RDKIT      "RDKIT software library"  
+     DAYLIGHT   "Daylight software library"  
+     INCHI      "IUPAC's InChI software library"  
+     OPENBABEL  "OpenBabel software library"  
+     OTHER      "Other program or software library"  
+   #
+save_
+#
+save__pdbx_investigation_entity_nonpoly.isomeric_smiles_software_version
+   _item_description.description  
+;              This data item contains the version of the program or software library used 
+               to compute the SMILES descriptor for the small molecule component.
+;
+
+   #
+   _item.name            "_pdbx_investigation_entity_nonpoly.isomeric_smiles_software_version"
+   _item.category_id     pdbx_investigation_entity_nonpoly
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_investigation_entity_nonpoly.cas_identifier
+   _item_description.description  "This Chemical Abstracts Service (CAS) identifier for the small molecule component."
+   #
+   _item.name            "_pdbx_investigation_entity_nonpoly.cas_identifier"
+   _item.category_id     pdbx_investigation_entity_nonpoly
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save_pdbx_ligscreen_investigation_audit_conform
+   _category.description     
+;              Data items in the PDBX_LIGSCREEN_INVESTIGATON_AUDIT_CONFORM category describe the
+               dictionary version against which the data in the current data block are conformant.
+;
+
+   _category.id              pdbx_ligscreen_investigation_audit_conform
+   _category.mandatory_code  no
+   #
+   loop_
+   _category_key.name
+     "_pdbx_ligscreen_investigation_audit_conform.dict_name"  
+     "_pdbx_ligscreen_investigation_audit_conform.dict_version"  
+   #
+   loop_
+   _category_group.id
+     inclusive_group  
+     ligscreen_group  
+   #
+   _category_examples.detail  
+;
+    Example 1 - investigation file conforming to the current mmCIF investigation dictionary.
+;
+
+   _category_examples.case    
+;
+    _pdbx_ligscreen_investigation_audit_conform.dict_name         mmcif_investigation.dic
+    _pdbx_ligscreen_investigation_audit_conform.dict_version      1.0.6.1
+    _pdbx_ligscreen_investigation_audit_conform.dict_location     https://mmcif.wwpdb.org/dictionaries/ascii/mmcif_investigation.dic
+;
+
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_audit_conform.dict_location
+   _item_description.description  "A file name or uniform resource locator (URL) for the dictionary to which the data block conforms."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_audit_conform.dict_location"
+   _item.category_id     pdbx_ligscreen_investigation_audit_conform
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_audit_conform.dict_name
+   _item_description.description  "The highest-level dictionary defining the categories and items used in this file."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_audit_conform.dict_name"
+   _item.category_id     pdbx_ligscreen_investigation_audit_conform
+   _item.mandatory_code  yes
+   #
+   _item_type.code  text
+   #
+   _item_enumeration.name    "_pdbx_ligscreen_investigation_audit_conform.dict_name"
+   _item_enumeration.value   mmcif_investigation.dic
+   _item_enumeration.detail  "mmCIF investigation dictionary"
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_audit_conform.dict_version
+   _item_description.description  "The version number of the dictionary to which the data block conforms."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_audit_conform.dict_version"
+   _item.category_id     pdbx_ligscreen_investigation_audit_conform
+   _item.mandatory_code  yes
+   #
+   _item_type.code  text
+   #
+save_
+#
+save_pdbx_ligscreen_investigation_revision
+   _category.description     "Data items in the PDBX_LIGSCREEN_INVESTIGATION_REVISION category record the revision history."
+   _category.id              pdbx_ligscreen_investigation_revision
+   _category.mandatory_code  no
+   #
+   _category_key.name  "_pdbx_ligscreen_investigation_revision.revision_ordinal"
+   #
+   loop_
+   _category_group.id
+     inclusive_group  
+     ligscreen_group  
+   #
+   _category_examples.detail  
+;
+     Example 1 - initial release
+;
+
+   _category_examples.case    
+;
+     _pdbx_ligscreen_investigation_revision.investigation_id              FH123
+     _pdbx_ligscreen_investigation_revision.revision_ordinal              0
+     _pdbx_ligscreen_investigation_revision.revision_date                 '2026-01-20'
+     _pdbx_ligscreen_investigation_revision.revision_type                 'Initial release'
+     _pdbx_ligscreen_investigation_revision.major_revision                0
+     _pdbx_ligscreen_investigation_revision.minor_revision                0000
+;
+
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_revision.revision_ordinal
+   _item_description.description  "A unique identifier for the PDBX_LIGSCREEN_INVESTIGATION_REVISION record."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_revision.revision_ordinal"
+   _item.category_id     pdbx_ligscreen_investigation_revision
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+   _item_examples.case  1
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_revision.investigation_id
+   _item_description.description  "This data item is a pointer to _pdbx_investigation.id in the PDBX_INVESTIGATION category."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_revision.investigation_id"
+   _item.category_id     pdbx_ligscreen_investigation_revision
+   _item.mandatory_code  yes
+   #
+   _item_type.code  code
+   #
+   _item_examples.case  FH123
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_revision.revision_date
+   _item_description.description  "A date for the current version or revision. The date format is yyyy-mm-dd."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_revision.revision_date"
+   _item.category_id     pdbx_ligscreen_investigation_revision
+   _item.mandatory_code  yes
+   #
+   _item_type.code  yyyy-mm-dd
+   #
+   _item_examples.case  2006-07-12
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_revision.revision_type
+   _item_description.description  "A type classification of the revision"
+   #
+   _item.name            "_pdbx_ligscreen_investigation_revision.revision_type"
+   _item.category_id     pdbx_ligscreen_investigation_revision
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+   loop_
+   _item_enumeration.value
+     "Initial release"  
+     "Coordinate replacement"  
+     Obsolete  
+     Remediation  
+     "Data added"  
+     "Data removed"  
+     "Data updated"  
+   #
+   _item_examples.case  "Initial release"
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_revision.major_version
+   _item_description.description  "Major version number for this datablock."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_revision.major_version"
+   _item.category_id     pdbx_ligscreen_investigation_revision
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+   _item_examples.case  1
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_revision.minor_version
+   _item_description.description  
+;              Minor version identifier for this datablock:
+
+               The minor version is incremented for each datablock revision.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_revision.minor_version"
+   _item.category_id     pdbx_ligscreen_investigation_revision
+   _item.mandatory_code  yes
+   #
+   _item_type.code  code
+   #
+   _item_examples.case  0004
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_revision.revision_description
+   _item_description.description  "A text description of any special details of the current version."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_revision.revision_description"
+   _item.category_id     pdbx_ligscreen_investigation_revision
+   _item.mandatory_code  no
+   #
+   _item_type.code  text
+   #
+   _item_examples.case  "Weekly release update of CCD information."
+   #
+save_
+#
+save_pdbx_ligscreen_investigation_revision_details
+   _category.description     
+;
+               Data items in the PDBX_LIGSCREEN_INVESTIGATION_REVISION_DETAILS category
+               report details associated with a PDBX_LIGSCREEN_INVESTIGATION_REVISION record.
+;
+
+   _category.id              pdbx_ligscreen_investigation_revision_details
+   _category.mandatory_code  no
+   #
+   loop_
+   _category_key.name
+     "_pdbx_ligscreen_investigation_revision_details.ordinal"  
+     "_pdbx_ligscreen_investigation_revision_details.revision_ordinal"  
+   #
+   loop_
+   _category_group.id
+     inclusive_group  
+     ligscreen_group  
+   #
+   _category_examples.detail  
+;
+     Example - revision_ordinal 0 - initial release (no contents should be in this category) 
+             - revision_ordinal 1 - new CCD id corresponding to fragment screen compound
+             - revision_ordinal 2 - adding new links to other databases
+;
+
+   _category_examples.case    
+;
+     loop_
+     _pdbx_audit_revision_category.ordinal
+     _pdbx_audit_revision_category.revision_ordinal
+     _pdbx_audit_revision_category.revision_category
+     _pdbx_audit_revision_category.revision_item
+      1   1   pdbx_ligscreen_investigation_lib_component   '_pdbx_ligscreen_investigation_lib_component.chem_comp_id'
+      1   2   pdbx_investigation_archived_data             '_pdbx_investigation_archived_data.id'
+      2   2   pdbx_investigation_archived_data             '_pdbx_investigation_archived_data.archive_db_name'
+      3   2   pdbx_investigation_archived_data             '_pdbx_investigation_archived_data.archive_db_acc'
+      4   2   pdbx_investigation_archived_data             '_pdbx_investigation_archived_data.investigation_id'
+      5   2   pdbx_investigation_archived_data             '_pdbx_investigation_archived_data.archived_data_doi'
+      6   2   pdbx_investigation_archived_data             '_pdbx_investigation_archived_dataarchived_data_url'
+      7   2   pdbx_ligscreen_investigation_screening_exp   '_pdbx_ligscreen_investigation_screening_exp.screening_exp_id'
+      8   2   pdbx_ligscreen_investigation_screening_exp   '_pdbx_ligscreen_investigation_screening_exp.series_id'
+      9   2   pdbx_ligscreen_investigation_screening_exp   '_pdbx_ligscreen_investigation_screening_exp.campaign_id'
+     10   2   pdbx_ligscreen_investigation_screening_exp   '_pdbx_ligscreen_investigation_screening_exp.investigation_id'
+     11   2   pdbx_ligscreen_investigation_screening_exp   '_pdbx_ligscreen_investigation_screening_exp.sample_id'
+     12   2   pdbx_ligscreen_investigation_screening_exp   '_pdbx_ligscreen_investigation_screening_exp.lib_component_mix_id'
+     13   2   pdbx_ligscreen_investigation_screening_exp   '_pdbx_ligscreen_investigation_screening_exp.exp_acc'
+     14   2   pdbx_ligscreen_investigation_screening_exp   '_pdbx_ligscreen_investigation_screening_exp.exp_method'
+     15   2   pdbx_ligscreen_investigation_screening_exp   '_pdbx_ligscreen_investigation_screening_exp.exp_details'
+     16   2   pdbx_ligscreen_investigation_screening_exp   '_pdbx_ligscreen_investigation_screening_exp.exp_external_url'
+     17   2   pdbx_ligscreen_investigation_screening_exp   '_pdbx_ligscreen_investigation_screening_exp.data_deposited'
+     18   2   pdbx_ligscreen_investigation_screening_exp   '_pdbx_ligscreen_investigation_screening_exp.instance_id'
+     19   2   pdbx_ligscreen_investigation_screening_exp   '_pdbx_ligscreen_investigation_screening_exp.archived_data_id'
+;
+
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_revision_details.ordinal
+   _item_description.description  "A unique identifier for the PDBX_LIGSCREEN_INVESTIGATION_REVISION_DETAILS record."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_revision_details.ordinal"
+   _item.category_id     pdbx_ligscreen_investigation_revision_details
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+   _item_examples.case  1
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_revision_details.revision_ordinal
+   _item_description.description  "A pointer to _pdbx_ligscreen_investigation_revision.revision_ordinal."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_revision_details.revision_ordinal"
+   _item.category_id     pdbx_ligscreen_investigation_revision_details
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+   _item_examples.case  1
+   #
+   _item_linked.parent_name  "_pdbx_ligscreen_investigation_revision.revision_ordinal"
+   _item_linked.child_name   "_pdbx_ligscreen_investigation_revision_details.revision_ordinal"
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_revision_details.revision_category
+   _item_description.description  "The category changed in the revision indicated PDBX_LIGSCREEN_INVESTIGATION_REVISION record."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_revision_details.revision_category"
+   _item.category_id     pdbx_ligscreen_investigation_revision_details
+   _item.mandatory_code  yes
+   #
+   _item_type.code  code
+   #
+   loop_
+   _item_examples.case
+     pdbx_ligscreen_investigation_lib_component  
+     pdbx_investigation_archived_data            
+     pdbx_ligscreen_investigation_screening_exp  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_revision_details.revision_item
+   _item_description.description  "The item changed in the revision indicated PDBX_LIGSCREEN_INVESTIGATION_REVISION record."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_revision_details.revision_item"
+   _item.category_id     pdbx_ligscreen_investigation_revision_details
+   _item.mandatory_code  yes
+   #
+   _item_type.code  code
+   #
+   _item_examples.case  "_pdbx_ligscreen_investigation_lib_component.chem_comp_id"
+   #
+save_
+#
+save_pdbx_ligscreen_investigation_software
+   _category.description     
+;              Data items in the PDBX_LIGSCREEN_INVESTIGATION_SOFTWARE category record details about
+               the software used to generate the investigation file.
+;
+
+   _category.id              pdbx_ligscreen_investigation_software
+   _category.mandatory_code  no
+   #
+   _category_key.name  "_pdbx_ligscreen_investigation_software.ordinal"
+   #
+   loop_
+   _category_group.id
+     inclusive_group  
+     ligscreen_group  
+   #
+   _category_examples.detail  
+;
+    Below example is based on the software first utilized to generate Investigation files.
+;
+
+   _category_examples.case    
+;
+    loop_
+    _pdbx_ligscreen_investigation_software.ordinal
+    _pdbx_ligscreen_investigation_software.name
+    _pdbx_ligscreen_investigation_software.version
+    _pdbx_ligscreen_investigation_software.version_year
+    _pdbx_ligscreen_investigation_software.contact_author
+    _pdbx_ligscreen_investigation_software.contact_author_email
+    _pdbx_ligscreen_investigation_software.location
+    _pdbx_ligscreen_investigation_software.language
+    _pdbx_ligscreen_investigation_software.mods
+    _pdbx_ligscreen_investigation_software.description
+    _pdbx_ligscreen_investigation_software.reference_DOI
+    1   mmcif-gen  v1.1.0   2025   'Ahsan Tanweer'  ?   'https://github.com/PDBeurope/mmcif-gen'   Python   ?   'Generates mmCIF Investigation files.'   ? 
+    2   gemmi      0.7.3    2025   'Marcin Wojdyr'  ?   'https://github.com/project-gemmi/gemmi'   Python   ?   'Reads and writes mmCIF files.'          ?
+;
+
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_software.ordinal
+   _item_description.description  "An ordinal index for this category."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_software.ordinal"
+   _item.category_id     pdbx_ligscreen_investigation_software
+   _item.mandatory_code  yes
+   #
+   _item_type.code  int
+   #
+   loop_
+   _item_examples.case
+     1  
+     2  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_software.name
+   _item_description.description  "The name of software used to generate the investigation file."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_software.name"
+   _item.category_id     pdbx_ligscreen_investigation_software
+   _item.mandatory_code  yes
+   #
+   _item_type.code  line
+   #
+   _item_examples.case  mmcif-gen
+   #
+   _pdbx_item.name            "_pdbx_ligscreen_investigation_software.name"
+   _pdbx_item.mandatory_code  yes
+   #
+   _pdbx_item_description.name         "_pdbx_ligscreen_investigation_software.name"
+   _pdbx_item_description.description  "Select the appropriate software used in generating the investigation file."
+   #
+   loop_
+   _pdbx_item_enumeration.name
+   _pdbx_item_enumeration.value
+   _pdbx_item_enumeration.detail
+     "_pdbx_ligscreen_investigation_software.name"  gemmi      "data extraction"  
+     "_pdbx_ligscreen_investigation_software.name"  mmcif-gen  "data extraction"  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_software.version
+   _item_description.description  "The version of the software."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_software.version"
+   _item.category_id     pdbx_ligscreen_investigation_software
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+   loop_
+   _item_examples.case
+     v1.0     
+     beta     
+     3.1-2    
+     unknown  
+   #
+   _pdbx_item_description.description  "The version of the refinement software."
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_software.version_year
+   _item_description.description  "The year the software version was released."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_software.version_year"
+   _item.category_id     pdbx_ligscreen_investigation_software
+   _item.mandatory_code  no
+   #
+   _item_type.code  yyyy
+   #
+   loop_
+   _item_examples.case
+     2024  
+     2025  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_software.contact_author
+   _item_description.description  
+;              The recognized contact author of the software. This could be
+               the original author, someone who has modified the code or
+               someone who maintains the code.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_software.contact_author"
+   _item.category_id     pdbx_ligscreen_investigation_software
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+   loop_
+   _item_examples.case
+     "A. Tanweer"  
+     "Ahsan Tanweer"  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_software.contact_author_email
+   _item_description.description  
+;              The e-mail address of the person specified in
+               pdbx_investigation_software.contact_author.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_software.contact_author_email"
+   _item.category_id     pdbx_ligscreen_investigation_software
+   _item.mandatory_code  no
+   #
+   _item_type.code  email
+   #
+   _item_examples.case  bourne@sdsc.edu
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_software.location
+   _item_description.description  "The URL an Internet address at which details of the software can be found."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_software.location"
+   _item.category_id     pdbx_ligscreen_investigation_software
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+   loop_
+   _item_examples.case
+     http://rosebud.sdsc.edu/projects/pb/IUCr/software.html  
+     ftp://ftp.sdsc.edu/pub/sdsc/biology/                    
+     https://github.com/PDBeurope/mmcif-gen                  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_software.language
+   _item_description.description  "The major computing language in which the software is coded."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_software.language"
+   _item.category_id     pdbx_ligscreen_investigation_software
+   _item.mandatory_code  no
+   #
+   _item_type.code  uline
+   #
+   loop_
+   _item_enumeration.value
+     Ada  
+     assembler  
+     Awk  
+     Basic  
+     C++  
+     C/C++  
+     C  
+     csh  
+     Fortran  
+     Fortran_77  
+     "Fortran 77"  
+     "Fortran 90"  
+     Java  
+     "Java & Fortran"  
+     ksh  
+     Pascal  
+     Perl  
+     Python  
+     Python/C++  
+     sh  
+     Tcl  
+     Other  
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_software.mods
+   _item_description.description  "Any noteworthy modifications to the base software, if applicable."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_software.mods"
+   _item.category_id     pdbx_ligscreen_investigation_software
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+   _item_examples.case  "Added support for generating Time-resolved X-ray Crystallography Investigation files."
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_software.description
+   _item_description.description  "Description of the software."
+   #
+   _item.name            "_pdbx_ligscreen_investigation_software.description"
+   _item.category_id     pdbx_ligscreen_investigation_software
+   _item.mandatory_code  no
+   #
+   _item_type.code  line
+   #
+   _item_examples.case  "Generates mmCIF Investigation files for Ligand Screening."
+   #
+save_
+#
+save__pdbx_ligscreen_investigation_software.reference_DOI
+   _item_description.description  
+;              Document Object Identifier used by doi.org to uniquely
+               identify software being used.
+;
+
+   #
+   _item.name            "_pdbx_ligscreen_investigation_software.reference_DOI"
+   _item.category_id     pdbx_ligscreen_investigation_software
+   _item.mandatory_code  no
+   #
+   _item_type.code  citation_doi
+   #
+   _item_examples.case  10.2345/S1384107697000225
+   #
+save_
+#
