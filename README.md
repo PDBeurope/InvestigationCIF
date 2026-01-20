@@ -39,14 +39,14 @@ Alterantively, one can generate an **investigation mmCIF file** from a set of PD
 
 ```
 # Fetch configuration for PDB files
-mmcif-gen fetch-facility-json pdbe_operations
+mmcif-gen fetch-facility-json pdbe_investigation
 # Generate an investigation file
 mmcif-gen make-mmcif --json pdbe_investigation.json --output-folder ./out --id I_321  pdbe --pdb-ids 5rvz, 5rvy, 5rvw
 ```
 
 ```
 # Specify custom output directory
-mmcif-gen fetch-facility-json pdbe_operations -o ./mapping_operations
+mmcif-gen fetch-facility-json pdbe_investigation -o ./mapping_operations
 # Generate an investigation file
 mmcif-gen make-mmcif --json /mapping_operations/pdbe_investigation.json --output-folder ./out --id I_321  pdbe --pdb-ids 5rvz, 5rvy, 5rvw
 ```
