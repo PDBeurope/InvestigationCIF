@@ -62,7 +62,7 @@ For more extensive documentation on using it:
 
 [README.md](README.md) - this file
 
-[MMCIF investigation extension](dist/mmcif_investigation.dic) - Investigation dictionary extension
+[MMCIF investigation extension](dist/mmcif_investigation.dic) - Investigation dictionary -- extension to the wwPDB mmCIF dictionary (file name: `mmcif_investigation_inc_pdbx.dic`)
 
 [Examples](examples) - directory with examples of investigation mmCIF file(s) compliant with the MMCIF investgation dictionary
 
