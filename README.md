@@ -28,14 +28,19 @@ https://ftp.ebi.ac.uk/pub/databases/msd/fragment_screening/investigations/
 
 An **investigation mmCIF file** can be created through [mmcif-gen](https://pypi.org/project/mmcif-gen/), which is a Python tool for generating mmCIF files.
 
-mmcif-gen can be used to create an **investigation mmCIF file** from internal databases at research facilities, such as a synchrotron, for example:
+mmcif-gen can be used to create an **investigation mmCIF file** from internal databases at research facilities, such as a synchrotron.
+Alterantively one can generate an investigation file from a set of PDB ids the correspond to fragment screen hits deposited to the wwPDB, for example:
 
 ```
-# Fetch configuration for a specific facility
-mmcif-gen fetch-facility-json maxiv
+# Fetch configuration for PDB files
+mmcif-gen fetch-facility-json pdbe_operations
+# Generate an investigation file
+mmcif-gen make-mmcif --json pdbe_investigation.json --output-folder ./out --id I_321  pdbe --pdb-ids 5rvz, 5rvy, 5rvw
 
 # Specify custom output directory
-mmcif-gen fetch-facility-json maxiv -o ./mapping_operations
+mmcif-gen fetch-facility-json pdbe_operations -o ./mapping_operations
+# Generate an investigation file
+mmcif-gen make-mmcif --json /mapping_operations/pdbe_investigation.json --output-folder ./out --id I_321  pdbe --pdb-ids 5rvz, 5rvy, 5rvw
 ```
 
 Each facility stores their data internally in different formats, thus each facility has a different facility-json.
