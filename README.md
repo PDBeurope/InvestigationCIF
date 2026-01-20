@@ -31,7 +31,7 @@ An **investigation mmCIF file** can be created through [mmcif-gen](https://pypi.
 
 [mmcif-gen](https://pypi.org/project/mmcif-gen/) can be used to create an **investigation mmCIF file** from internal databases at research facilities, such as a synchrotron.
 Each facility stores their data internally in different ways and the data is available in different formats (*e.g.* SQL files, JSON files, etc).
-Consequently each facility has a different configuration file (*i.e.* a different operation-facility-json).
+Consequently each facility has a different configuration file (*i.e.* a different operation facility.json).
 
 Alterantively, one can generate an **investigation mmCIF file** from a set of PDB ids the correspond to fragment screen hits that have been deposited to the wwPDB, for example:
 
