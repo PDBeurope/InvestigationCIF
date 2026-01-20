@@ -65,7 +65,8 @@ For more extensive documentation on using it:
 [README.md](README.md) - this file
 
 [MMCIF investigation extension](dist/mmcif_investigation.dic) - Investigation dictionary <br>
-                                --> This is an extension to the wwPDB mmCIF dictionary (file name: `mmcif_pdbx_v50.dic`; [link](https://mmcif.wwpdb.org/dictionaries/mmcif_pdbx_v50.dic/Index/)).
+                                --> This is an extension to the wwPDB mmCIF dictionary (file name: `mmcif_pdbx_v50.dic`; [link](https://mmcif.wwpdb.org/dictionaries/mmcif_pdbx_v50.dic/Index/)). <br>
+                                
 [MMCIF investigation combined with the wwPDB dictionary](dist/mmcif_investigation.dic)
 
 [Examples](examples) - directory with examples of investigation mmCIF file(s) compliant with the MMCIF investgation dictionary
