@@ -7,7 +7,9 @@ This repository contains a [MMCIF investigation dictionary](dist/mmcif_investiga
 
 This dictionary is an extension of the [PDBx/mmCIF](http://mmcif.wwpdb.org) dictionary and provides the additional definitions required for an investigation files. Investigation files are umbrella files for a set of coordinates / models and their corresponding experimental data files. 
 
-The primary example showcased here is for fragment screening investigations, where multiple atomic-level models are determined to analyze how small molecule fragments interact with protein targets, facilitating drug discovery efforts.
+The primary example showcased here is for fragment screening investigations. 
+Fragment screening experiments in structural biology involve the determination of multiple atomic-level models to analyze how small molecule fragments interact with protein targets.
+These experiments facilitate drug discovery efforts.
 
 ## Why InvestigationCIF?
 
